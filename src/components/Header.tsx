@@ -41,6 +41,7 @@ export default function Header() {
       label: 'Company & Help',
       description: 'Our Ahmedabad headquarters, verified client reviews & advisories.',
       links: [
+        { label: 'AI Travel Concierge', href: '/chat' },
         { label: 'Contact & Office Desk', href: '/contact' },
         { label: 'Travel Blog & Insights', href: '/blog' },
         { label: 'Privacy Policy', href: '/privacy-policy' },

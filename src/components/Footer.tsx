@@ -95,6 +95,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
+                <Link href="/chat" className="text-white font-medium hover:underline transition-colors flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span>AI Travel Concierge</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/air-tickets" className="hover:text-white hover:underline transition-colors">
                   Air Tickets
                 </Link>
