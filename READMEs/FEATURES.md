@@ -28,3 +28,4 @@
 - [Homepage 9-Pass Unslop Redesign](../docs/homepage-unslop-redesign.md) - Comprehensive de-slopping of the homepage and aperture carousel across Spacing, Color, Icons, Copy, Type, Layout, Details, Visuals, and Motion.
 - [Site-Wide Unslop Refactoring](../docs/site-wide-unslop-refactoring.md) - Complete aesthetic harmonization and de-slopping across all subpages (/air-tickets, /packages, /visa, /passport, /travel-insurance, /payment-details, /contact, /blog, /privacy-policy, and modals).
 - [Groq AI Travel Concierge & Full-Page Chat](../docs/groq-ai-chatbot.md) - Groq-powered AI Travel Desk with floating widget, full-page concierge desk (/chat), site knowledge retrieval engine, and strict design-taste-frontend styling.
+- [Docker Containerization](../docs/docker-containerization.md) - Production-ready multi-stage Docker packaging with Next.js standalone optimization, non-root user security hardening, and Docker Compose orchestration.

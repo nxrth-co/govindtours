@@ -1,0 +1,37 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Next.js build output & cache
+.next
+out
+
+# Git and dev metadata
+.git
+.gitignore
+.gitattributes
+.dev
+docs
+READMEs
+temp-tests
+graphify-out
+old_website
+stitch_remix_of_travel_insurance
+
+# Environment variables & secrets (Zero-Trust Baseline)
+.env
+.env*.local
+.env.production
+.env.development
+
+# Logs & debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
