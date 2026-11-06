@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#0f5fae",
+              "tertiary-fixed": "#d0e4ff",
+              "on-error-container": "#93000a",
+              "on-primary-fixed-variant": "#930014",
+              "on-tertiary-container": "#d5e7ff",
+              "error": "#ba1a1a",
+              "surface-container": "#f6eaf4",
+              "outline-variant": "#e4beba",
+              "on-primary-container": "#ffddda",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed-dim": "#a7c8ff",
+              "on-secondary-fixed-variant": "#004787",
+              "inverse-surface": "#352e36",
+              "tertiary-fixed-dim": "#9bcbff",
+              "secondary-fixed": "#d5e3ff",
+              "surface": "#fff7fb",
+              "on-tertiary-fixed": "#001d34",
+              "inverse-on-surface": "#f9edf7",
+              "on-error": "#ffffff",
+              "surface-bright": "#fff7fb",
+              "on-primary-fixed": "#410004",
+              "primary-container": "#c6222a",
+              "outline": "#8f6f6d",
+              "tertiary": "#055285",
+              "surface-container-high": "#f1e5ef",
+              "surface-dim": "#e2d7e0",
+              "secondary-container": "#6faafe",
+              "on-tertiary-fixed-variant": "#004a79",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#ffdad7",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-secondary-fixed": "#001c3b",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#003d77",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#2e6a9e",
+              "background": "#fff7fb",
+              "surface-tint": "#ba1823",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#fcf0fa",
+              "inverse-primary": "#ffb3ae",
+              "on-background": "#1f1a20",
+              "surface-variant": "#ebdfe9",
+              "primary": "#a10017",
+              "on-surface": "#1f1a20",
+              "surface-container-highest": "#ebdfe9",
+              "on-surface-variant": "#5b403e"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff7fb;
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-red-700 dark:text-red-500 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg text-zinc-900 dark:text-zinc-50">Visa Application Guide</h1>
+</div>
+<div class="brand-font font-extrabold text-zinc-900 dark:text-zinc-50 text-xl tracking-tighter">
+                Govind Tours
+            </div>
+</div>
+<div class="bg-zinc-100 dark:bg-zinc-800 h-[1px] w-full"></div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-3xl mx-auto">
+<!-- Progress Header Section -->
+<section class="mb-12">
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Current Progress</span>
+<h2 class="text-3xl font-extrabold text-on-surface mt-1 tracking-tight">Step 1 of 4</h2>
+</div>
+<span class="text-primary font-bold text-lg">25%</span>
+</div>
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-primary-container h-full w-1/4 rounded-full transition-all duration-700"></div>
+</div>
+<p class="text-on-surface-variant text-sm body-lg">Your application is in the initial consultation phase.</p>
+</div>
+</section>
+<!-- Stats/Intro Bar (Mirroring Home Page Stats Bar weight) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 bg-surface-container-lowest p-6 rounded-xl shadow-[0_-4px_20px_0_rgba(0,0,0,0.03)]">
+<div class="text-center">
+<div class="text-primary font-bold text-2xl">15k+</div>
+<div class="text-zinc-500 text-xs font-semibold uppercase tracking-wider">Approved</div>
+</div>
+<div class="text-center border-l border-surface-variant">
+<div class="text-secondary font-bold text-2xl">98%</div>
+<div class="text-zinc-500 text-xs font-semibold uppercase tracking-wider">Success</div>
+</div>
+<div class="text-center border-l border-surface-variant hidden md:block">
+<div class="text-primary font-bold text-2xl">24h</div>
+<div class="text-zinc-500 text-xs font-semibold uppercase tracking-wider">Response</div>
+</div>
+<div class="text-center border-l border-surface-variant hidden md:block">
+<div class="text-secondary font-bold text-2xl">50+</div>
+<div class="text-zinc-500 text-xs font-semibold uppercase tracking-wider">Countries</div>
+</div>
+</div>
+<!-- Vertical Timeline Steps -->
+<div class="relative space-y-12">
+<!-- Timeline Line Connector -->
+<div class="absolute left-6 top-8 bottom-8 w-1 bg-surface-container-highest -translate-x-1/2"></div>
+<!-- Step 1 (Active) -->
+<div class="relative flex gap-8">
+<div class="z-10 flex-none w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white ring-8 ring-surface shadow-lg">
+<span class="material-symbols-outlined text-2xl" data-icon="forum">forum</span>
+</div>
+<div class="flex-grow p-6 rounded-xl bg-surface-container-lowest shadow-[0_4px_20px_0_rgba(0,0,0,0.05)] ring-2 ring-primary/10">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-on-surface">1. Document Consultation</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest">In Progress</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed">Expert review of your personal situation and requirements. We analyze your profile to ensure all eligibility criteria are met before starting the paperwork.</p>
+<div class="mt-4 flex items-center gap-2 text-secondary font-bold text-sm cursor-pointer group">
+<span>Schedule Meeting</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex gap-8">
+<div class="z-10 flex-none w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-zinc-400 ring-8 ring-surface">
+<span class="material-symbols-outlined text-2xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<div class="flex-grow p-6 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<h3 class="text-xl font-bold text-on-surface mb-2">2. Document Gathering</h3>
+<p class="text-on-surface-variant leading-relaxed">Checklist of mandatory forms, photos, and financial proofs. We provide a tailored kit specifically for your destination country.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex gap-8">
+<div class="z-10 flex-none w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-zinc-400 ring-8 ring-surface">
+<span class="material-symbols-outlined text-2xl" data-icon="description">description</span>
+</div>
+<div class="flex-grow p-6 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<h3 class="text-xl font-bold text-on-surface mb-2">3. Submission &amp; Filing</h3>
+<p class="text-on-surface-variant leading-relaxed">We handle the actual application process with the consulate. Our liaison officers manage appointments and submission queues on your behalf.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex gap-8">
+<div class="z-10 flex-none w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-zinc-400 ring-8 ring-surface">
+<span class="material-symbols-outlined text-2xl" data-icon="local_shipping">local_shipping</span>
+</div>
+<div class="flex-grow p-6 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<h3 class="text-xl font-bold text-on-surface mb-2">4. Tracking &amp; Pickup</h3>
+<p class="text-on-surface-variant leading-relaxed">Real-time updates until your visa is delivered. Track your passport status directly through our integrated dashboard until it's safely in your hands.</p>
+</div>
+</div>
+</div>
+<!-- Featured Guide Imagery -->
+<div class="mt-20 rounded-3xl overflow-hidden relative aspect-video shadow-2xl group">
+<img alt="Travel Documents" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a blue passport and leather travel wallet on a clean white desk with soft sunlight and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl3Nh0uKnYTXXl6XGk0uq_r652f4wYey2w-jXqwYTQXXvUwe9mrF9bG9j0anZ7_CqhJ_WUHglVHRSw50D5cI-dLcMYvI1Ier4eNpl3eVIuDnEbHJwTOGtEg3rPQVHH-6FcugSFDl11HbOoCHXE2pYdaHwH2nRk7Kk2tOemkDYVAGpjXPI_95S_SbYXf24aWdCwWebe3cSUiJJ5IU-c9pL5RpwyGinCVxWen8O1uS-xiQSYblCPCwM0ZmsW4GrhUs5EviVRcgDvP7s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent flex flex-col justify-end p-8">
+<h4 class="text-white font-bold text-2xl mb-2">Need Help?</h4>
+<p class="text-zinc-200 text-sm max-w-md">Our specialized agents are available for 1-on-1 support for complex cases.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-2xl z-50 rounded-t-3xl shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-500 px-5 py-2 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-400 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider mt-1">Visas</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-500 px-5 py-2 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold uppercase tracking-wider mt-1">Support</span>
+</a>
+</nav>
+</body></html>

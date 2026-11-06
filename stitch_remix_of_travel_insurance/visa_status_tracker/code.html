@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visa Status Tracker | Govind Tours</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#d5e7ff",
+              "inverse-primary": "#ffb3ae",
+              "error-container": "#ffdad6",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#ffb3ae",
+              "outline-variant": "#e4beba",
+              "secondary-fixed": "#d5e3ff",
+              "secondary-fixed-dim": "#a7c8ff",
+              "on-secondary-container": "#003d77",
+              "on-surface-variant": "#5b403e",
+              "surface-container-high": "#f1e5ef",
+              "surface-container": "#f6eaf4",
+              "tertiary-container": "#2e6a9e",
+              "on-primary-fixed-variant": "#930014",
+              "on-primary-fixed": "#410004",
+              "background": "#fff7fb",
+              "surface": "#fff7fb",
+              "primary-fixed": "#ffdad7",
+              "on-primary-container": "#ffddda",
+              "inverse-surface": "#352e36",
+              "surface-bright": "#fff7fb",
+              "error": "#ba1a1a",
+              "surface-container-low": "#fcf0fa",
+              "on-tertiary": "#ffffff",
+              "on-background": "#1f1a20",
+              "on-secondary-fixed": "#001c3b",
+              "on-secondary-fixed-variant": "#004787",
+              "on-error-container": "#93000a",
+              "secondary": "#0f5fae",
+              "tertiary-fixed-dim": "#9bcbff",
+              "surface-tint": "#ba1823",
+              "surface-dim": "#e2d7e0",
+              "on-tertiary-fixed": "#001d34",
+              "tertiary": "#055285",
+              "on-error": "#ffffff",
+              "surface-variant": "#ebdfe9",
+              "tertiary-fixed": "#d0e4ff",
+              "surface-container-highest": "#ebdfe9",
+              "primary": "#a10017",
+              "outline": "#8f6f6d",
+              "on-surface": "#1f1a20",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#f9edf7",
+              "primary-container": "#c6222a",
+              "secondary-container": "#6faafe",
+              "on-tertiary-fixed-variant": "#004a79",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .step-active::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 9999px;
+        background: currentColor;
+        opacity: 0.2;
+        transform: scale(1.5);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm shadow-zinc-200/50 dark:shadow-none flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-zinc-500 hover:bg-zinc-50 p-2 rounded-full transition-colors active:scale-95 duration-200" data-icon="menu">menu</button>
+<span class="text-2xl font-extrabold text-[#a10017] dark:text-[#c6222a] tracking-tighter font-headline">Govind Tours</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors font-medium" href="#">Home</a>
+<a class="text-[#a10017] dark:text-[#c6222a] font-bold transition-colors" href="#">My Visas</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors font-medium" href="#">Explore</a>
+</div>
+<div class="h-10 w-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a young man with a warm smile and modern hairstyle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzthQBrkATB3Ak_sQfS5ywN3o5BP_1aZ4ZDFBcI_q1u_oYTEXpQNo5cNgjChoCscUtKE-72TQcO2JmexiTEu4qkJdSmQQPxUyTWZdj7jKXEtvmYSt33TZ6dZsuBzNiBahtS8D1SbYxn2sZ8XrDQ9OnJaDdg4REFUuIYUrSreme9rDpATkHrCX_ns09YuKQBm17an0nf-baEPvy5vvSWLSrwkgtsEDeYA9SfKokikuwwwI7RXOBWXwkY26gXjvZnb75_2E0ajMQwbs"/>
+</div>
+</nav>
+<main class="mt-20 px-4 md:px-8 max-w-5xl mx-auto space-y-6">
+<!-- Application Header Section -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-4 py-4">
+<div>
+<h1 class="text-3xl md:text-4xl font-extrabold font-headline tracking-tight text-on-surface">Visa Status</h1>
+<p class="text-on-surface-variant mt-1 font-medium">Tracking your journey to Dubai, UAE</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/15 flex flex-col gap-1 min-w-[200px]">
+<span class="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Application Progress</span>
+<div class="flex items-center justify-between">
+<span class="text-xl font-bold font-headline text-secondary">65%</span>
+<span class="text-xs text-on-surface-variant font-medium">In Review</span>
+</div>
+<div class="w-full h-2 bg-surface-container-highest rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-secondary w-[65%] rounded-full shadow-[0_0_8px_rgba(15,95,174,0.3)]"></div>
+</div>
+</div>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Application Details Card -->
+<section class="lg:col-span-1 space-y-6">
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-8xl" data-icon="travel_explore">travel_explore</span>
+</div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+                        Details
+                    </h2>
+<div class="space-y-4 relative z-10">
+<div>
+<p class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">Application ID</p>
+<p class="text-lg font-bold font-headline text-on-surface">GT-VS-98234</p>
+</div>
+<div>
+<p class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">Applicant</p>
+<p class="text-lg font-bold font-headline text-on-surface">Alex Sterling</p>
+</div>
+<div>
+<p class="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider">Destination</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<p class="text-lg font-bold font-headline text-on-surface">Dubai, UAE</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Estimated Completion Box -->
+<div class="bg-gradient-to-br from-secondary to-tertiary rounded-2xl p-6 text-on-tertiary shadow-lg shadow-secondary/20">
+<div class="flex items-center gap-3 mb-3">
+<div class="p-2 bg-white/20 rounded-lg">
+<span class="material-symbols-outlined" data-icon="event_upcoming">event_upcoming</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest opacity-90">Estimated Date</span>
+</div>
+<p class="text-2xl font-extrabold font-headline">Oct 22, 2024</p>
+<p class="text-xs mt-2 opacity-75 font-medium">Processing is on schedule as per Dubai standard protocols.</p>
+</div>
+</section>
+<!-- Visual Progress Timeline -->
+<section class="lg:col-span-2 bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-outline-variant/10">
+<h2 class="text-xs font-bold uppercase tracking-widest text-primary mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="route">route</span>
+                    Tracking Timeline
+                </h2>
+<div class="relative space-y-12">
+<!-- Line -->
+<div class="absolute left-[19px] top-2 bottom-2 w-0.5 bg-zinc-100"></div>
+<div class="absolute left-[19px] top-2 h-[66%] w-0.5 bg-gradient-to-b from-primary via-primary to-secondary"></div>
+<!-- Step 1: Submitted -->
+<div class="relative flex items-start gap-6">
+<div class="z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-xl" data-icon="check">check</span>
+</div>
+<div class="flex-1 pb-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold font-headline text-on-surface">Submitted</h3>
+<span class="text-xs font-semibold text-zinc-400 mt-1">Oct 12, 2024</span>
+</div>
+<p class="text-sm text-on-surface-variant font-medium mt-1">Application successfully received and logged into Govind Tours systems.</p>
+</div>
+</div>
+<!-- Step 2: Verification -->
+<div class="relative flex items-start gap-6">
+<div class="z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-xl" data-icon="check">check</span>
+</div>
+<div class="flex-1 pb-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold font-headline text-on-surface">Document Verification</h3>
+<span class="text-xs font-semibold text-zinc-400 mt-1">Oct 14, 2024</span>
+</div>
+<p class="text-sm text-on-surface-variant font-medium mt-1">All passports and supporting documents have been verified for completeness.</p>
+</div>
+</div>
+<!-- Step 3: Under Review (Active) -->
+<div class="relative flex items-start gap-6">
+<div class="z-10 w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white shadow-lg shadow-secondary/40 step-active">
+<span class="material-symbols-outlined text-xl animate-pulse" data-icon="pending">pending</span>
+</div>
+<div class="flex-1 pb-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold font-headline text-secondary">Under Review</h3>
+<span class="bg-secondary-container/30 text-secondary text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider mt-1">In Progress</span>
+</div>
+<p class="text-sm text-on-surface-variant font-medium mt-1">Your application is currently being reviewed by the Dubai Immigration Department.</p>
+</div>
+</div>
+<!-- Step 4: Approved / Result -->
+<div class="relative flex items-start gap-6 opacity-40">
+<div class="z-10 w-10 h-10 rounded-full bg-zinc-200 flex items-center justify-center text-zinc-500">
+<span class="material-symbols-outlined text-xl" data-icon="task_alt">task_alt</span>
+</div>
+<div class="flex-1 pb-2">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold font-headline text-on-surface">Approved / Result</h3>
+<span class="text-xs font-semibold text-zinc-400 mt-1">Pending</span>
+</div>
+<p class="text-sm text-on-surface-variant font-medium mt-1">Final decision will be notified via email and SMS.</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-12 flex flex-col sm:flex-row gap-4">
+<button class="flex-1 bg-secondary hover:from-secondary hover:to-tertiary text-white py-4 rounded-xl font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all active:scale-95 duration-150 shadow-md">
+<span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+                        Chat with Support
+                    </button>
+<button class="flex-1 bg-surface-container-low hover:bg-surface-container-high text-secondary py-4 rounded-xl font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined text-xl" data-icon="download">download</span>
+                        Download Docs
+                    </button>
+</div>
+</section>
+</div>
+<!-- Secondary Information / Help Card -->
+<section class="bg-surface-container rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8 border border-outline-variant/5">
+<div class="w-full md:w-1/3 aspect-video md:aspect-square rounded-2xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="panoramic sunset view of Dubai skyline featuring Burj Khalifa with golden light reflection on water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDImD7TKMZmk6lq_rsC4NYsg-gCueouWZ9gMBa10MHLWh3wW81IPKbcvwcHwYQj1U560c5OQ5Ab5YNcgA-nkVaPPhbyeebeTim6FtLvZp3bm9tk8N_CPnNp-36ORnRBMyyOWv_bUItN5yhGCt1VUeekEYf-EzBZWCB_uq7gw9PnAuGswBdwnl4OUOqVAHSndo0E7606ULUzx48i-F8uE61YthPcSnKuYyjCUSQt4RsXO0femRZa71OoNXYYnFbW2FCUDsg9zAELuPM"/>
+</div>
+<div class="flex-1 space-y-4">
+<span class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Helpful Tip</span>
+<h3 class="text-2xl font-extrabold font-headline text-on-surface leading-tight">Prepare for your Dubai Arrival</h3>
+<p class="text-on-surface-variant leading-relaxed">While your visa is under review, explore our curated city guides. Remember to keep your physical passport handy upon landing for the e-gate registration.</p>
+<a class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                    View City Guide
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-lg shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] flex justify-around items-center px-4 pb-6 pt-3 rounded-t-3xl border-t border-zinc-100 dark:border-zinc-800 md:hidden">
+<button class="flex flex-col items-center gap-1 text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-[#a10017] dark:hover:text-white transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#a10017] dark:text-[#f6eaf4] bg-[#f6eaf4] dark:bg-[#a10017]/20 rounded-xl px-4 py-2 active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="Fact_Check" data-weight="fill">fact_check</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">My Visas</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-[#a10017] dark:hover:text-white transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-[#a10017] dark:hover:text-white transition-all active:scale-90 duration-150">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">Profile</span>
+</button>
+</nav>
+</body></html>

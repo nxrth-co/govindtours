@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#fff7fb",
+              "outline": "#8f6f6d",
+              "surface-dim": "#e2d7e0",
+              "primary-fixed": "#ffdad7",
+              "background": "#fff7fb",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#004a79",
+              "on-tertiary-container": "#d5e7ff",
+              "on-secondary-container": "#003d77",
+              "on-secondary-fixed": "#001c3b",
+              "inverse-on-surface": "#f9edf7",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#004787",
+              "secondary-fixed-dim": "#a7c8ff",
+              "error": "#ba1a1a",
+              "surface-container-highest": "#ebdfe9",
+              "on-primary-fixed-variant": "#930014",
+              "on-primary-container": "#ffddda",
+              "primary": "#a10017",
+              "surface-container-high": "#f1e5ef",
+              "on-background": "#1f1a20",
+              "surface-container": "#f6eaf4",
+              "on-surface-variant": "#5b403e",
+              "tertiary-fixed": "#d0e4ff",
+              "tertiary": "#055285",
+              "tertiary-fixed-dim": "#9bcbff",
+              "secondary-container": "#6faafe",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-tertiary": "#ffffff",
+              "secondary": "#0f5fae",
+              "on-tertiary-fixed": "#001d34",
+              "primary-container": "#c6222a",
+              "surface-tint": "#ba1823",
+              "surface-variant": "#ebdfe9",
+              "surface-bright": "#fff7fb",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#2e6a9e",
+              "inverse-primary": "#ffb3ae",
+              "outline-variant": "#e4beba",
+              "on-surface": "#1f1a20",
+              "on-primary-fixed": "#410004",
+              "inverse-surface": "#352e36",
+              "surface-container-low": "#fcf0fa",
+              "secondary-fixed": "#d5e3ff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none h-16 flex items-center justify-between px-6">
+<div class="flex items-center gap-4">
+<button class="text-[#a10017] dark:text-[#c6222a] active:scale-95 duration-200 p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold text-[#1f1a20] dark:text-white font-['Plus_Jakarta_Sans'] tracking-tight">Insurance Plans</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-[#a10017] dark:text-[#c6222a] active:scale-95 duration-200 p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full">
+<span class="material-symbols-outlined">contact_support</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12 text-center md:text-left">
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight leading-tight mb-4">Choose Your Protection</h2>
+<p class="text-lg text-on-surface-variant max-w-2xl opacity-80">Tailored coverage for every traveler and every journey.</p>
+</section>
+<!-- Bento Grid Layout for Insurance Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+<!-- Basic Plan -->
+<div class="bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative overflow-hidden group border border-outline-variant/10">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="p-2 bg-secondary/10 text-secondary rounded-lg">
+<span class="material-symbols-outlined">verified_user</span>
+</span>
+<h3 class="text-xl font-bold text-secondary">Basic</h3>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold text-on-surface">$29</span>
+<span class="text-on-surface-variant font-medium">/trip</span>
+</div>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Medical Emergency <strong class="text-on-surface">($50k)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Trip Cancellation <strong class="text-on-surface">(Basic)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Baggage Loss <strong class="text-on-surface">($500)</strong></span>
+</li>
+</ul>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-xl tracking-wider hover:bg-surface-dim active:scale-95 duration-200 text-sm uppercase">Select Plan</button>
+</div>
+<!-- Standard Plan (Highlighted) -->
+<div class="bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between transition-all duration-300 shadow-2xl shadow-primary/10 border-2 border-primary relative overflow-hidden ring-4 ring-primary/5 scale-105 z-10">
+<div class="absolute top-0 right-0 px-4 py-1.5 bg-primary text-white text-[10px] font-black uppercase tracking-widest rounded-bl-xl">Most Popular</div>
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="p-2 bg-primary/10 text-primary rounded-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stars</span>
+</span>
+<h3 class="text-xl font-bold text-primary">Standard</h3>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="text-5xl font-extrabold text-on-surface">$59</span>
+<span class="text-on-surface-variant font-medium">/trip</span>
+</div>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Medical Emergency <strong class="text-on-surface">($250k)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Trip Cancellation <strong class="text-on-surface">(Full)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Baggage Loss <strong class="text-on-surface">($1,500)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Flight Delay Coverage</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl tracking-widest shadow-lg shadow-primary/20 hover:brightness-110 active:scale-95 duration-200 text-sm uppercase">Select Plan</button>
+</div>
+<!-- Premium Plan -->
+<div class="bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative overflow-hidden group border border-outline-variant/10">
+<div class="absolute bottom-0 right-0 w-48 h-48 bg-tertiary/5 rounded-full -mr-24 -mb-24 transition-transform group-hover:scale-110"></div>
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="p-2 bg-tertiary/10 text-tertiary rounded-lg">
+<span class="material-symbols-outlined">diamond</span>
+</span>
+<h3 class="text-xl font-bold text-tertiary">Premium</h3>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold text-on-surface">$99</span>
+<span class="text-on-surface-variant font-medium">/trip</span>
+</div>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Medical Emergency <strong class="text-on-surface">($1M)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Trip Cancellation <strong class="text-on-surface">(Any Reason)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Baggage Loss <strong class="text-on-surface">($5,000)</strong></span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface-variant text-sm">Personal Liability Included</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-4 bg-surface-container-high text-on-surface font-bold rounded-xl tracking-wider hover:bg-surface-dim active:scale-95 duration-200 text-sm uppercase">Select Plan</button>
+</div>
+</div>
+<!-- Trust Indicators Section -->
+<section class="mt-20 p-8 bg-surface-container-low rounded-3xl grid grid-cols-1 md:grid-cols-3 gap-8 items-center border border-white">
+<div class="flex flex-col items-center text-center p-4">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">gpp_good</span>
+<h4 class="font-bold mb-1">Global 24/7 Support</h4>
+<p class="text-xs text-on-surface-variant">Emergency assistance anywhere in the world, any time.</p>
+</div>
+<div class="flex flex-col items-center text-center p-4 border-y md:border-y-0 md:border-x border-outline-variant/20">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">speed</span>
+<h4 class="font-bold mb-1">Fast Claim Processing</h4>
+<p class="text-xs text-on-surface-variant">Digital claims submission with 48-hour typical turnaround.</p>
+</div>
+<div class="flex flex-col items-center text-center p-4">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">lock</span>
+<h4 class="font-bold mb-1">Reliable Underwriting</h4>
+<p class="text-xs text-on-surface-variant">Backed by world-class insurance partners for peace of mind.</p>
+</div>
+</section>
+<!-- Illustration / Background Detail -->
+<div class="mt-16 flex justify-center opacity-40">
+<img alt="Scenic mountain landscape" class="w-full h-48 object-cover rounded-3xl" data-alt="dramatic wide shot of a peaceful snow-capped mountain range with mist and soft blue morning light for a sense of security and scale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9jstohDeEltBXlIvC1R2DikGLpZjeBcJ7QZq0X42JkMgc3HBwyRUK_pK6cfdgaRWlVnnkWk9QsL-hb69GU6hO5EYW4H4FHTucfQifnHQbJzmGvZh1ooyS29lo7Z5TEyOmP817UyLL_7fNZAF2FNlhjMEzyDRGXIZ9PGhBrCRkGk0noyBmPkp4ykjqpUkt50oOxYh2rWtKxQCBUCsytDZs76Uc_mY78M8qLNUZyryKlMj0sJKI0VQP6_zPkPfsdCCjfGsbSNwIUrw"/>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-lg rounded-t-2xl z-50 shadow-[0_-4px_20px_0_rgba(31,26,32,0.06)] border-t border-zinc-100/10">
+<div class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-4 py-1.5 hover:text-[#a10017] dark:hover:text-[#c6222a] transition-colors active:translate-y-0.5 duration-150">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-4 py-1.5 hover:text-[#a10017] dark:hover:text-[#c6222a] transition-colors active:translate-y-0.5 duration-150">
+<span class="material-symbols-outlined">travel_explore</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#a10017] dark:text-[#c6222a] bg-[#f6eaf4] dark:bg-zinc-800 rounded-xl px-4 py-1.5 active:translate-y-0.5 duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Insurance</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-4 py-1.5 hover:text-[#a10017] dark:hover:text-[#c6222a] transition-colors active:translate-y-0.5 duration-150">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

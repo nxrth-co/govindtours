@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Air Tickets - Govind Tours</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#e2d7e0",
+              "on-secondary-container": "#003d77",
+              "outline-variant": "#e4beba",
+              "primary": "#a10017",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#930014",
+              "inverse-on-surface": "#f9edf7",
+              "surface-container-high": "#f1e5ef",
+              "primary-container": "#c6222a",
+              "tertiary-fixed": "#d0e4ff",
+              "background": "#fff7fb",
+              "surface-container": "#f6eaf4",
+              "surface-tint": "#ba1823",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary-container": "#6faafe",
+              "on-background": "#1f1a20",
+              "on-tertiary-fixed": "#001d34",
+              "on-secondary-fixed": "#001c3b",
+              "tertiary": "#055285",
+              "surface-variant": "#ebdfe9",
+              "on-primary-fixed": "#410004",
+              "inverse-primary": "#ffb3ae",
+              "on-surface-variant": "#5b403e",
+              "tertiary-fixed-dim": "#9bcbff",
+              "secondary": "#0f5fae",
+              "surface-bright": "#fff7fb",
+              "on-secondary-fixed-variant": "#004787",
+              "surface-container-low": "#fcf0fa",
+              "on-tertiary-fixed-variant": "#004a79",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "primary-fixed": "#ffdad7",
+              "secondary-fixed": "#d5e3ff",
+              "secondary-fixed-dim": "#a7c8ff",
+              "surface-container-highest": "#ebdfe9",
+              "outline": "#8f6f6d",
+              "error-container": "#ffdad6",
+              "on-surface": "#1f1a20",
+              "on-tertiary-container": "#d5e7ff",
+              "inverse-surface": "#352e36",
+              "tertiary-container": "#2e6a9e",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-primary-container": "#ffddda",
+              "surface": "#fff7fb"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fff7fb; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#c6222a] text-3xl" data-icon="travel_explore">travel_explore</span>
+<span class="text-2xl font-extrabold text-[#0e5ead] dark:text-blue-400 font-['Plus_Jakarta_Sans'] tracking-tight">Govind Tours</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#c6222a] font-bold border-b-2 border-[#c6222a] py-1 text-sm" href="#">Flights</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] text-sm transition-colors" href="#">Visa</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] text-sm transition-colors" href="#">Insurance</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] text-sm transition-colors" href="#">Packages</a>
+<button class="bg-[#c6222a] text-white px-5 py-2 rounded-full font-bold text-xs uppercase tracking-wider hover:opacity-90 active:scale-95 transition-all">Contact Us</button>
+</nav>
+<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero & Search Section -->
+<section class="relative px-6 max-w-7xl mx-auto">
+<div class="relative rounded-3xl overflow-hidden min-h-[500px] flex items-center p-8 md:p-16">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-75" data-alt="Modern passenger jet flying through soft pink and orange sunset clouds at high altitude editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAODoVg9HWhRfhKXwfi0LCuW59oFTyixqpb4DriXivbS3XFDtfW2gN0-Oljo7IH72i7tMQReCn7uIYk-Y9wYorRMGAUFMc_QtsdVm9d9TlQGiHzRd8qDKCL8k7Kf1pxhmpMKgqpsIy8nWbfGjJKbwzdF_HjI0OInS17g8eLQp7HZH8-8pvFzRebaPGDk7_ReY084brTGguGtTT4xj09iZe189xZUC-iX4CgL2ibmadFFpNI9eSCgVYGkXzBUSFcJsBjeVDFvUI5a64"/>
+</div>
+<div class="relative z-10 w-full max-w-4xl">
+<h1 class="text-white text-4xl md:text-6xl font-extrabold tracking-tighter mb-8 leading-[1.1]">
+                        Your Journey <br/><span class="text-primary-fixed">Begins Above the Clouds</span>
+</h1>
+<!-- Search Form Card -->
+<div class="bg-surface-container-lowest rounded-[2rem] shadow-2xl p-6 md:p-10">
+<!-- Tab Switcher -->
+<div class="flex gap-4 mb-8 p-1.5 bg-surface-container-low w-fit rounded-2xl">
+<button class="px-6 py-2.5 rounded-xl bg-primary text-white text-sm font-bold shadow-lg transition-all">Domestic Flights</button>
+<button class="px-6 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-variant text-sm font-semibold transition-all">International Flights</button>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">From City</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary" data-icon="flight_takeoff">flight_takeoff</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Ahmedabad (AMD)" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">To City</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary" data-icon="flight_land">flight_land</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Where to?" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">Travel Date</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary" data-icon="calendar_month">calendar_month</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">Return Date (Optional)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="event_repeat">event_repeat</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-outline ml-1">Passengers &amp; Class</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary" data-icon="group">group</span>
+<select class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all appearance-none">
+<option>1 Passenger, Economy</option>
+<option>2 Passengers, Economy</option>
+<option>1 Passenger, Business</option>
+<option>2 Passengers, Business</option>
+</select>
+</div>
+</div>
+<div class="flex items-end">
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-2xl font-bold text-sm uppercase tracking-widest shadow-xl hover:shadow-primary/20 active:scale-95 transition-all flex items-center justify-center gap-2" type="submit">
+                                    Search Flights
+                                    <span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Book With Us Section -->
+<section class="mt-20 px-6 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-3xl bg-surface-container-low transition-all hover:bg-surface-container-high group">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white transition-colors" data-icon="payments">payments</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Best Fares</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Exclusive deals and competitive pricing for all domestic and international routes, guaranteed.</p>
+</div>
+<div class="p-8 rounded-3xl bg-surface-container-low transition-all hover:bg-surface-container-high group">
+<div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-white transition-colors" data-icon="support_agent">support_agent</span>
+</div>
+<h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Our dedicated travel experts are available around the clock to assist with your bookings and changes.</p>
+</div>
+<div class="p-8 rounded-3xl bg-surface-container-low transition-all hover:bg-surface-container-high group">
+<div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center mb-6 group-hover:bg-tertiary transition-colors">
+<span class="material-symbols-outlined text-tertiary group-hover:text-white transition-colors" data-icon="verified">verified</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Instant Confirmation</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">No waiting periods. Receive your e-tickets and itineraries immediately after payment.</p>
+</div>
+</div>
+</section>
+<!-- Popular Domestic Routes -->
+<section class="mt-32 px-6 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-[0.3em]">Home Base: Ahmedabad</span>
+<h2 class="text-3xl md:text-4xl font-extrabold mt-2">Popular Domestic Routes</h2>
+</div>
+<button class="text-secondary font-bold text-sm flex items-center gap-2 hover:underline">View All <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Route Card -->
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-[3/4]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="The historic Red Fort in Delhi at sunset with warm glows on the sandstone walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzp_peCQzuTmbrJoL3ix4_Svb3cTMqArinnmyMGb6PMzdPUXcAoJPnH3W3DtcV_WI76aCL0fovvDXZ6NgHK2WB1mBm6xUMkz2pkBBCu8serWj_mWrI-HH-vJppp-k-Xz3Cmv-YHDA9iC9F0piP9LIFVlWUfut6zr8JxXou9gmp09slkXBmXGQp8JCNdwlroafB3Cihu2CkT1SoGG23tvhUR0jIpqZec5GskcM_0ZDkmPvp915JnraoSWBn3V8COyDbsiOwPuyN9yc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="text-[10px] uppercase tracking-widest opacity-80">To</p>
+<p class="text-lg font-bold">Delhi</p>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-[3/4]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="The Gateway of India in Mumbai overlooking the Arabian Sea during bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgAFFa1S-H0cSTpKLepvZmk7XPqB_mZBik4bWwwCj_QKkKZUFkkR3NM_sIfboG01w_axEu8D0vrLL5BOF4dt41pj7STvK23WKabJ1osP0292GKxD1FxoRo8MElZ4bKMEXvo5mP5FXBa3UaP6JZiSZBAUD7HU09oGPmeDTYDiuTlpyjzxf7Au_EuuH8D4knsExmN_TLEE0poOPmq4hHqgPxsWNuX51K-ozRZEUNU4WVKOz1wS8ULAK6zz6g8p8abA45XGxU3iRSeOk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="text-[10px] uppercase tracking-widest opacity-80">To</p>
+<p class="text-lg font-bold">Mumbai</p>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-[3/4]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Pristine white sand beach in Goa with palm trees leaning over turquoise water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeEK6jPoNsGfp5Nbi6L5B6Kk4_iEKpOUS_WbWZd0Oa3KAOtL5T1xa7kdk-RA_ZjSNMuidMnlP_uiWNimPNCQRBmhTDW8hKbYvaltPs5564m4TluW5V1YmmrVQ7GDJwRWmCVG4X5HKn2Y7p0ZrSbg_CFNGv6LQbNgDabAVq6Z-ZppLeFuSqIA18R-prdCwdx-C6qxn9_oR2ImoedwS4do03xqrh9HjppwqiknMt4uUe53ecgvzZxq3qwNdOom3vBfsnUgSycNuP8F0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="text-[10px] uppercase tracking-widest opacity-80">To</p>
+<p class="text-lg font-bold">Goa</p>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-[3/4]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Traditional South Indian temple architecture in Chennai with vibrant intricate carvings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADdM_B_ZfCaFbnBHsbltktBuLstbnjIyFDNUc0gyZxQ9zlBY2wCSa7JD-gWFwVrbnEzFsE10aLPH8JWbOPKn7DBCkRsQPARuM20DR-Uz1BwA431iyP8HlfbJC7u1EeSQz4GWC27WMTsD2Yu12OQeUPHZHl0Nin5H6xMz9IVZ5fKkcpYnq8ZYd5EPobfIxDXHahzN-kzvRrX1ikvW53AY85l09ZkK7Hzp5IDS740xpmXpjKGPUuVPJb6DV34Ghbbfb_MGAhqvufnz0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="text-[10px] uppercase tracking-widest opacity-80">To</p>
+<p class="text-lg font-bold">Chennai</p>
+</div>
+</div>
+<div class="relative group cursor-pointer overflow-hidden rounded-2xl aspect-[3/4]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Iconic yellow taxi in front of Victoria Memorial in Kolkata on a bright morning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh3L6wfRwWUV1gsIipqslhi6WD-1H8TuvZh_SdgrdcqUC4UEoRDVD8SGr8PS9mnxAxs0_BXp5DmwJnTgeQJ-tpngq5Jg3tQYaeQ7h5iMWOUb_MtHcJkdjAnKW3ULQpzwpSM6nC9jD7OAsI-e7eRAVrohLbi2vDxPB9kypldxLYpnRA_UhXFQ9wH_8Yh6Gp2DNS_8k3mACZjrLQcAceq_rMCrNk0sNYPSjj2JBOS4NWYUgHHSjnjjDPQ7ZWYYsUQK4nkMkQakMBZo0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="text-[10px] uppercase tracking-widest opacity-80">To</p>
+<p class="text-lg font-bold">Kolkata</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular International Routes -->
+<section class="mt-32 px-6 max-w-7xl mx-auto">
+<div class="mb-12">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.3em]">Explore the World</span>
+<h2 class="text-3xl md:text-4xl font-extrabold mt-2">Trending International Flights</h2>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px] md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-[2.5rem] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Aerial view of the Burj Khalifa and downtown Dubai skyline illuminated at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyU_wECReSZUvZJs5RIB5f_l_C3U4kKdo_WiLkIDydo9SeLDCm7gCYYHaEat745dU4MD9wHtsKGYQ_4E2nJ_eEGAAjajFlAjp8aHeiLlBz9lQN59MCz_T5mgchYnJj0VPaaAW0w_xHxyrwrW2EgSbeXwi6o0_r_x2y47FMHkZr_uo1TawFPmw-uGxajp-g3tf0HBt3OzSGR0AALVskNBMukcVBS-J69tUEDpCSgY9GPncrZwDTKLwf3owiee6g8VW7VEEQKcGBqxI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<span class="px-3 py-1 bg-primary rounded-full text-[10px] font-bold uppercase mb-4 inline-block tracking-widest">Most Popular</span>
+<h3 class="text-4xl font-bold">Dubai, UAE</h3>
+<p class="mt-2 text-sm opacity-80">Starting from ₹14,999</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-[2rem] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Traditional ornate temple in Bangkok during the blue hour with glowing lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB47eJZlMp3X55N4y5hRXR1rXxGnk03wkkr5mANcmwaN8o1AvovD4Wdu3YB5KlsEqJAyCP0dGSOpH-uRzFnZ0jUBy_JDyapCRxXfvLgdryHoieGvUfs_MufzZwqrHrS0DhDdg7RmE4I0eLMwwY2VICQrUpp_TjKKWzvuBDGID1_5CYCJApphYWJRaSkWjYyUstC51uv94S8VMHb8MJmxOAmVXg7qNs0TFehi0NTBRGFqj924Q4Q1lyQSdjOi0KVpyJigbjcrlH5H4Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-xl font-bold">Bangkok</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-[2rem] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="The futuristic Supertree Grove in Singapore at dusk with purple glowing lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaR1riws6gTrn2WTUCsQSrp3SxGVpftIcWmcSeGfPwFj-AWhavQjJ-Ruir8BSj86pDOERYvMDvf0noP60tfUksozXgT5Wb256p3aKaM44HMbMv4cW_Vqhhj-OrfsItNvQTNf57qwHbMzfkjAN-v98_KwY6aH95RLgjdTQqMwm-rVqxEjvf5F7Ml_MBsf6bWCK2aN-n7lWbtnoRk0RfxEl2FZ726j1GVDffgI-EMK_kOkRNz9pmBk0WO0RFankSRr9Zz14ezDPp3vM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-xl font-bold">Singapore</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-[2rem] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="The Tower Bridge in London over the Thames river under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYA3V9hCbvchr8-1IOIr_HbQeh4wuJJjGADTzuHJ6b0gRr6xfyGP_1sKP7kTtjMmr3k9oBG8tfQiEd47f9N0iH7tPKGWfNkUerFHMSu5SnEBSrrkuiFhtOt4YQW61i9Xtq5ONGgFurzYQEV3zbVEfXNJoqQnfDK2zlsigkNwrKd7Fnx-NahJWNElypJQnS61vyUp_CKyHRRI_AJ5yytrH6m-0foMp0KUef8skuzmh7xGG-XhoIlKbQfGkxLqTFOefVP_iBSoqWOtc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-xl font-bold">London</h3>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-[2rem] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="The bright lights of Times Square in New York City with bustling traffic and billboards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgM5KTEW68rYsygUxJk9xVgBqC51wCU65AtfLTjcOighPGD5b-790vus2vVl12N_6r1sdPSCqLzbDB5kVBYsCsFngCFUgjUxNJ9a9GhsK87IZ5OdjopERZM-23aVLUOa4Y0UuZfXlxBqvOhzDtxHRkOJqH9eUr7g8DSLwZDemCrFOtPQlX6WI4B6ViqWK1gu6czKMKk4G4AtPLep5PnBY0XY3OPMiAvJ-BpBTzIbhwbRrAbqbySQln6g3w8v5yaQ0SWg8tYQPNNdc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="text-xl font-bold">New York</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-3xl mt-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-100">
+<div class="flex flex-col items-center text-center p-10 space-y-6 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-lg font-bold text-[#c6222a]">Govind Tours</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-[#c6222a] underline text-sm font-['Plus_Jakarta_Sans']" href="#">Air Tickets</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-['Plus_Jakarta_Sans']" href="#">Visa</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-['Plus_Jakarta_Sans']" href="#">Insurance</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-['Plus_Jakarta_Sans']" href="#">Tour Packages</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-['Plus_Jakarta_Sans']" href="#">Passport</a>
+<a class="text-[#0e5ead] font-semibold text-sm" href="mailto:info@govindtours.com">info@govindtours.com</a>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-['Plus_Jakarta_Sans'] leading-relaxed">
+                © 2024 Govind Tours. Mon–Fri, 10AM–6:30PM
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white dark:bg-slate-950 shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] border-t border-slate-100 dark:border-slate-800 rounded-t-2xl">
+<div class="flex justify-around items-center px-4 pb-4 pt-2">
+<div class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-900/20 text-[#c6222a] rounded-xl px-3 py-1 transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Flights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Visa</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Insurance</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="card_travel">card_travel</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Packages</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Passport</span>
+</div>
+</div>
+</nav>
+<!-- Get a Callback Floating Button -->
+<button class="fixed bottom-24 right-6 md:bottom-10 md:right-10 z-[60] bg-[#0e5ead] text-white flex items-center gap-3 pl-4 pr-6 py-4 rounded-full shadow-2xl hover:bg-[#0c4d8d] transition-all hover:scale-105 active:scale-95 group">
+<div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="call">call</span>
+</div>
+<span class="font-bold text-sm tracking-wide">Get a Callback</span>
+</button>
+</body></html>

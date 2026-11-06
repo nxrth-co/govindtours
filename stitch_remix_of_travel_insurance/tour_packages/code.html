@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#e2d7e0",
+              "on-secondary-container": "#003d77",
+              "outline-variant": "#e4beba",
+              "primary": "#a10017",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#930014",
+              "inverse-on-surface": "#f9edf7",
+              "surface-container-high": "#f1e5ef",
+              "primary-container": "#c6222a",
+              "tertiary-fixed": "#d0e4ff",
+              "background": "#fff7fb",
+              "surface-container": "#f6eaf4",
+              "surface-tint": "#ba1823",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary-container": "#6faafe",
+              "on-background": "#1f1a20",
+              "on-tertiary-fixed": "#001d34",
+              "on-secondary-fixed": "#001c3b",
+              "tertiary": "#055285",
+              "surface-variant": "#ebdfe9",
+              "on-primary-fixed": "#410004",
+              "inverse-primary": "#ffb3ae",
+              "on-surface-variant": "#5b403e",
+              "tertiary-fixed-dim": "#9bcbff",
+              "secondary": "#0f5fae",
+              "surface-bright": "#fff7fb",
+              "on-secondary-fixed-variant": "#004787",
+              "surface-container-low": "#fcf0fa",
+              "on-tertiary-fixed-variant": "#004a79",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "primary-fixed": "#ffdad7",
+              "secondary-fixed": "#d5e3ff",
+              "secondary-fixed-dim": "#a7c8ff",
+              "surface-container-highest": "#ebdfe9",
+              "outline": "#8f6f6d",
+              "error-container": "#ffdad6",
+              "on-surface": "#1f1a20",
+              "on-tertiary-container": "#d5e7ff",
+              "inverse-surface": "#352e36",
+              "tertiary-container": "#2e6a9e",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-primary-container": "#ffddda",
+              "surface": "#fff7fb"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+      }
+      .editorial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#c6222a] dark:text-red-500" data-icon="travel_explore">travel_explore</span>
+<span class="text-2xl font-extrabold text-[#0e5ead] dark:text-blue-400 font-['Plus_Jakarta_Sans'] tracking-tight">Govind Tours</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] transition-colors font-medium" href="#">Flights</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] transition-colors font-medium" href="#">Visa</a>
+<a class="text-[#c6222a] font-bold border-b-2 border-[#c6222a] transition-colors" href="#">Packages</a>
+<button class="bg-[#c6222a] text-white px-5 py-2 rounded-full font-bold hover:opacity-90 active:scale-95 duration-200">Contact Us</button>
+</nav>
+</div>
+</header>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="px-6 mb-12">
+<div class="max-w-7xl mx-auto">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-4">
+                    Curated <span class="text-primary italic">Escapes</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl">
+                    Explore our handpicked collection of journeys designed for the discerning traveler. From the emerald backwaters of Kerala to the neon streets of Tokyo.
+                </p>
+</div>
+</section>
+<!-- Tab Switcher & Filters -->
+<section class="px-6 sticky top-20 z-40 mb-12">
+<div class="max-w-7xl mx-auto flex flex-col gap-6">
+<!-- Tab Switcher -->
+<div class="bg-surface-container-low p-1.5 rounded-2xl flex w-fit self-center md:self-start shadow-sm">
+<button class="px-8 py-3 rounded-xl bg-surface-container-lowest text-primary font-bold shadow-sm transition-all">Domestic Packages</button>
+<button class="px-8 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container-high transition-all">International Packages</button>
+</div>
+<!-- Filter Bar -->
+<div class="bg-surface-container-high/50 backdrop-blur-md rounded-2xl p-4 flex flex-wrap gap-4 items-center justify-between">
+<div class="flex flex-wrap gap-3">
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest rounded-full border border-outline-variant/30 text-sm font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+                                Budget
+                                <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest rounded-full border border-outline-variant/30 text-sm font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                Duration
+                                <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest rounded-full border border-outline-variant/30 text-sm font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="landscape">landscape</span>
+                                Destination Type
+                                <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+<div class="text-sm font-medium text-on-surface-variant">
+                        Showing <span class="text-on-surface font-bold">128</span> Packages
+                    </div>
+</div>
+</div>
+</section>
+<!-- Package Grid -->
+<section class="px-6">
+<div class="max-w-7xl mx-auto editorial-grid">
+<!-- Package Card: Goa -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img alt="Goa Beach" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="golden sandy beach in Goa with coconut palms swaying against a clear blue sky and turquoise ocean waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVgoplXUNuMSPIrho-Q1QGQp2e5enDmapzrNSAnRBZWo7iEzzVDG6U0dFa0FYxQudazdi55FcpBFcb9aiqYBeZdXEzAcvTuFJ2eJSMxayHEr792GL2pMXLujA9fM_xIXV1YxhyqSV7qUwKbrjjWO74LGvGbUCl5ONr6lh7VvSm-QPPgzB_j3l5IKZjQmjznoziEcgreL1QYHKaqooux7qqixIkYnK3xdO2a4mhrAPlJ9FpTNe-NgjawMauMCaoMy-Gg621twhi2mE"/>
+<div class="absolute top-4 left-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold tracking-widest uppercase">
+                            Trending
+                        </div>
+<div class="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-xl font-bold shadow-lg">
+                            ₹25,999
+                        </div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Goa</h3>
+<span class="flex items-center gap-1 text-secondary font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 5N/6D
+                            </span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Private Beach Dinner
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                South Goa Heritage Tour
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Watersports Combo included
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold rounded-2xl transition-all hover:bg-primary hover:text-white group/btn flex items-center justify-center gap-2">
+                            View Details
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Package Card: Kashmir -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img alt="Kashmir Valley" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="stunning aerial view of Dal Lake in Kashmir with traditional houseboats and snow-capped Himalayan peaks in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVJKulTs8mWaSEQzE89vObBhw6aZNLl_xtwf7hUDF1PyPnkXnmXi-qQp-STIdr3t8ojtlLFOWD1ooN_oza9QSqfrjibZoONObIoBShFJooTXOnPT0gFJ4D6pRZkqcmZ0WwBPNiU4wkb71HKaQkFVqZ_FRb8JOikY1zc713xY5jFHVZcY882Jq-hLzkFsXVvcD7N2-bx_kVUZ-V_smdpL8NKAFfcFqIdEUL6ywQzDMa_U7Dqbm1jkbkwHDvtA1akjFXbmlF2JvdpgM"/>
+<div class="absolute top-4 left-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold tracking-widest uppercase">
+                            Honeymoon
+                        </div>
+<div class="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-xl font-bold shadow-lg">
+                            ₹38,500
+                        </div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Kashmir</h3>
+<span class="flex items-center gap-1 text-secondary font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 6N/7D
+                            </span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Shikara Ride on Dal Lake
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Gulmarg Gondola Tickets
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Stay in Premium Houseboat
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold rounded-2xl transition-all hover:bg-primary hover:text-white group/btn flex items-center justify-center gap-2">
+                            View Details
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Package Card: Kerala -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img alt="Kerala Backwaters" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="serene green backwaters of Alleppey with a luxury wooden houseboat floating amidst palm trees and calm water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1VmjbISzSZ9WT5Dzjoeht_VkeaOjVLauBe1SdDtVb8r5T5csVPJG6I7Mz_-CrjBAI6etVj9qHjZuH3US9_6Qel50wmTIn1Nuw7SmBQ-gyB7yvLCmDTEyetJ1cJn5e1KDVwwvXheusqlu3FGMMWuS2IajQn3HWdqAKxjmQd6-AqVoQes6m79eHElUz3L7BCuHEQFSs5_1zFNa7Bz9kf7duXItZNLR0IFeGXsWVlN3Q422G-OrtXhG3aDZ49D_WrJvbkK1x6-8s_z0"/>
+<div class="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-xl font-bold shadow-lg">
+                            ₹29,999
+                        </div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Kerala</h3>
+<span class="flex items-center gap-1 text-secondary font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 5N/6D
+                            </span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Munnar Tea Garden Walk
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Overnight Houseboat Cruise
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Authentic Ayurvedic Massage
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold rounded-2xl transition-all hover:bg-primary hover:text-white group/btn flex items-center justify-center gap-2">
+                            View Details
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Package Card: Himachal -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img alt="Himachal Mountains" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="misty mountain peaks of Himachal Pradesh with cedar forests and a small village nestled on a cliff edge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwRG21CMPIkCSo3p8IEglzjfGX8gXI_vD1TwXeQCjc8hv6ydzfW35mziGph7eBuonNmpUQPAVGhLAFz8mq_a3xUV6knODWxbnFWySLYSk7Xu_nKFydh5n_Q4dLPe1bVGYXtPphLLHo6Hs2InpSKxDL-iAOhc2zVdXUxLcm6LOvREyfp90GzYLgM6v1DJ6DOI1h6zz16vF7cvg2ZF9QFCBPFuvD84vnQJ3hws30nTz5uEtJT4rRqcPi-R5073jctCfQqKnbkiGNbsk"/>
+<div class="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-xl font-bold shadow-lg">
+                            ₹32,000
+                        </div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Himachal</h3>
+<span class="flex items-center gap-1 text-secondary font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 7N/8D
+                            </span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Rohtang Pass Excursion
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Shimla Ridge Walk
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Local Monastery Visits
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold rounded-2xl transition-all hover:bg-primary hover:text-white group/btn flex items-center justify-center gap-2">
+                            View Details
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Package Card: Andaman -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img alt="Andaman Islands" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="crystal clear turquoise waters of Havelock island with white sand and people scuba diving in the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3lC1AkoGz9lRDAZZd0bEChBbhkJa5TJ8lLKfSnVfoh98MTCgCGj1b2Sl3Q1vR7nyz4VdiQQo3RrMO-txYanaA3sp951NctXKVTBR0U_8jXqIBkkjITwvOenZ-MNBocu3WJN0G6dwC2o-s_xypB-3oZzftjfYzPe7DKcvtiuF2Q0sH6oHooyq2bUGoKX0_9Ghg4GGk535Jjh-TcSr0W_ZBJzcBTQ1Hmd5F3yyJzZDFViOJXWT4lW20Sya42VP_lkpLacbJHxhXrV8"/>
+<div class="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-xl font-bold shadow-lg">
+                            ₹42,500
+                        </div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Andaman</h3>
+<span class="flex items-center gap-1 text-secondary font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 5N/6D
+                            </span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Scuba Diving in Havelock
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Cellular Jail Light Show
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Radhanagar Beach Sunset
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold rounded-2xl transition-all hover:bg-primary hover:text-white group/btn flex items-center justify-center gap-2">
+                            View Details
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Package Card: Meghalaya -->
+<div class="group bg-surface-container-lowest rounded-[2rem] overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img alt="Meghalaya Waterfall" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dramatic Nohkalikai Falls in Meghalaya plunging into a green pool with lush jungle cliffs and fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBocmj6u_NtBw5joroLmrQTuRJ8H1vWtEve6lUZCtKXkpY-j2tI1d0GVW19oI_xf01u0bR83fvWhOFarPFqNHd1-ZiQuo-VqBSjHUHbFOkzCw3QGDfERJHXE2gO0xBUfs72I0WjdPpq9RvONZLVUwm8WOO6HcpOurxdbLycba7WbEIP5xmnHUklRtGQomdZg4rwzdriVryYEyyhBSUp-JGa_NbcKWjmQVIL5xwqh1rSUkjr9rtx6d3nf1D1yu8z_7e8tPmlakDmPBQ"/>
+<div class="absolute bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-xl font-bold shadow-lg">
+                            ₹35,999
+                        </div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Meghalaya</h3>
+<span class="flex items-center gap-1 text-secondary font-medium text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 5N/6D
+                            </span>
+</div>
+<ul class="space-y-2 mb-8 flex-grow">
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Living Root Bridges Trek
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Mawlynnong Village Visit
+                            </li>
+<li class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Cherrapunji Sightseeing
+                            </li>
+</ul>
+<button class="w-full py-4 bg-surface-container-high text-primary font-bold rounded-2xl transition-all hover:bg-primary hover:text-white group/btn flex items-center justify-center gap-2">
+                            View Details
+                            <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="px-6 mt-24">
+<div class="max-w-7xl mx-auto rounded-[3rem] overflow-hidden bg-[#c6222a] text-white relative flex flex-col md:flex-row items-center justify-between p-12 md:p-20 shadow-2xl">
+<div class="relative z-10 max-w-xl">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                        Can't find your <br/><span class="opacity-70">Perfect Dream Trip?</span>
+</h2>
+<p class="text-xl opacity-90 mb-10">
+                        Let our expert travel designers craft a bespoke itinerary tailored exactly to your preferences and pace.
+                    </p>
+<button class="px-10 py-5 bg-white text-primary font-bold rounded-full text-lg shadow-xl hover:scale-105 transition-transform">
+                        Customize Your Package
+                    </button>
+</div>
+<div class="relative mt-12 md:mt-0">
+<div class="w-64 h-64 bg-white/10 rounded-full absolute -top-10 -right-10 blur-3xl"></div>
+<span class="material-symbols-outlined text-[10rem] opacity-20 rotate-12" data-icon="auto_fix_high">auto_fix_high</span>
+</div>
+</div>
+</section>
+<!-- Package Detail Preview (Simulated Modal/Detail View Area) -->
+<section class="px-6 mt-24" id="details-preview">
+<div class="max-w-7xl mx-auto bg-surface-container-low rounded-[3rem] p-10 md:p-16 border border-outline-variant/10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<span class="px-4 py-1 bg-primary/10 text-primary font-bold rounded-full text-xs">FEATURED ITINERARY</span>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<h2 class="font-headline text-4xl font-extrabold text-on-surface mb-4">The Grand Bali Odyssey</h2>
+<div class="flex items-center gap-6 mb-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+<span class="font-medium">6 Nights / 7 Days</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="font-medium">Ex-Mumbai/Delhi</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex gap-6">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">01</div>
+<div class="w-px h-full bg-outline-variant/50 my-2"></div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Arrival &amp; Uluwatu Sunset</h4>
+<p class="text-on-surface-variant text-sm">Welcome to Bali! Airport transfer to your villa followed by a dramatic sunset at Uluwatu Temple with Kecak dance.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">02</div>
+<div class="w-px h-full bg-outline-variant/50 my-2"></div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Ubud Art &amp; Swing Culture</h4>
+<p class="text-on-surface-variant text-sm">Visit Tegalalang rice terraces, Ubud monkey forest, and the famous Bali Swing for iconic photos.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">03</div>
+<div class="w-px h-full bg-outline-variant/50 my-2"></div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Nusa Penida Island Tour</h4>
+<p class="text-on-surface-variant text-sm">Full day exploration of Kelingking beach, Broken beach and Angel's Billabong with snorkeling.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl p-8 shadow-sm border border-outline-variant/20 h-fit">
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-6">Quick Enquiry</h3>
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl p-3 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Phone</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl p-3 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="+91 98XXX" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Preferred Date</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl p-3 focus:ring-2 focus:ring-primary/20 text-sm" type="date"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-on-surface-variant mb-1 uppercase tracking-wider">Travelers</label>
+<select class="w-full bg-surface-container-high border-none rounded-xl p-3 focus:ring-2 focus:ring-primary/20 text-sm">
+<option>2 Adults</option>
+<option>Family (2+2)</option>
+<option>Group (5+)</option>
+</select>
+</div>
+<button class="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:opacity-90 active:scale-95 transition-all mt-4" type="button">
+                                Get a Call Back
+                            </button>
+<p class="text-[10px] text-center text-on-surface-variant mt-4">
+                                By clicking, you agree to our privacy policy and terms of service.
+                            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-3xl mt-12 bg-slate-50 dark:bg-slate-900 flex flex-col items-center text-center p-10 space-y-4 w-full">
+<div class="text-lg font-bold text-[#c6222a] font-headline">Govind Tours</div>
+<div class="flex flex-wrap justify-center gap-6 px-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-medium" href="#">Air Tickets</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-medium" href="#">Visa</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-medium text-[#c6222a] underline font-bold" href="#">Tour Packages</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-medium" href="#">Insurance</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all text-sm font-medium" href="#">Passport</a>
+</div>
+<div class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-4">
+            © 2024 Govind Tours. Mon–Fri, 10AM–6:30PM <br/>
+<span class="text-[#0e5ead] font-bold">info@govindtours.com</span>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white dark:bg-slate-950 flex justify-around items-center px-4 pb-4 pt-2 z-50 rounded-t-2xl shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] border-t border-slate-100 dark:border-slate-800">
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Flights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Visa</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-900/20 text-[#c6222a] rounded-xl px-3 py-1 transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="card_travel" style="font-variation-settings: 'FILL' 1;">card_travel</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Packages</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Insurance</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 hover:text-[#0e5ead] transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_Sans']">Passport</span>
+</div>
+</nav>
+</body></html>

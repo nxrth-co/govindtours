@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>International Flight Results | Govind Tours</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-container": "#2e6a9e",
+                        "on-primary-fixed": "#410004",
+                        "surface-container": "#f6eaf4",
+                        "error-container": "#ffdad6",
+                        "background": "#fff7fb",
+                        "on-secondary-fixed-variant": "#004787",
+                        "surface-container-low": "#fcf0fa",
+                        "surface": "#fff7fb",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#e4beba",
+                        "on-secondary-fixed": "#001c3b",
+                        "on-background": "#1f1a20",
+                        "tertiary-fixed-dim": "#9bcbff",
+                        "inverse-surface": "#352e36",
+                        "primary-container": "#c6222a",
+                        "on-secondary-container": "#003d77",
+                        "surface-container-high": "#f1e5ef",
+                        "surface-dim": "#e2d7e0",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#ba1823",
+                        "primary": "#a10017",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb3ae",
+                        "secondary": "#0f5fae",
+                        "primary-fixed-dim": "#ffb3ae",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#5b403e",
+                        "surface-container-highest": "#ebdfe9",
+                        "surface-bright": "#fff7fb",
+                        "on-surface": "#1f1a20",
+                        "inverse-on-surface": "#f9edf7",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-primary-fixed-variant": "#930014",
+                        "secondary-container": "#6faafe",
+                        "on-tertiary-fixed": "#001d34",
+                        "primary-fixed": "#ffdad7",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "surface-variant": "#ebdfe9",
+                        "on-primary-container": "#ffddda",
+                        "error": "#ba1a1a",
+                        "tertiary": "#055285",
+                        "outline": "#8f6f6d",
+                        "tertiary-fixed": "#d0e4ff",
+                        "on-tertiary-container": "#d5e7ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 hover:bg-stone-100/50 p-2 rounded-full">
+<span class="material-symbols-outlined text-stone-500">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-blue-700">International Flights</h1>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<span class="text-stone-500 dark:text-stone-400 font-medium">Home</span>
+<span class="text-blue-700 dark:text-blue-400 font-semibold">Bookings</span>
+<span class="text-stone-500 dark:text-stone-400 font-medium">Offers</span>
+<span class="text-stone-500 dark:text-stone-400 font-medium">Account</span>
+</div>
+<div class="text-xl font-extrabold text-red-700">GOVIND</div>
+</div>
+</header>
+<main class="max-w-5xl mx-auto px-4 sm:px-6 pt-6">
+<!-- Search & Filter Section -->
+<div class="space-y-6 mb-8">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-stone-400">search</span>
+</div>
+<input class="block w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-stone-400 text-on-surface" placeholder="Search by airline or destination..." type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex items-center gap-3 overflow-x-auto pb-2 no-scrollbar">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-semibold whitespace-nowrap active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+                    Fastest
+                </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+                    Cheapest
+                </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+                    Non-stop
+                </button>
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-medium whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filters
+                </button>
+</div>
+</div>
+<!-- Results Summary -->
+<div class="flex justify-between items-end mb-6">
+<div>
+<p class="text-sm text-stone-500 font-medium">128 flights found</p>
+<h2 class="text-2xl font-headline font-bold text-on-surface">AMD <span class="text-primary">→</span> DXB</h2>
+</div>
+<div class="text-right">
+<p class="text-xs uppercase tracking-widest text-stone-400 font-bold mb-1">Departure</p>
+<p class="text-sm font-semibold">24 Oct, 2024</p>
+</div>
+</div>
+<!-- Flight Cards List -->
+<div class="space-y-4">
+<!-- Flight Card 1: Emirates -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 flex flex-col md:flex-row items-center gap-8 shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex items-center gap-4 w-full md:w-1/4">
+<div class="w-14 h-14 rounded-2xl bg-stone-50 flex items-center justify-center p-2">
+<img alt="Emirates Logo" class="w-full h-auto object-contain" data-alt="Emirates airline logo in red and white minimalist style on a clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTGX7VDPpmjAB6GITaZQNKMtZAqc607CxJ2GMyLkEllUiiJb5DmzMP92l5PbSt3GKIhIqNpbki33EzWqeUnQD7ZdIH12qsu_N1rv3Fcbezm1nYacE59nB0hVDRQ1X0gS2Pr0bxFg5-mzoQTbYKX3A_E_j4HCB3pigvluSZymkdYULz7F_GiQQY26GkT4178x5qvuYG46kG6723aJezlsR8t4Rt9sWPpv1pOr2NulSu2cE3Z1TSZ4H6VXkjAJQowI0DnHycovws2pw"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Emirates</p>
+<p class="text-xs text-stone-500">EK-539 • Boeing 777</p>
+</div>
+</div>
+<div class="flex-1 w-full flex items-center justify-between relative px-4">
+<div class="text-center md:text-left">
+<p class="text-2xl font-headline font-extrabold text-on-surface">04:25</p>
+<p class="text-sm font-bold text-stone-400 uppercase tracking-tighter">AMD</p>
+</div>
+<div class="flex-1 flex flex-col items-center px-6">
+<p class="text-[11px] font-bold text-primary mb-1">Non-stop</p>
+<div class="w-full h-[2px] bg-surface-container-high relative flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px] absolute bg-surface-container-lowest px-2">flight_takeoff</span>
+</div>
+<p class="text-[11px] font-medium text-stone-400 mt-1">3h 15m</p>
+</div>
+<div class="text-center md:text-right">
+<p class="text-2xl font-headline font-extrabold text-on-surface">06:10</p>
+<p class="text-sm font-bold text-stone-400 uppercase tracking-tighter">DXB</p>
+</div>
+</div>
+<div class="w-full md:w-1/4 flex md:flex-col items-center md:items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-stone-100 pt-4 md:pt-0 md:pl-8">
+<div class="mb-0 md:mb-3">
+<p class="text-2xl font-headline font-extrabold text-primary">₹24,500</p>
+<p class="text-[10px] text-stone-400 font-bold uppercase text-right">Per Adult</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all">
+                        SELECT
+                    </button>
+</div>
+</div>
+<!-- Flight Card 2: Indigo -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 flex flex-col md:flex-row items-center gap-8 shadow-sm hover:shadow-md transition-shadow border border-transparent hover:border-surface-container-high">
+<div class="flex items-center gap-4 w-full md:w-1/4">
+<div class="w-14 h-14 rounded-2xl bg-stone-50 flex items-center justify-center p-2">
+<img alt="IndiGo Logo" class="w-full h-auto object-contain" data-alt="IndiGo airline logo with dark blue circle and abstract white icons on a soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcl4wWYrDQiZPncxHztWAT9D8JNv8kdXMzTzDY9Yv4H_xnvOy-szk3aWCzmfolqrbMcxu0yEEOfeip7u5vNCguNV3xB9tKwg-h6V6EskJd5rxm2PlGA8pUmnHjZQRQtVa5Hb4PsTWZEPsnjmXBJsCeeXzehmF35yJ6VQukIxI7gktwFMkAitsTPj1snz9m8OS5pT-UxWq2Hkcs5KH8ZQGlMJMv-uFMqhouS2eclOtcAXa2hk9fz9Y56cAaDbsX29YTM_8y9TBPmnQ"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">IndiGo</p>
+<p class="text-xs text-stone-500">6E-1423 • Airbus A320</p>
+</div>
+</div>
+<div class="flex-1 w-full flex items-center justify-between relative px-4">
+<div class="text-center md:text-left">
+<p class="text-2xl font-headline font-extrabold text-on-surface">18:45</p>
+<p class="text-sm font-bold text-stone-400 uppercase tracking-tighter">AMD</p>
+</div>
+<div class="flex-1 flex flex-col items-center px-6">
+<p class="text-[11px] font-bold text-stone-400 mb-1">Non-stop</p>
+<div class="w-full h-[2px] bg-surface-container-high relative flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-300 text-[20px] absolute bg-surface-container-lowest px-2">flight</span>
+</div>
+<p class="text-[11px] font-medium text-stone-400 mt-1">3h 30m</p>
+</div>
+<div class="text-center md:text-right">
+<p class="text-2xl font-headline font-extrabold text-on-surface">20:45</p>
+<p class="text-sm font-bold text-stone-400 uppercase tracking-tighter">DXB</p>
+</div>
+</div>
+<div class="w-full md:w-1/4 flex md:flex-col items-center md:items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-stone-100 pt-4 md:pt-0 md:pl-8">
+<div class="mb-0 md:mb-3">
+<p class="text-2xl font-headline font-extrabold text-on-surface">₹18,900</p>
+<p class="text-[10px] text-stone-400 font-bold uppercase text-right">Per Adult</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                        SELECT
+                    </button>
+</div>
+</div>
+<!-- Flight Card 3: Air India -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 flex flex-col md:flex-row items-center gap-8 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center gap-4 w-full md:w-1/4">
+<div class="w-14 h-14 rounded-2xl bg-stone-50 flex items-center justify-center p-2">
+<img alt="Air India Logo" class="w-full h-auto object-contain" data-alt="Air India swan and sun logo in vibrant red and orange colors representing luxury travel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyXuPL0I69E2U9M78b2CKJKdqz4Xdb18YHwJa3A2h79qATmtnCDloFpOqz1uXNE78SQbthsRp8KXFM3XRVZwr1NpYPiffZI28g77ZZhOQ7E9cVvWOFQ_EeKew_xmQQ5vzECvZng_KDvLpWk674uh5hNdiAIiclgLTY2xc3C2f_A2pQVFcx5-bIWSIcVVKwgAP59ERpRH4LB2Hw9X8ixyQQ4m77FHDQq_u71NkKQO9RL6NXLUvEPTipuVziSVFFQ19ANIZhijkuNsI"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface">Air India</p>
+<p class="text-xs text-stone-500">AI-915 • Boeing 787</p>
+</div>
+</div>
+<div class="flex-1 w-full flex items-center justify-between relative px-4">
+<div class="text-center md:text-left">
+<p class="text-2xl font-headline font-extrabold text-on-surface">11:10</p>
+<p class="text-sm font-bold text-stone-400 uppercase tracking-tighter">AMD</p>
+</div>
+<div class="flex-1 flex flex-col items-center px-6">
+<p class="text-[11px] font-bold text-secondary mb-1">1 Stop (BOM)</p>
+<div class="w-full h-[2px] bg-surface-container-high relative flex items-center justify-center">
+<div class="absolute w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<p class="text-[11px] font-medium text-stone-400 mt-1">7h 20m</p>
+</div>
+<div class="text-center md:text-right">
+<p class="text-2xl font-headline font-extrabold text-on-surface">18:00</p>
+<p class="text-sm font-bold text-stone-400 uppercase tracking-tighter">DXB</p>
+</div>
+</div>
+<div class="w-full md:w-1/4 flex md:flex-col items-center md:items-end justify-between md:justify-center border-t md:border-t-0 md:border-l border-stone-100 pt-4 md:pt-0 md:pl-8">
+<div class="mb-0 md:mb-3">
+<p class="text-2xl font-headline font-extrabold text-on-surface">₹21,200</p>
+<p class="text-[10px] text-stone-400 font-bold uppercase text-right">Per Adult</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                        SELECT
+                    </button>
+</div>
+</div>
+</div>
+<!-- Bento Style Promo (Luxury Concierge) -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 relative overflow-hidden rounded-[2.5rem] bg-stone-900 text-white p-8 h-64 flex flex-col justify-end">
+<div class="absolute inset-0 opacity-40">
+<img alt="Luxury Lounge" class="w-full h-full object-cover" data-alt="interior of a luxury airport lounge with plush velvet chairs and warm ambient golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq-53DkeBs_-QdRv0UcF9IXwRGgzHl7De55Du8DlsGGjTqzwo9J-pxgYSfsOg6ZEhBz12X1OXR0oxCvM4xzeWIr9E-VbTuLo5ZvGTBZKEwDUHHPutj1LuGt6m9vHTZkdYXSif-YahIK6EYXvAISE9IktqY9EE7KB834cm5RmDYu44h_hcDtVHOUGtJ5V-G012TqW7g_vtxPFloe1WbtmHXhVFIMBw1dY9luop1jXyChVljrzBhl8nw0erGZcJBFDkfju8CyxkZxKU"/>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-headline font-extrabold mb-2">Upgrade to First Class</h3>
+<p class="text-stone-300 max-w-sm mb-4">Experience personalized concierge services and premium lounge access for just ₹4,999 more.</p>
+<button class="text-sm font-bold uppercase tracking-widest text-primary bg-white px-6 py-2 rounded-full active:scale-95 transition-transform">Enquire Now</button>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-[2.5rem] p-8 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h3 class="text-lg font-headline font-bold mb-2">Safe &amp; Secure</h3>
+<p class="text-sm text-stone-500 leading-relaxed">Travel with confidence. Full flight protection and 24/7 assistance.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-white/90 dark:bg-stone-950/90 backdrop-blur-lg shadow-[0_-4px_20px_rgba(0,0,0,0.05)] border-t border-stone-100 dark:border-stone-800">
+<div class="flex justify-around items-center h-20 px-4 pb-safe w-full">
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-red-600 dark:text-red-500 bg-red-50 dark:bg-red-950/30 rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">local_offer</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">Offers</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-blue-600 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-['Inter'] font-medium uppercase tracking-wider">Account</span>
+</div>
+</div>
+</nav>
+</body></html>

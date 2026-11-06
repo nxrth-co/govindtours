@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curated Odyssey - Immersive Cultural Experiences</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#0f5fae",
+                        "surface-container-highest": "#ebdfe9",
+                        "surface-container-high": "#f1e5ef",
+                        "inverse-surface": "#352e36",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#2e6a9e",
+                        "outline-variant": "#e4beba",
+                        "on-secondary-fixed": "#001c3b",
+                        "surface-container": "#f6eaf4",
+                        "surface-dim": "#e2d7e0",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f9edf7",
+                        "on-background": "#1f1a20",
+                        "surface-container-low": "#fcf0fa",
+                        "primary-fixed": "#ffdad7",
+                        "tertiary-fixed-dim": "#9bcbff",
+                        "background": "#fff7fb",
+                        "surface-variant": "#ebdfe9",
+                        "error-container": "#ffdad6",
+                        "outline": "#8f6f6d",
+                        "primary-fixed-dim": "#ffb3ae",
+                        "on-secondary-fixed-variant": "#004787",
+                        "secondary-container": "#6faafe",
+                        "on-secondary-container": "#003d77",
+                        "surface": "#fff7fb",
+                        "on-surface": "#1f1a20",
+                        "on-primary-fixed-variant": "#930014",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#d0e4ff",
+                        "surface-tint": "#ba1823",
+                        "inverse-primary": "#ffb3ae",
+                        "on-tertiary-fixed": "#001d34",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d5e3ff",
+                        "primary-container": "#c6222a",
+                        "on-tertiary-fixed-variant": "#004a79",
+                        "on-primary-container": "#ffddda",
+                        "surface-bright": "#fff7fb",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "on-primary-fixed": "#410004",
+                        "tertiary": "#055285",
+                        "primary": "#a10017",
+                        "on-tertiary-container": "#d5e7ff",
+                        "on-surface-variant": "#5b403e"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-sm dark:shadow-none flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors p-2 rounded-full active:scale-95 duration-200" data-icon="menu">menu</button>
+<span class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 font-headline">Curated Odyssey</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-red-700 dark:text-red-500 font-bold font-headline tracking-tight" href="#">Explore</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-headline tracking-tight hover:text-red-600 transition-colors" href="#">Customs</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-headline tracking-tight hover:text-red-600 transition-colors" href="#">History</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-headline tracking-tight hover:text-red-600 transition-colors" href="#">Saved</a>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30 active:scale-95 duration-200 cursor-pointer">
+<img alt="Traveler Profile" data-alt="close-up portrait of a sophisticated traveler with warm lighting and blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA47Eh9NpFJoalVzLh3GYVKWQ4BDGolei_W8f5wpjV9ahhGVpMrMw7nBjGphR2LI-pZcS7rnSNKkh6GgvglUpetV1OPnG5NWn0P7t3u8eBk85N-ybPiVVEe9rdbnRPyWzAWUj4H_pAWbtg-JC2wsiBiggzhno3zyQBlMxfjA8zXV0PZVNLOlQHI1uGRIT1FanjD35-60VCP36QSgSpFgDB2-pbrEumXBomwQXSdHvEbivOZmW08DBLueFvQmLMUmLDBJwqnKRDYGpU"/>
+</div>
+</header>
+<main class="pt-16 pb-32">
+<!-- Hero Section -->
+<section class="relative min-h-[600px] lg:min-h-[720px] w-full overflow-hidden mb-16 flex items-center">
+<!-- Background Image Container -->
+<div class="absolute inset-0 z-0">
+<img alt="Hawa Mahal, Jaipur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVodTVNtOmc9L2UTokc-g2-c_IC0XSJ4KTigENr_dnXEznJybn8mgWb2LecbccRGYOBe1elK9Zxvl2FSk-h0UIzCu7VAuqwoEoUOREpc4GfNZE3Nt6A0Nj3g_p_zu1B1i5YAk_QZcm_mfrSTxBHt9WKzHOprUfQjsYAKgJWKeCldBHHIIwjusrecb3apvodw-yZCaECoeB3rHYmmlOoE6-r-EmadDrVWFUdiyd7R86hQlvyh3OKl9NFGO66fRPdWBXMtbdIsGLQQo"/>
+<!-- Subtle Overlay for Legibility -->
+<div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent md:from-white/60 md:via-white/20"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-6 md:px-16 py-20 lg:py-32 z-10 w-full">
+<div class="w-full lg:w-3/5">
+<span class="text-orange-700 font-extrabold tracking-[0.2em] uppercase text-xs mb-4 flex items-center gap-2 drop-shadow-sm">
+<span class="w-8 h-[2px] bg-orange-700"></span> Heritage &amp; Horizon
+</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-zinc-900 leading-[1.1] mb-6 drop-shadow-sm">
+                        Explore Cultures <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-purple-700 to-amber-600">Like Never Before</span> 🌍
+                    </h1>
+<p class="max-w-xl text-lg md:text-xl text-zinc-800 font-medium leading-relaxed mb-10 drop-shadow-sm">
+                        Discover traditions, food &amp; experiences from around the world with ultra-HD clarity.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-10 py-4 rounded-full font-headline font-bold text-sm tracking-widest uppercase shadow-2xl shadow-orange-200/50 hover:shadow-orange-300 hover:-translate-y-1 transition-all active:scale-95">
+                            Start Exploring
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="px-6 md:px-16 max-w-7xl mx-auto mb-12">
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-full font-headline font-semibold text-sm whitespace-nowrap shadow-sm">Ancient History</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-3 rounded-full font-headline font-semibold text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors">Living Traditions</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-3 rounded-full font-headline font-semibold text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors">Art &amp; Craft</button>
+<button class="bg-surface-container text-on-surface-variant px-6 py-3 rounded-full font-headline font-semibold text-sm whitespace-nowrap hover:bg-surface-container-high transition-colors">Culinary Heritage</button>
+</div>
+</section>
+<!-- Experiences Grid -->
+<section class="px-6 md:px-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Experience Card 1 -->
+<div class="group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+<div class="relative h-72 overflow-hidden">
+<img alt="Kyoto Temples" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="serene morning view of a traditional Japanese temple in Kyoto surrounded by lush green maples and soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCui3bMMX9HfZglMjhuoEYu_5HnPaRhivAxkeDDvGXmdEYCy3uiibtjD1WahMiIWERhrm0-2SFzHd7-4Eqpk4MUz8RPuqVMkq5yE0V1h7tfBFDFnK1dCCNBtI0pClKrPkPVLLSdaHI6OPnSfXNiK2LbLRhVJXfVDOieWr8TFyIQTEC3Vo-weVz5h437zN4J6n1QbeZlQRFzLipf-4vx8GSGFV-CgU7HKvXJ4IxPzb1B_JVHNhzjqXO6ON1ddgD1reSjXUpplwi_vSk"/>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">4 Hours</div>
+<div class="absolute bottom-4 left-4 bg-primary/90 text-white px-3 py-1 rounded-lg text-xs font-bold">Recommended</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-bold text-on-background mb-4 group-hover:text-primary transition-colors">The Whispers of Kyoto's Temples</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6 flex-grow">
+                            An intimate sunrise meditation session led by a local monk, followed by a private tour of the hidden Zen gardens rarely seen by the public.
+                        </p>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+<span class="text-secondary font-bold font-headline">$120 / person</span>
+<button class="text-primary font-headline font-bold text-xs tracking-tighter hover:underline flex items-center gap-1 uppercase">
+                                Book Experience <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Experience Card 2 -->
+<div class="group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+<div class="relative h-72 overflow-hidden">
+<img alt="Udaipur City Palace" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A royal Rajasthan travel banner featuring Udaipur City Palace near lake Pichola during sunset, golden lighting, luxurious royal architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyt-yEQwbMfHVyjj7OUP36IJJStJSMuB_2rMTVsYp5KXVT36drii7Zz8hWE2_8GaxfzRx21czBCxZocE6flJgmLOSWkoOe5PuzSM2veQiK8O7kOJU9uCObcG3wP03gd9AJKRSDh-hQL-D-xfx_VYquSqG4hwhmuSOdh27mQxZ35OqdnBUJ98LvMuCrEeZ3ysDGNCp9aEDcDSiVD5KX6TxmvNrjXPb72lwMoLizuUInnDr7Rn0eq68u-E4L4NjE5Dwh0qjRF5Oz6_w"/>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">Full Day</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-bold text-on-background mb-4 group-hover:text-primary transition-colors">Rajasthan's Folk Soul</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6 flex-grow">
+                            Journey into the Thar desert for an evening of Manganiyar music, traditional puppetry, and a feast prepared over open dunes by local artisans.
+                        </p>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+<span class="text-secondary font-bold font-headline">$240 / person</span>
+<button class="text-primary font-headline font-bold text-xs tracking-tighter hover:underline flex items-center gap-1 uppercase">
+                                Book Experience <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Experience Card 3 -->
+<div class="group bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
+<div class="relative h-72 overflow-hidden">
+<img alt="Ancient Rome" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="interior view of an ancient Roman amphitheater with dramatic shadows and golden sunlight filtering through stone arches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC3SExuPKuNnZw6otDDzvZ55sCSacuTC8RAJOdp5jvAx0l2WUCh5qVTIVAK3xmbFwofR_Aw02S3spWTW8_OswbPoAZ-OmGiLFfTaOUuD-uudoeSpPcHLxc4GcezCIrHvOoj6-Uh2sK72m3lvdidERfiQATHgD2SZPdV-hJqajyOk0Qh0u798svbGEBtURK_hHNg1r7NQmYkz0rTwnwOipPIBW3Py39IKZP6ZJq2k7uNyYPtyHoXpQzylWt1pCwWRFe_usbR_uqMv4"/>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest">6 Hours</div>
+</div>
+<div class="p-8 flex-grow flex flex-col">
+<h3 class="font-headline text-2xl font-bold text-on-background mb-4 group-hover:text-primary transition-colors">Echoes of the Arena</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm mb-6 flex-grow">
+                            A private, after-hours exploration of the Roman Forum and Colosseum led by a PhD archaeologist, unveiling stories of daily life and ancient power.
+                        </p>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+<span class="text-secondary font-bold font-headline">$185 / person</span>
+<button class="text-primary font-headline font-bold text-xs tracking-tighter hover:underline flex items-center gap-1 uppercase">
+                                Book Experience <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Feature Section -->
+<section class="mt-24 px-6 md:px-16 max-w-7xl mx-auto">
+<div class="bg-surface-container-low rounded-[3rem] p-8 md:p-16 editorial-grid overflow-hidden relative">
+<div class="col-span-12 lg:col-span-6 relative z-10">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-background mb-8 leading-tight">
+                        The Craft <br/> of Connection.
+                    </h2>
+<p class="text-lg text-on-surface-variant mb-10 leading-relaxed max-w-md">
+                        We believe travel should change you. Our "Master Series" connects you with living legends—from master calligraphers in Tokyo to fifth-generation pasta makers in Tuscany.
+                    </p>
+<ul class="space-y-4 mb-12">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">verified_user</span>
+<div>
+<h4 class="font-bold text-on-background">Ethical Immersion</h4>
+<p class="text-sm text-on-surface-variant">Direct support for local communities and heritage preservation.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">auto_awesome</span>
+<div>
+<h4 class="font-bold text-on-background">Exclusive Access</h4>
+<p class="text-sm text-on-surface-variant">Entries to sites and events strictly closed to general tourism.</p>
+</div>
+</li>
+</ul>
+<button class="border-2 border-primary text-primary px-8 py-3 rounded-full font-headline font-bold text-xs tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300">Explore the Series</button>
+</div>
+<div class="col-span-12 lg:col-span-6 flex items-center justify-center">
+<div class="relative w-full aspect-square md:aspect-auto md:h-full">
+<img alt="Craftsman" class="w-full h-full object-cover rounded-[2rem] shadow-2xl" data-alt="close-up of elderly hands skillfully weaving a traditional basket with natural fibers in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6QMBCfYDhwUctvU8JaTWTc866537RyPw4h4FOWXIi76IYc7eobu-I2hpJ3Svq_o5oVijyT8UGzK4aL-YKCi7eQZrTnzsjGW6w5hj7U8aHCwzGZsVg-B-1VbG06hkmYKzaAtOkwy4Px42xtZ3Ea9oqDpcXHvVAkyb2UYEDHLtd4kx1eYrTA8S-rhdcX4Ynjj0xKgsuckUN2jdHOcSp8C0sk0mcMyrQWMln_CPqwfI2v_-ywEN8h_wAA01h9koDRW11xeNshY-RVfE"/>
+<div class="absolute -bottom-6 -left-6 bg-secondary-container p-8 rounded-3xl shadow-xl hidden md:block">
+<p class="font-headline text-4xl font-black text-on-secondary-container">15+</p>
+<p class="text-[10px] font-bold uppercase tracking-widest text-on-secondary-container opacity-70">Countries Covered</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-3xl">
+<a class="flex flex-col items-center gap-1 text-red-700 dark:text-red-500 font-bold bg-red-50 dark:bg-red-950/30 px-4 py-2 rounded-xl transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-inter text-[10px] uppercase tracking-widest">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400 px-4 py-2 hover:text-red-600 dark:hover:text-red-400 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="festival">festival</span>
+<span class="font-inter text-[10px] uppercase tracking-widest">Customs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400 px-4 py-2 hover:text-red-600 dark:hover:text-red-400 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-inter text-[10px] uppercase tracking-widest">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-zinc-500 dark:text-zinc-400 px-4 py-2 hover:text-red-600 dark:hover:text-red-400 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+<span class="font-inter text-[10px] uppercase tracking-widest">Saved</span>
+</a>
+</nav>
+<!-- FAB -->
+<button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 z-40 group">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="absolute right-full mr-4 bg-white text-primary px-4 py-2 rounded-xl text-xs font-bold shadow-lg opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">Concierge Chat</span>
+</button>
+</body></html>

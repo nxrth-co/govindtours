@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#9bcbff",
+              "on-secondary-fixed-variant": "#004787",
+              "primary-container": "#c6222a",
+              "on-tertiary-fixed": "#001d34",
+              "on-surface-variant": "#5b403e",
+              "on-primary-fixed": "#410004",
+              "on-primary-fixed-variant": "#930014",
+              "surface-container": "#f6eaf4",
+              "tertiary-container": "#2e6a9e",
+              "surface-container-high": "#f1e5ef",
+              "on-primary-container": "#ffddda",
+              "background": "#fff7fb",
+              "inverse-surface": "#352e36",
+              "primary": "#a10017",
+              "tertiary": "#055285",
+              "surface-variant": "#ebdfe9",
+              "on-secondary-fixed": "#001c3b",
+              "on-secondary-container": "#003d77",
+              "on-secondary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#004a79",
+              "secondary-fixed-dim": "#a7c8ff",
+              "primary-fixed-dim": "#ffb3ae",
+              "surface-tint": "#ba1823",
+              "secondary-fixed": "#d5e3ff",
+              "error-container": "#ffdad6",
+              "surface": "#fff7fb",
+              "secondary": "#0f5fae",
+              "on-surface": "#1f1a20",
+              "surface-container-low": "#fcf0fa",
+              "outline-variant": "#e4beba",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#f9edf7",
+              "surface-dim": "#e2d7e0",
+              "inverse-primary": "#ffb3ae",
+              "surface-bright": "#fff7fb",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#d0e4ff",
+              "secondary-container": "#6faafe",
+              "on-background": "#1f1a20",
+              "on-tertiary-container": "#d5e7ff",
+              "surface-container-highest": "#ebdfe9",
+              "primary-fixed": "#ffdad7",
+              "on-tertiary": "#ffffff",
+              "outline": "#8f6f6d"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 h-16 w-full">
+<button class="text-zinc-500 dark:text-zinc-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-xl text-red-700 dark:text-red-500">Emergency Hub</h1>
+<button class="text-red-700 dark:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="sos" style="font-variation-settings: 'FILL' 1;">sos</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-10">
+<!-- Immediate Assistance Section -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface">Immediate Assistance</h2>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full uppercase tracking-widest">Active Help</span>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Local Police -->
+<div class="bg-primary group relative overflow-hidden rounded-[2rem] p-6 shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
+<div class="absolute right-[-20px] top-[-20px] opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[120px]" data-icon="local_police">local_police</span>
+</div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div class="flex justify-between items-start">
+<div class="bg-white/20 p-3 rounded-2xl backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="local_police" style="font-variation-settings: 'FILL' 1;">local_police</span>
+</div>
+<span class="text-white/80 font-bold text-lg tracking-tighter">999</span>
+</div>
+<div class="mt-8">
+<p class="text-white/70 text-sm font-semibold uppercase tracking-widest">Local Emergency</p>
+<h3 class="text-white text-3xl font-extrabold leading-tight">Local Police (999)</h3>
+</div>
+<div class="mt-6 flex gap-3">
+<button class="flex-1 bg-white text-primary font-bold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="call" style="font-variation-settings: 'FILL' 1;">call</span>
+                                Call Now
+                            </button>
+</div>
+</div>
+</div>
+<!-- Family Contact -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 shadow-sm border border-zinc-100 flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-zinc-200">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional woman with a warm and supportive expression, blurred outdoor background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3QrZsLaODp5kbAfAevmE58iIDxaaovWruzzPzDK6kfyf_obxOE8snKgzXhxNWaTMOmLjrFVQtdU79Jocma8RWZKQIhv_ovnH_4LNdvUDrXXalAaOMN36UFRIA93JnCuAHurlkLDzHXpyj-D-b3eQhsHlPiS-sPGwRcA5Iwr4SINtF_XNPfl3_hw2LFYltrMtwggNL8LVSH3IqvBWEW-eMVBPNR8AcO4lyayDSLJbJyGoU3p7wc5aqyqJWB44juumVfHRCUwK2vxQ"/>
+</div>
+<div>
+<p class="text-zinc-500 text-xs font-bold uppercase tracking-widest">Family Contact</p>
+<h3 class="text-xl font-bold text-on-surface">Aarya Shah</h3>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-secondary text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="call" style="font-variation-settings: 'FILL' 1;">call</span>
+                            Call
+                        </button>
+<button class="flex-1 bg-emerald-600 text-white font-bold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            WhatsApp
+                        </button>
+</div>
+</div>
+<!-- Embassy -->
+<div class="bg-on-secondary-fixed rounded-[2rem] p-6 shadow-sm flex flex-col gap-4 text-white">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<p class="text-secondary-fixed/60 text-xs font-bold uppercase tracking-widest">Diplomatic Support</p>
+<h3 class="text-xl font-bold">Indian Embassy (London)</h3>
+</div>
+<div class="bg-secondary-fixed/20 p-2 rounded-xl">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="account_balance">account_balance</span>
+</div>
+</div>
+<div class="flex items-start gap-2 text-secondary-fixed/80">
+<span class="material-symbols-outlined text-sm mt-1" data-icon="location_on">location_on</span>
+<p class="text-sm font-medium leading-snug">India House, Aldwych, London WC2B 4NA, UK</p>
+</div>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed font-bold py-4 rounded-2xl flex items-center justify-center gap-2 mt-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="call" style="font-variation-settings: 'FILL' 1;">call</span>
+                        Call Embassy
+                    </button>
+</div>
+</div>
+</section>
+<!-- Critical Document Access -->
+<section class="space-y-6">
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface">Critical Document Access</h2>
+<!-- Passport Card -->
+<div class="bg-white rounded-[2rem] p-5 shadow-sm border border-zinc-100 flex items-center gap-5">
+<div class="w-24 h-32 rounded-xl overflow-hidden bg-zinc-100 flex-shrink-0 relative group">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform" data-alt="Blurred close-up of a blue passport cover on a neutral surface, soft focus photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1W1sMvUIYnJs-lh6kk4FGRhbcG7TnP-U0gq5B7aLzNJRnMuQ2VxUej_7E2ECUeP8Z3zwpxBNWtl5Au1hiIQ82A1_fKFVghzd6Ws3pappy1OdJ0pq686TGX6AA5DbUpQhQ8dOcSjXYbSvi9d26d_gBKw1IO1iDael-tF_rRh2meIa5zpMCOtU7K2pRGms_QpEegTuVymWe8UMmNT2zYfXmz31PImrqvgNlHDFc2lqdm-D4lom5LO8SEet_bMZTf5SS9K9-joesr2M"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/20">
+<span class="material-symbols-outlined text-white" data-icon="visibility">visibility</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div>
+<h3 class="font-bold text-lg text-on-surface">Passport Scan</h3>
+<p class="text-zinc-500 text-sm">Valid until Oct 2029</p>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-surface-container-high text-on-surface-variant font-bold py-2 rounded-xl text-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
+                            View
+                        </button>
+<button class="flex-1 bg-surface-container-high text-on-surface-variant font-bold py-2 rounded-xl text-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
+                            Share
+                        </button>
+</div>
+</div>
+</div>
+<!-- Insurance & Flight Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed rounded-[2rem] p-6 space-y-4">
+<div class="bg-white/30 w-10 h-10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="shield_with_heart" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div>
+<p class="text-on-tertiary-fixed/60 text-[10px] font-bold uppercase tracking-widest">Travel Insurance</p>
+<p class="text-lg font-extrabold tracking-tight">GT-8829-XPLR</p>
+</div>
+<button class="w-full bg-on-tertiary-fixed text-tertiary-fixed font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+                        Get PDF
+                    </button>
+</div>
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 space-y-4 border border-zinc-100">
+<div class="bg-zinc-100 w-full aspect-square rounded-xl flex items-center justify-center p-2">
+<img class="w-full h-full object-contain mix-blend-multiply opacity-80" data-alt="Digital black and white QR code on a clean white background for scanning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFYy0t8LFjfe2ZOyE6A4M1DlrpXoLL7Y6ZuMvb-2-tRg7MBuA1XRw__9VbO1wAUceHzfcDt0C3LSsTkMHqeLKtUqm5I4db6X_kKs4OZ4s_5O0U0FDrYXFJxr1hFWjMxXgUAVktqMjrbyWDKmCBSVaK0W6HCb_RXYGXKGfqZzBAWJBXN9unv_iaktyqMKAq5m6dk9lGFycp1wiTSyNT6lG25ntk4rZDyrfStDHIfm8ifITPVZoXtCpncTde0jdx5ZnJuJFw7AlmYlY"/>
+</div>
+<div>
+<p class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest">Next Flight</p>
+<p class="text-lg font-extrabold tracking-tight text-on-surface">LHR → BOM</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Help Info Note -->
+<div class="p-6 bg-surface-container-low rounded-[2rem] border border-dashed border-outline-variant/50">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    All emergency contacts and document copies are available <span class="font-bold">offline</span>. Your location is being shared with Govind Tours support team.
+                </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-lg shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-3xl border-t border-zinc-100 dark:border-zinc-800">
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold tracking-wide uppercase mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold tracking-wide uppercase mt-1">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-red-700 dark:text-red-400 font-bold active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="emergency" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold tracking-wide uppercase mt-1">Safety</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-red-600 dark:hover:text-red-400 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

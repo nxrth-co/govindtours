@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#fff7fb",
+              "on-primary-fixed": "#410004",
+              "surface-variant": "#ebdfe9",
+              "secondary": "#0f5fae",
+              "on-surface-variant": "#5b403e",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#d0e4ff",
+              "on-tertiary-fixed": "#001d34",
+              "surface-bright": "#fff7fb",
+              "secondary-fixed-dim": "#a7c8ff",
+              "on-surface": "#1f1a20",
+              "outline": "#8f6f6d",
+              "primary-container": "#c6222a",
+              "inverse-surface": "#352e36",
+              "inverse-on-surface": "#f9edf7",
+              "tertiary-container": "#2e6a9e",
+              "primary-fixed": "#ffdad7",
+              "on-error-container": "#93000a",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#d5e3ff",
+              "surface-container-high": "#f1e5ef",
+              "on-secondary-fixed": "#001c3b",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#9bcbff",
+              "surface-container-highest": "#ebdfe9",
+              "on-tertiary-fixed-variant": "#004a79",
+              "inverse-primary": "#ffb3ae",
+              "tertiary": "#055285",
+              "primary": "#a10017",
+              "background": "#fff7fb",
+              "surface-dim": "#e2d7e0",
+              "secondary-container": "#6faafe",
+              "primary-fixed-dim": "#ffb3ae",
+              "surface-container": "#f6eaf4",
+              "outline-variant": "#e4beba",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#ba1823",
+              "on-background": "#1f1a20",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#ffddda",
+              "surface-container-low": "#fcf0fa",
+              "on-secondary-container": "#003d77",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#930014",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#d5e7ff",
+              "on-secondary-fixed-variant": "#004787"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+      }
+      .glass-effect {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation (Shell Implementation) -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full shadow-sm">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-stone-100/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600">arrow_back</span>
+</button>
+<span class="text-xl font-extrabold text-stone-900 font-headline tracking-tight">Govind Tours</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-stone-100/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-red-700">favorite</span>
+</button>
+<button class="p-2 rounded-full hover:bg-stone-100/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-stone-600">share</span>
+</button>
+</div>
+</nav>
+<main class="pb-32">
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full overflow-hidden">
+<img alt="Misty Mountain River Valley" class="w-full h-full object-cover" data-alt="Stunning panoramic view of a deep river valley shrouded in ethereal morning mist with lush green mountain peaks and soft cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQD2Fl9_HrxqbMcAJa998tN-MJmJmaemwgRiz6fuXMUoDCaTy2srs3jEWXosf1iuJjSU501X9DYDzVR72fXXF7EmzUj6PAGOLxyv5xjJv10-Qbe9A8wbHljjDiAeLQnS0KKwvQ2CcbZwMoCT5uBvT4RwK0dGqfNPML4kaGmyv55hh1YDh5VjwLH-30VJq_qJUgLSQ-kUAFZt738DLjWNMF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 md:p-16 lg:p-24 flex flex-col items-start space-y-4">
+<div class="flex items-center gap-3">
+<span class="bg-primary px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest text-on-primary uppercase font-label glass-effect">Top Choice</span>
+<div class="flex items-center gap-1 bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-white text-sm font-semibold">4.9</span>
+</div>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold text-white leading-[1.1] tracking-tighter">
+                    Misty Mountain<br/>Odyssey
+                </h1>
+<p class="text-xl md:text-2xl text-white/90 font-light max-w-2xl">
+                    A journey into the heart of the clouds
+                </p>
+</div>
+</section>
+<!-- Overview Content -->
+<section class="mt-[-4rem] relative z-10 px-6 md:px-16 lg:px-24">
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-on-surface/5 flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1 space-y-6">
+<h2 class="text-3xl font-headline font-bold text-on-surface tracking-tight">The Sacred Silence</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                        Venture beyond the ordinary into a realm where the sky kisses the earth. The Misty Mountain Odyssey is crafted for those seeking a profound reset. Experience the serene beauty of emerald river valleys and the spiritual calm that only high-altitude air provides. Here, every morning is a whispered invitation from nature to witness life at its most pristine and untouched state.
+                    </p>
+<div class="flex flex-wrap gap-3 pt-4">
+<span class="px-4 py-2 bg-secondary-container/30 text-on-secondary-container rounded-full text-sm font-medium">9 Days</span>
+<span class="px-4 py-2 bg-secondary-container/30 text-on-secondary-container rounded-full text-sm font-medium">All-Inclusive</span>
+<span class="px-4 py-2 bg-secondary-container/30 text-on-secondary-container rounded-full text-sm font-medium">Eco-Certified</span>
+</div>
+</div>
+<div class="w-full md:w-80 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-3xl text-center space-y-2 group hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">landscape</span>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Altitude</p>
+<p class="text-xl font-headline font-bold text-on-surface">3,200m</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl text-center space-y-2 group hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">thermostat</span>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Avg Temp</p>
+<p class="text-xl font-headline font-bold text-on-surface">14°C</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Highlights - Bento Grid Style -->
+<section class="mt-20 px-6 md:px-16 lg:px-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div class="max-w-xl">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">Curated Moments</span>
+<h2 class="text-4xl font-headline font-bold text-on-surface mt-2 tracking-tight">Odyssey Highlights</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Highlight Card 1 -->
+<div class="md:col-span-2 bg-surface-container p-8 rounded-[2rem] flex flex-col justify-between min-h-[280px] group hover:bg-primary duration-300 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl group-hover:text-white transition-colors">temple_hindu</span>
+<div>
+<h3 class="text-2xl font-headline font-bold text-on-surface group-hover:text-white mb-2 transition-colors">Cultural Experiences</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 transition-colors">Engage with century-old monastic traditions and local artisan crafts.</p>
+</div>
+</div>
+<!-- Highlight Card 2 -->
+<div class="bg-surface-container-low p-8 rounded-[2rem] flex flex-col justify-between min-h-[280px] group hover:bg-secondary duration-300 transition-all">
+<span class="material-symbols-outlined text-secondary text-4xl group-hover:text-white transition-colors">hiking</span>
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-white mb-2 transition-colors">Nature Treks</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 text-sm transition-colors">Guided forest trails through biodiversity hotspots.</p>
+</div>
+</div>
+<!-- Highlight Card 3 -->
+<div class="bg-surface-container-highest p-8 rounded-[2rem] flex flex-col justify-between min-h-[280px] group hover:bg-tertiary duration-300 transition-all">
+<span class="material-symbols-outlined text-tertiary text-4xl group-hover:text-white transition-colors">bedroom_parent</span>
+<div>
+<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-white mb-2 transition-colors">Boutique Stays</h3>
+<p class="text-on-surface-variant group-hover:text-white/80 text-sm transition-colors">Luxury retreats designed with local architectural soul.</p>
+</div>
+</div>
+<!-- Highlight Card 4 (Large Asymmetric) -->
+<div class="md:col-span-4 relative h-[400px] rounded-[3rem] overflow-hidden group">
+<img alt="Guided Tours" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A small group of travelers led by a guide walking across a scenic wooden suspension bridge over a turquoise mountain river." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQD2Fl9_HrxqbMcAJa998tN-MJmJmaemwgRiz6fuXMUoDCaTy2srs3jEWXosf1iuJjSU501X9DYDzVR72fXXF7EmzUj6PAGOLxyv5xjJv10-Qbe9A8wbHljjDiAeLQnS0KKwvQ2CcbZwMoCT5uBvT4RwK0dGqfNPML4kaGmyv55hh1YDh5VjwLH-30VJq_qJUgLSQ-kUAFZt738DLjWNMF"/>
+<div class="absolute inset-0 bg-black/30 flex flex-col justify-end p-12">
+<div class="bg-white/20 backdrop-blur-xl p-8 rounded-3xl max-w-md border border-white/20">
+<span class="material-symbols-outlined text-white text-4xl mb-4">explore</span>
+<h3 class="text-3xl font-headline font-bold text-white mb-2">Guided Tours</h3>
+<p class="text-white/90">Our expert local narrators bring the history of the mountains to life with every step you take.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Itinerary Preview -->
+<section class="mt-24 px-6 md:px-16 lg:px-24 max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">The Journey</span>
+<h2 class="text-4xl font-headline font-bold text-on-surface mt-2 tracking-tight">Your Daily Odyssey</h2>
+</div>
+<div class="relative space-y-12">
+<!-- Timeline Line -->
+<div class="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-outline-variant hidden md:block"></div>
+<!-- Day 1 -->
+<div class="relative flex flex-col md:flex-row items-center group">
+<div class="md:w-1/2 md:pr-16 text-right hidden md:block">
+<h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-1">Morning Arrival</h4>
+<p class="text-on-surface-variant italic">Welcome drinks by the hearth</p>
+</div>
+<div class="absolute left-8 md:left-1/2 w-10 h-10 bg-white border-4 border-primary rounded-full z-10 -translate-x-1/2 flex items-center justify-center">
+<span class="text-xs font-black text-primary">01</span>
+</div>
+<div class="pl-20 md:pl-16 md:w-1/2">
+<div class="bg-surface-container-low p-8 rounded-[2rem] border border-transparent group-hover:border-primary/20 transition-all">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-2">Arrival &amp; Riverside Serenity</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Check-in at our signature eco-lodge followed by a mindful lunch by the gushing river. Spend your evening listening to the water's song.</p>
+</div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="relative flex flex-col md:flex-row items-center group">
+<div class="pl-20 md:pl-0 md:pr-16 md:w-1/2 order-2 md:order-1">
+<div class="bg-surface-container-low p-8 rounded-[2rem] border border-transparent group-hover:border-primary/20 transition-all text-left md:text-right">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-2">The Peak Sunrise Trek</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">A pre-dawn hike to the valley's highest vantage point. Witness the first golden rays piercing through the rolling mist. Breakfast served at the summit.</p>
+</div>
+</div>
+<div class="absolute left-8 md:left-1/2 w-10 h-10 bg-white border-4 border-primary rounded-full z-10 -translate-x-1/2 flex items-center justify-center">
+<span class="text-xs font-black text-primary">02</span>
+</div>
+<div class="md:w-1/2 md:pl-16 hidden md:block order-2">
+<h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-1">Dawn Awakening</h4>
+<p class="text-on-surface-variant italic">360-degree Himalayan views</p>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="relative flex flex-col md:flex-row items-center group">
+<div class="md:w-1/2 md:pr-16 text-right hidden md:block">
+<h4 class="text-primary font-bold text-sm tracking-widest uppercase mb-1">Human Connection</h4>
+<p class="text-on-surface-variant italic">Traditional tea ceremonies</p>
+</div>
+<div class="absolute left-8 md:left-1/2 w-10 h-10 bg-white border-4 border-primary rounded-full z-10 -translate-x-1/2 flex items-center justify-center">
+<span class="text-xs font-black text-primary">03</span>
+</div>
+<div class="pl-20 md:pl-16 md:w-1/2">
+<div class="bg-surface-container-low p-8 rounded-[2rem] border border-transparent group-hover:border-primary/20 transition-all">
+<h3 class="text-xl font-headline font-bold text-on-surface mb-2">Local Village Immersion</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Walk through ancient stone-paved villages. Participate in a community-led weaving workshop and enjoy a traditional home-cooked Himalayan meal.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Pricing & CTA Sticky Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 p-4 md:p-6 lg:px-24">
+<div class="max-w-7xl mx-auto bg-on-surface/95 backdrop-blur-2xl rounded-[2.5rem] p-4 md:p-6 flex items-center justify-between shadow-2xl shadow-on-surface/30">
+<div class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-8 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[10px] uppercase tracking-widest font-bold">Total Experience</span>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-2xl md:text-3xl font-headline font-extrabold tracking-tight">₹35,999</span>
+<span class="text-white/60 text-xs">/ per person</span>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-6 border-l border-white/10 pl-8">
+<div class="flex flex-col">
+<span class="text-white/60 text-[10px] uppercase font-bold tracking-widest">Next Departure</span>
+<span class="text-white text-sm font-medium">Oct 12, 2024</span>
+</div>
+<div class="flex flex-col">
+<span class="text-white/60 text-[10px] uppercase font-bold tracking-widest">Availability</span>
+<span class="text-primary-fixed text-sm font-medium">Only 4 slots left</span>
+</div>
+</div>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-8 md:px-12 py-4 rounded-xl font-label text-sm font-bold tracking-widest uppercase shadow-lg active:scale-95 transition-all duration-200">
+                Book This Odyssey
+            </button>
+</div>
+</div>
+</body></html>

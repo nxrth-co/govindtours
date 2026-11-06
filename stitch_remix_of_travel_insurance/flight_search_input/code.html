@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flight Search - Govind Tours</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#a7c8ff",
+              "on-surface-variant": "#5b403e",
+              "on-primary-container": "#ffddda",
+              "tertiary-container": "#2e6a9e",
+              "on-secondary-fixed": "#001c3b",
+              "on-error": "#ffffff",
+              "surface-variant": "#ebdfe9",
+              "surface-tint": "#ba1823",
+              "secondary-fixed": "#d5e3ff",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "surface": "#fff7fb",
+              "outline": "#8f6f6d",
+              "inverse-primary": "#ffb3ae",
+              "tertiary": "#055285",
+              "surface-container-high": "#f1e5ef",
+              "secondary": "#0f5fae",
+              "on-surface": "#1f1a20",
+              "inverse-surface": "#352e36",
+              "background": "#fff7fb",
+              "inverse-on-surface": "#f9edf7",
+              "secondary-container": "#6faafe",
+              "primary-fixed": "#ffdad7",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#d5e7ff",
+              "on-tertiary-fixed-variant": "#004a79",
+              "tertiary-fixed": "#d0e4ff",
+              "surface-container": "#f6eaf4",
+              "on-secondary-fixed-variant": "#004787",
+              "outline-variant": "#e4beba",
+              "surface-container-highest": "#ebdfe9",
+              "primary-fixed-dim": "#ffb3ae",
+              "surface-container-low": "#fcf0fa",
+              "surface-bright": "#fff7fb",
+              "primary": "#a10017",
+              "on-primary-fixed-variant": "#930014",
+              "error": "#ba1a1a",
+              "surface-dim": "#e2d7e0",
+              "on-secondary-container": "#003d77",
+              "primary-container": "#c6222a",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#001d34",
+              "on-primary-fixed": "#410004",
+              "on-background": "#1f1a20",
+              "tertiary-fixed-dim": "#9bcbff",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-5xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform text-[#a10017] dark:text-[#c6222a]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-xl font-extrabold text-[#1f1a20] dark:text-stone-100 font-headline tracking-tight">Flight Search</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-semibold text-secondary">Govind Tours</span>
+</div>
+</div>
+</header>
+<main class="max-w-xl mx-auto px-6 pt-8 space-y-8">
+<!-- Hero Visual Section -->
+<div class="relative w-full h-48 rounded-2xl overflow-hidden shadow-sm">
+<img alt="Airplane wing over clouds" class="w-full h-full object-cover" data-alt="cinematic wide angle shot of an airplane wing gliding through soft pink and orange sunset clouds above a vast ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYrjht4LpALyCkYG4EBRbvxgAofJ_-esUFuyRq8THmdDCSrQiZfR10ROhboZNE8tnRoybFToCdtSPem_gvJHS1X2Br2SFyE0C6Bdquz1meP2iBHAfwFldUBIVaPnFRspM2lLnZp9CW-t4jaiAKobrquSUzVBRMJITlaHgqtjEEYi3dy1Gh69i7fqdQt5Baa3TLatOD8mZKHIJR7WcY_-gbLLLcpeKqI2iy2zITG8cpGpNiarVtFqCWy1cLdT7cTVF2UiDsCmpPC6c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent flex items-end p-6">
+<p class="text-white font-headline font-bold text-2xl tracking-tight">Where to next?</p>
+</div>
+</div>
+<!-- Search Card -->
+<section class="bg-surface-container-lowest rounded-[12px] p-6 shadow-sm space-y-6">
+<!-- Route Picker -->
+<div class="space-y-4 relative">
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline ml-1">From</label>
+<div class="flex items-center bg-surface-container-low rounded-xl px-4 py-3 focus-within:bg-white focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-primary mr-3" data-icon="flight_takeoff">flight_takeoff</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-medium text-on-surface placeholder:text-outline/50" placeholder="Origin City" type="text" value="New Delhi (DEL)"/>
+</div>
+</div>
+<!-- Swap Button -->
+<div class="absolute right-8 top-1/2 -translate-y-1/2 z-10">
+<button class="bg-primary-container text-white p-2 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="swap_vert">swap_vert</span>
+</button>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline ml-1">To</label>
+<div class="flex items-center bg-surface-container-low rounded-xl px-4 py-3 focus-within:bg-white focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-primary mr-3" data-icon="flight_land">flight_land</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-medium text-on-surface placeholder:text-outline/50" placeholder="Destination City" type="text"/>
+</div>
+</div>
+</div>
+<!-- Date Picker Row -->
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline ml-1">Departure</label>
+<div class="flex items-center bg-surface-container-low rounded-xl px-4 py-3">
+<span class="material-symbols-outlined text-secondary mr-2 text-xl" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm font-medium">Oct 24, 2023</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline ml-1">Return</label>
+<div class="flex items-center bg-surface-container-low rounded-xl px-4 py-3 opacity-60">
+<span class="material-symbols-outlined text-secondary mr-2 text-xl" data-icon="add_circle">add_circle</span>
+<span class="text-sm font-medium">Add Return</span>
+</div>
+</div>
+</div>
+<!-- Passengers & Class -->
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline ml-1">Passengers</label>
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl px-4 py-3">
+<span class="text-sm font-medium">1 Adult</span>
+<span class="material-symbols-outlined text-outline text-lg" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-widest text-outline ml-1">Class</label>
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl px-4 py-3">
+<span class="text-sm font-medium">Economy</span>
+<span class="material-symbols-outlined text-outline text-lg" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Cabin Class Segmented UI (Modern Detail) -->
+<div class="flex p-1 bg-surface-container-low rounded-xl">
+<button class="flex-1 py-2 text-xs font-bold uppercase tracking-wider bg-white rounded-lg shadow-sm text-primary">Economy</button>
+<button class="flex-1 py-2 text-xs font-bold uppercase tracking-wider text-outline/70">Business</button>
+<button class="flex-1 py-2 text-xs font-bold uppercase tracking-wider text-outline/70">First</button>
+</div>
+<!-- CTA Button -->
+<button class="w-full bg-gradient-to-r from-[#a10017] to-[#c6222a] text-white py-4 rounded-xl font-headline font-bold uppercase tracking-widest text-sm shadow-md active:scale-[0.98] transition-all">
+                Search Flights
+            </button>
+</section>
+<!-- Recent Searches Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-bold text-lg">Recent Searches</h3>
+<button class="text-primary text-sm font-semibold">Clear All</button>
+</div>
+<div class="space-y-3">
+<!-- Search Item 1 -->
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 font-headline font-bold text-on-surface">
+<span>DEL</span>
+<span class="material-symbols-outlined text-sm text-outline" data-icon="arrow_forward">arrow_forward</span>
+<span>LHR</span>
+</div>
+<p class="text-xs text-outline font-medium">Oct 28 • 1 Passenger • Economy</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Search Item 2 -->
+<div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 font-headline font-bold text-on-surface">
+<span>DEL</span>
+<span class="material-symbols-outlined text-sm text-outline" data-icon="arrow_forward">arrow_forward</span>
+<span>DXB</span>
+</div>
+<p class="text-xs text-outline font-medium">Nov 05 • 2 Passengers • Business</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-stone-900/90 backdrop-blur-2xl rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50">
+<button class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-2 hover:text-[#a10017] active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase mt-1">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#fcf0fa] dark:bg-[#a10017]/10 text-[#a10017] dark:text-[#f6eaf4] rounded-2xl px-4 py-2 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="flight_takeoff" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase mt-1">Flights</span>
+</button>
+<button class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-2 hover:text-[#a10017] active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase mt-1">Bookings</span>
+</button>
+<button class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-2 hover:text-[#a10017] active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

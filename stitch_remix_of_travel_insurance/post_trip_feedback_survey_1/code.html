@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .star-active {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-fixed": "#d0e4ff",
+                "inverse-surface": "#352e36",
+                "primary-fixed-dim": "#ffb3ae",
+                "on-surface": "#1f1a20",
+                "error": "#ba1a1a",
+                "primary-container": "#c6222a",
+                "on-background": "#1f1a20",
+                "secondary-fixed-dim": "#a7c8ff",
+                "on-tertiary-fixed": "#001d34",
+                "background": "#fff7fb",
+                "on-secondary": "#ffffff",
+                "on-primary": "#ffffff",
+                "tertiary-container": "#2e6a9e",
+                "surface-container-low": "#fcf0fa",
+                "on-secondary-container": "#003d77",
+                "on-primary-container": "#ffddda",
+                "inverse-on-surface": "#f9edf7",
+                "outline": "#8f6f6d",
+                "on-error-container": "#93000a",
+                "error-container": "#ffdad6",
+                "surface-variant": "#ebdfe9",
+                "on-secondary-fixed-variant": "#004787",
+                "on-error": "#ffffff",
+                "surface-container": "#f6eaf4",
+                "on-secondary-fixed": "#001c3b",
+                "primary-fixed": "#ffdad7",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#ebdfe9",
+                "secondary": "#0f5fae",
+                "on-tertiary-fixed-variant": "#004a79",
+                "secondary-fixed": "#d5e3ff",
+                "surface-dim": "#e2d7e0",
+                "on-tertiary-container": "#d5e7ff",
+                "surface-container-high": "#f1e5ef",
+                "tertiary": "#055285",
+                "surface-bright": "#fff7fb",
+                "surface": "#fff7fb",
+                "on-surface-variant": "#5b403e",
+                "tertiary-fixed-dim": "#9bcbff",
+                "primary": "#a10017",
+                "secondary-container": "#6faafe",
+                "on-primary-fixed": "#410004",
+                "inverse-primary": "#ffb3ae",
+                "outline-variant": "#e4beba",
+                "surface-tint": "#ba1823",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed-variant": "#930014"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm shadow-stone-200/50 dark:shadow-none">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<button class="text-red-700 dark:text-red-500 active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg text-red-700 dark:text-red-500">Govind Tours</h1>
+<div class="w-6"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Progress Header -->
+<div class="mb-10">
+<div class="flex justify-between items-end mb-3">
+<span class="text-sm font-semibold tracking-widest text-secondary uppercase">Step 1 of 3</span>
+<span class="text-xs text-on-surface-variant">33% Complete</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-1/3 rounded-full"></div>
+</div>
+</div>
+<!-- Editorial Headline -->
+<section class="mb-12">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface leading-tight mb-4">
+                Welcome back! <br/>
+<span class="text-primary">How was your trip?</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                Your journey with Govind Tours matters to us. Help us perfect the art of travel by sharing your experience.
+            </p>
+</section>
+<!-- Feedback Form -->
+<div class="space-y-10">
+<!-- Question 1: Stars -->
+<div class="p-8 bg-surface-container-lowest rounded-[2rem] shadow-sm">
+<label class="block font-headline text-xl font-bold mb-6">Overall Experience</label>
+<div class="flex gap-3 justify-center">
+<button class="group p-2">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-active:scale-90" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="group p-2">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-active:scale-90" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="group p-2">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-active:scale-90" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="group p-2">
+<span class="material-symbols-outlined text-4xl text-primary transition-transform group-active:scale-90" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="group p-2">
+<span class="material-symbols-outlined text-4xl text-outline-variant transition-transform group-active:scale-90" data-icon="star">star</span>
+</button>
+</div>
+<div class="flex justify-between mt-4 px-2">
+<span class="text-xs font-medium text-outline">Needs Work</span>
+<span class="text-xs font-medium text-outline">Exceptional</span>
+</div>
+</div>
+<!-- Question 2: Multi-Choice Bento -->
+<div class="space-y-6">
+<label class="block font-headline text-xl font-bold px-2">What did you love most?</label>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-start p-6 bg-surface-container-lowest rounded-3xl text-left transition-all hover:bg-secondary-container/10 active:scale-95 border-2 border-transparent focus:border-secondary">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="font-bold text-sm">Flight Comfort</span>
+</button>
+<button class="flex flex-col items-start p-6 bg-secondary-container text-on-secondary-container rounded-3xl text-left transition-all active:scale-95">
+<div class="flex w-full justify-between items-start">
+<span class="material-symbols-outlined mb-3" data-icon="hotel">hotel</span>
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<span class="font-bold text-sm">Hotel Stay</span>
+</button>
+<button class="flex flex-col items-start p-6 bg-surface-container-lowest rounded-3xl text-left transition-all hover:bg-secondary-container/10 active:scale-95 border-2 border-transparent focus:border-secondary">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="tour">tour</span>
+<span class="font-bold text-sm">Tour Guides</span>
+</button>
+<button class="flex flex-col items-start p-6 bg-surface-container-lowest rounded-3xl text-left transition-all hover:bg-secondary-container/10 active:scale-95 border-2 border-transparent focus:border-secondary">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="verified_user">verified_user</span>
+<span class="font-bold text-sm">Seamless Visa</span>
+</button>
+</div>
+</div>
+<!-- Question 3: Text Area -->
+<div class="p-8 bg-surface-container-low rounded-[2rem]">
+<label class="block font-headline text-xl font-bold mb-4">Anything else you want to share?</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-2xl p-5 text-on-surface placeholder:text-outline/60 focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Tell us about your favorite moments or things we can improve..." rows="4"></textarea>
+</div>
+<!-- Action Button -->
+<div class="pt-4 pb-12">
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-xl font-label font-bold tracking-[0.05em] uppercase shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                    Next
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-stone-950/90 backdrop-blur-2xl shadow-[0_-4px_20px_0px_rgba(0,0,0,0.05)] z-50 rounded-t-3xl">
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-400 rounded-2xl px-5 py-2 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="travel_explore" style="font-variation-settings: 'FILL' 1;">travel_explore</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Trips</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 hover:text-red-600 dark:hover:text-red-300 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="map">map</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 hover:text-red-600 dark:hover:text-red-300 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-5 py-2 hover:text-red-600 dark:hover:text-red-300 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase">Profile</span>
+</a>
+</nav>
+</body></html>

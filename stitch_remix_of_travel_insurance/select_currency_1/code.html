@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Currency Selection - Odyssey Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#c6222a",
+              "outline": "#8f6f6d",
+              "on-error-container": "#93000a",
+              "on-tertiary-container": "#d5e7ff",
+              "on-surface": "#1f1a20",
+              "tertiary-fixed-dim": "#9bcbff",
+              "surface-bright": "#fff7fb",
+              "primary-fixed": "#ffdad7",
+              "on-secondary-fixed-variant": "#004787",
+              "on-primary-fixed": "#410004",
+              "secondary-fixed": "#d5e3ff",
+              "on-secondary-container": "#003d77",
+              "tertiary-container": "#2e6a9e",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#ffddda",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-tertiary-fixed": "#001d34",
+              "surface-container": "#f6eaf4",
+              "surface": "#fff7fb",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f9edf7",
+              "surface-dim": "#e2d7e0",
+              "secondary-container": "#6faafe",
+              "inverse-surface": "#352e36",
+              "on-background": "#1f1a20",
+              "surface-tint": "#ba1823",
+              "tertiary": "#055285",
+              "primary": "#a10017",
+              "tertiary-fixed": "#d0e4ff",
+              "background": "#fff7fb",
+              "inverse-primary": "#ffb3ae",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#930014",
+              "secondary-fixed-dim": "#a7c8ff",
+              "surface-container-highest": "#ebdfe9",
+              "secondary": "#0f5fae",
+              "surface-variant": "#ebdfe9",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#001c3b",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#004a79",
+              "on-surface-variant": "#5b403e",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#fcf0fa",
+              "surface-container-high": "#f1e5ef",
+              "outline-variant": "#e4beba"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1e5ef; /* surface-container-high as requested */
+        }
+        .header-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e4beba;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-high min-h-screen">
+<!-- Main Full-Screen Modal Container -->
+<main class="max-w-2xl mx-auto min-h-screen bg-surface-container-high flex flex-col">
+<!-- Top Sticky Header -->
+<header class="sticky top-0 z-50 bg-surface-container-high/90 backdrop-blur-md px-6 pt-8 pb-4">
+<div class="flex items-center justify-between mb-8">
+<button class="p-2 -ml-2 text-on-surface-variant hover:bg-surface-container-highest rounded-full transition-colors duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
+</button>
+<h1 class="header-font text-xl font-extrabold text-on-surface tracking-tight">Select Currency</h1>
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+</div>
+<!-- Search Bar Wrapper -->
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 pl-12 pr-6 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 transition-all duration-300 shadow-sm" placeholder="Search currency" type="text"/>
+</div>
+</header>
+<!-- Currency List Section -->
+<section class="flex-1 px-6 pb-24 overflow-y-auto custom-scrollbar">
+<div class="mt-4 mb-2">
+<h2 class="header-font text-[11px] font-bold text-outline uppercase tracking-widest px-2">Popular Currencies</h2>
+</div>
+<!-- List Grid -->
+<div class="space-y-2">
+<!-- Active Currency Item -->
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-primary/5 border border-primary/10 transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xs header-font">
+                            USD
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">USD</p>
+<p class="text-xs text-on-surface-variant">US Dollar</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Inactive Currency Item -->
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            EUR
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">EUR</p>
+<p class="text-xs text-on-surface-variant">Euro</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            INR
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">INR</p>
+<p class="text-xs text-on-surface-variant">Indian Rupee</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="mt-8 mb-2">
+<h2 class="header-font text-[11px] font-bold text-outline uppercase tracking-widest px-2">All Currencies</h2>
+</div>
+<!-- Repeating Items -->
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            GBP
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">GBP</p>
+<p class="text-xs text-on-surface-variant">British Pound Sterling</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            AUD
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">AUD</p>
+<p class="text-xs text-on-surface-variant">Australian Dollar</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            CAD
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">CAD</p>
+<p class="text-xs text-on-surface-variant">Canadian Dollar</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            JPY
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">JPY</p>
+<p class="text-xs text-on-surface-variant">Japanese Yen</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            SGD
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">SGD</p>
+<p class="text-xs text-on-surface-variant">Singapore Dollar</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-surface-container-lowest hover:bg-surface-container-highest transition-all duration-200 group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-bold text-xs header-font group-hover:bg-outline-variant transition-colors">
+                            CHF
+                        </div>
+<div class="text-left">
+<p class="header-font text-base font-bold text-on-surface">CHF</p>
+<p class="text-xs text-on-surface-variant">Swiss Franc</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Tonal Layering Overlay for "Currencies" Context -->
+<nav class="fixed md:hidden bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-stone-950 border-none shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 px-5 py-2 hover:text-[#a10017] dark:hover:text-red-400 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide uppercase">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 px-5 py-2 hover:text-[#a10017] dark:hover:text-red-400 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="luggage">luggage</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide uppercase">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-950/30 text-[#a10017] dark:text-red-200 rounded-full px-5 py-2 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="payments" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide uppercase">Currencies</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 px-5 py-2 hover:text-[#a10017] dark:hover:text-red-400 transition-transform scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium tracking-wide uppercase">Profile</span>
+</a>
+</nav>
+<!-- Web Navigation Shadow (Suppressed for Modal but defined for structure) -->
+<div class="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-6 py-4 bg-white/80 dark:bg-stone-950/80 backdrop-blur-lg flat no-border tonal-layering">
+<span class="font-['Plus_Jakarta_Sans'] text-xl font-extrabold text-[#a10017] tracking-tighter">Odyssey Travel</span>
+<div class="flex gap-8">
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-stone-500 cursor-pointer hover:text-[#a10017]">Explore</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-stone-500 cursor-pointer hover:text-[#a10017]">Bookings</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-[#a10017]">Currencies</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-stone-500 cursor-pointer hover:text-[#a10017]">Profile</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Profile" data-alt="close-up portrait of a professional male traveler with a friendly expression and natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa5G5Hpk-OD_xObxQMHPKZbskxFGbRTmjkhjR1vftG4NR0CMfVffa7MRAXdS1xId4u2F5L6XRG9038sAxl8nQeI86aeYNjLCIOzCTIxl7EQWMKE6yDeg15ccltCILXAVFFQdEemE2iC9CBXC7b8gl7MAvBw2GiUQQMX2qx3RFpvWoYh_B-M10567b9vkrzz3S2RPlQkzVo1u1A17UUVr6sCMCqQgt-Is6bORRpy95-ke9zmhZ7bAAPSif-mTdxJS1T_H22kXPgJmk"/>
+</div>
+</div>
+</main>
+<!-- Floating Background Aesthetic Elements -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-secondary/5 blur-[100px]"></div>
+</div>
+</body></html>

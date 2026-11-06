@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff7fb;
+        }
+        h1, h2, h3, .headline-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "tertiary-container": "#2e6a9e",
+                "background": "#fff7fb",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed-variant": "#004a79",
+                "primary-container": "#c6222a",
+                "inverse-on-surface": "#f9edf7",
+                "surface-tint": "#ba1823",
+                "primary-fixed-dim": "#ffb3ae",
+                "on-background": "#1f1a20",
+                "secondary": "#0f5fae",
+                "surface-dim": "#e2d7e0",
+                "secondary-fixed-dim": "#a7c8ff",
+                "outline-variant": "#e4beba",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed-variant": "#004787",
+                "secondary-fixed": "#d5e3ff",
+                "primary-fixed": "#ffdad7",
+                "on-error-container": "#93000a",
+                "surface-variant": "#ebdfe9",
+                "tertiary-fixed-dim": "#9bcbff",
+                "outline": "#8f6f6d",
+                "on-secondary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-secondary-container": "#003d77",
+                "on-primary-fixed": "#410004",
+                "on-surface-variant": "#5b403e",
+                "on-tertiary-fixed": "#001d34",
+                "tertiary-fixed": "#d0e4ff",
+                "inverse-primary": "#ffb3ae",
+                "surface-container-highest": "#ebdfe9",
+                "on-surface": "#1f1a20",
+                "surface-container-high": "#f1e5ef",
+                "secondary-container": "#6faafe",
+                "surface-bright": "#fff7fb",
+                "inverse-surface": "#352e36",
+                "surface-container": "#f6eaf4",
+                "on-primary-fixed-variant": "#930014",
+                "tertiary": "#055285",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-container": "#ffddda",
+                "on-tertiary-container": "#d5e7ff",
+                "surface-container-low": "#fcf0fa",
+                "surface": "#fff7fb",
+                "on-secondary-fixed": "#001c3b",
+                "on-primary": "#ffffff",
+                "error-container": "#ffdad6",
+                "primary": "#a10017"
+              },
+              fontFamily: {
+                "headline": ["Plus Jakarta Sans"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface overflow-hidden">
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-[60] flex items-center justify-center p-4 md:p-6 bg-on-surface/40 backdrop-blur-sm">
+<!-- Modal Container -->
+<div class="relative w-full max-w-4xl bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[795px]">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 z-50 p-2 bg-surface-container-low/80 hover:bg-surface-container-high rounded-full transition-colors group active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="close">close</span>
+</button>
+<!-- Visual Sidebar (Desktop only) -->
+<div class="hidden md:flex md:w-5/12 relative overflow-hidden bg-primary">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay bg-gradient-to-br from-primary to-secondary"></div>
+<img alt="Luxury travel scenery" class="absolute inset-0 object-cover w-full h-full grayscale-[20%] contrast-[1.1]" data-alt="Cinematic wide shot of a luxury private yacht at sunset in the Mediterranean with calm turquoise waters and golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM7gv1e_SATGC4X_wV65jjEiT1uQW_W15nmIiUm32zWL-Y_vamYPY9SggMaw7EeuwpyYxyELwtAAgg_OB8xlYHqWeST-oofQ1X8fS5QpI2X9ZuRE8eoQ8S87toMG_WbV6UlSc1ljcHIQvrukyn0V4p6gJf6Dr1_vayXK-5zq5GMdMKfdRbPgioqx2mSZ2rhxXPlLRokxy3l06cQTm3QvhjQA9GPlKNlnWjBcIVehcRFEkGm3kWcFu1-1E3MmzFBqXgCoEQsYXr2YU"/>
+<div class="relative z-10 mt-auto p-10 bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="text-white text-3xl font-extrabold headline-font mb-4 tracking-tight leading-tight">Your Curated Journey Awaits.</h3>
+<p class="text-white/80 text-sm leading-relaxed mb-6 font-body">Connect with our concierge to begin designing an odyssey tailored exclusively to your desires.</p>
+<div class="flex items-center gap-3 text-white/90">
+<span class="material-symbols-outlined text-secondary-container" data-icon="verified_user">verified_user</span>
+<span class="text-xs uppercase tracking-widest font-semibold">Concierge Service Guaranteed</span>
+</div>
+</div>
+</div>
+<!-- Form Content -->
+<div class="w-full md:w-7/12 p-8 md:p-12 overflow-y-auto">
+<header class="mb-10">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-2 block">Private Concierge</span>
+<h1 class="text-4xl font-extrabold text-on-surface headline-font tracking-tighter leading-none">Get in Touch</h1>
+<div class="w-12 h-1 bg-primary mt-4"></div>
+</header>
+<form class="space-y-6">
+<div class="grid grid-cols-1 gap-6">
+<!-- Name Field -->
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider ml-1">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="person">person</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant text-on-surface" placeholder="Alex Sterling" type="text"/>
+</div>
+</div>
+<!-- Contact Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="alternate_email">alternate_email</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant text-on-surface" placeholder="alex@domain.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider ml-1">Phone Number</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="call">call</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant text-on-surface" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Message Field -->
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider ml-1">Your Message</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-4 text-outline text-lg" data-icon="edit_note">edit_note</span>
+<textarea class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant text-on-surface resize-none" placeholder="Tell us about your dream destination..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-bold uppercase tracking-[0.1em] text-sm flex items-center justify-center gap-3 shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:scale-95 transition-all duration-300" type="submit">
+                            Send Inquiry
+                            <span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+</button>
+<p class="text-center text-[10px] text-outline mt-6 uppercase tracking-widest">Our typical response time is under 4 hours.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Main Background Content (Mocked) -->
+<div class="min-h-screen opacity-10 pointer-events-none select-none">
+<nav class="flex items-center justify-between px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold text-primary tracking-tighter">Govind Tours</div>
+<div class="flex gap-8">
+<span class="text-neutral-600">Destinations</span>
+<span class="text-neutral-600">Our Story</span>
+</div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8 mt-20">
+<h2 class="text-7xl font-extrabold tracking-tighter headline-font text-on-surface">Explore the<br/>Unseen World.</h2>
+<div class="mt-12 grid grid-cols-3 gap-8">
+<div class="h-[400px] bg-neutral-200 rounded-xl"></div>
+<div class="h-[400px] bg-neutral-200 rounded-xl"></div>
+<div class="h-[400px] bg-neutral-200 rounded-xl"></div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Govind Tours - Book Your Flight</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#f1e5ef",
+              "on-error": "#ffffff",
+              "on-secondary-container": "#003d77",
+              "tertiary-fixed": "#d0e4ff",
+              "secondary-fixed-dim": "#a7c8ff",
+              "primary-fixed-dim": "#ffb3ae",
+              "secondary": "#0f5fae",
+              "background": "#fff7fb",
+              "surface-container-highest": "#ebdfe9",
+              "on-tertiary-fixed-variant": "#004a79",
+              "on-primary-fixed": "#410004",
+              "on-primary-container": "#ffddda",
+              "surface-variant": "#ebdfe9",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#5b403e",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fff7fb",
+              "outline": "#8f6f6d",
+              "tertiary": "#055285",
+              "surface": "#fff7fb",
+              "on-error-container": "#93000a",
+              "on-tertiary-container": "#d5e7ff",
+              "primary-fixed": "#ffdad7",
+              "outline-variant": "#e4beba",
+              "tertiary-container": "#2e6a9e",
+              "surface-tint": "#ba1823",
+              "on-secondary-fixed-variant": "#004787",
+              "on-background": "#1f1a20",
+              "primary": "#a10017",
+              "error": "#ba1a1a",
+              "primary-container": "#c6222a",
+              "surface-container": "#f6eaf4",
+              "inverse-on-surface": "#f9edf7",
+              "tertiary-fixed-dim": "#9bcbff",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#ffb3ae",
+              "secondary-container": "#6faafe",
+              "surface-dim": "#e2d7e0",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#d5e3ff",
+              "inverse-surface": "#352e36",
+              "on-tertiary-fixed": "#001d34",
+              "on-primary-fixed-variant": "#930014",
+              "on-surface": "#1f1a20",
+              "on-tertiary": "#ffffff",
+              "surface-container-low": "#fcf0fa",
+              "on-secondary-fixed": "#001c3b"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-sm shadow-[#1f1a20]/5 flex items-center justify-between px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#a10017] cursor-pointer active:scale-95 duration-200" data-icon="menu">menu</span>
+<h1 class="text-xl font-extrabold tracking-tighter text-[#a10017] dark:text-[#c6222a] font-['Plus_Jakarta_Sans']">Govind Tours</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-primary/10 transition-transform active:scale-95 duration-200">
+<img alt="Travel Agent Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsgcD0oQkMKgKKMvTC6YoOa_LFkH3NtBgLVrL1_nN6QzjRPKmcCyyEeXz0JSG0rlcEIpmdr_mE7BHNCw542WZFaNG8eRnnt7zsJwOa8BayIKo5KUtUVirsIUVad5sAn1MpU8Fe7Dl4HUqnPjjRNmBJCjqh9dbst9Ccd7inEMZU8FlO7dHkLOlGbJTfpJb5Sa-fdXneTnraXgb4BUEaT_VfIsZKzjhU6erPXOxKOItIqGNrMx4Upu9ofRhxU9i2PZMwkWlPTWOQvq8"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-5xl mx-auto">
+<!-- Hero Section Asymmetry -->
+<section class="mb-10 relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+<div class="md:col-span-8">
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tight text-on-background leading-none mb-4">
+                        Where will your <span class="text-secondary italic">next odyssey</span> begin?
+                    </h2>
+<p class="text-lg text-on-surface-variant max-w-md">
+                        Experience curated travel with Govind Tours. Seamlessly booking the world's finest routes since 1998.
+                    </p>
+</div>
+<div class="hidden md:block md:col-span-4 h-48 rounded-xl overflow-hidden shadow-2xl rotate-2">
+<img class="w-full h-full object-cover" data-alt="Modern commercial airplane soaring through soft white clouds at sunrise with warm golden light hitting the wings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRo9kkAFRvL4iHydIZJ5sG-XyOB4TO1e4gqXRFtlzZ2yNsXb8qpemjV69Msv3mnxhDTTv8ss1E0ESujWuRlqn3Qc3R7dB6E8tGN4i2CQ6vkf1eq7cCmwAk-BuwMhE4omXKIGP2XkRrPKr5ACK7pzKQZafsBvpOLIFZR2SChrBtjBN6KLgOwy7R8gc205N7GJiJ18ZsQSg_T8BkRJ0bAt_ot-We9hrhfZRnuXdMHef0anCLUvzhnSILL_0g7db6eF1aFBVOXwh6H0g"/>
+</div>
+</div>
+</section>
+<!-- Booking Form Card -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] shadow-[0_20px_50px_rgba(31,26,32,0.08)] p-6 md:p-10 relative overflow-hidden">
+<!-- Glass Decorative Element -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+<form class="space-y-8 relative z-10">
+<!-- Trip Type Toggle -->
+<div class="flex gap-2 p-1 bg-surface-container rounded-full w-fit">
+<button class="px-6 py-2 rounded-full bg-white text-on-surface text-sm font-semibold shadow-sm" type="button">Round Trip</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant text-sm font-semibold hover:bg-white/50 transition-colors" type="button">One Way</button>
+<button class="px-6 py-2 rounded-full text-on-surface-variant text-sm font-semibold hover:bg-white/50 transition-colors" type="button">Multi-city</button>
+</div>
+<!-- Origin/Destination Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
+<div class="relative group">
+<label class="absolute -top-2.5 left-4 px-1 bg-surface-container-lowest text-xs font-bold text-secondary tracking-widest uppercase">From</label>
+<div class="flex items-center gap-4 bg-surface-container-low hover:bg-surface-container-lowest border-2 border-transparent focus-within:border-primary/20 transition-all rounded-xl p-4">
+<span class="material-symbols-outlined text-on-surface-variant">flight_takeoff</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-lg font-medium placeholder:text-zinc-400" placeholder="Origin City" type="text" value="Mumbai (BOM)"/>
+</div>
+</div>
+<!-- Swap Button -->
+<button class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white shadow-lg border border-outline-variant/30 rounded-full flex items-center justify-center text-primary hover:rotate-180 transition-transform duration-500 md:flex hidden" type="button">
+<span class="material-symbols-outlined text-sm">swap_horiz</span>
+</button>
+<div class="relative group">
+<label class="absolute -top-2.5 left-4 px-1 bg-surface-container-lowest text-xs font-bold text-secondary tracking-widest uppercase">To</label>
+<div class="flex items-center gap-4 bg-surface-container-low hover:bg-surface-container-lowest border-2 border-transparent focus-within:border-primary/20 transition-all rounded-xl p-4">
+<span class="material-symbols-outlined text-on-surface-variant">flight_land</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-lg font-medium placeholder:text-zinc-400" placeholder="Destination City" type="text"/>
+</div>
+</div>
+</div>
+<!-- Dates and Passengers -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="relative">
+<label class="absolute -top-2.5 left-4 px-1 bg-surface-container-lowest text-xs font-bold text-secondary tracking-widest uppercase">Departure</label>
+<div class="flex items-center gap-4 bg-surface-container-low p-4 rounded-xl">
+<span class="material-symbols-outlined text-on-surface-variant">calendar_today</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-medium" type="date"/>
+</div>
+</div>
+<div class="relative">
+<label class="absolute -top-2.5 left-4 px-1 bg-surface-container-lowest text-xs font-bold text-zinc-400 tracking-widest uppercase">Return (Optional)</label>
+<div class="flex items-center gap-4 bg-surface-container-low p-4 rounded-xl opacity-60">
+<span class="material-symbols-outlined text-on-surface-variant">event_repeat</span>
+<input class="bg-transparent border-none focus:ring-0 w-full font-medium" type="date"/>
+</div>
+</div>
+<div class="relative">
+<label class="absolute -top-2.5 left-4 px-1 bg-surface-container-lowest text-xs font-bold text-secondary tracking-widest uppercase">Passengers &amp; Class</label>
+<div class="flex items-center gap-4 bg-surface-container-low p-4 rounded-xl">
+<span class="material-symbols-outlined text-on-surface-variant">group</span>
+<select class="bg-transparent border-none focus:ring-0 w-full font-medium appearance-none">
+<option>1 Adult, Economy</option>
+<option>2 Adults, Economy</option>
+<option>1 Adult, Business</option>
+<option>2 Adults, First Class</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-4">
+<button class="w-full py-5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white text-sm font-bold tracking-[0.1em] uppercase shadow-[0_10px_30px_-10px_rgba(161,0,23,0.5)] active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">search</span>
+                        Search Flights
+                    </button>
+</div>
+</form>
+</div>
+<!-- Featured Offers Grid (Bento Style) -->
+<section class="mt-20">
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-primary font-bold tracking-tighter uppercase text-xs">Exclusively for you</span>
+<h3 class="text-3xl font-headline font-bold text-on-background">Seasonal Getaways</h3>
+</div>
+<button class="text-secondary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[500px]">
+<div class="md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden relative group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Tropical beach paradise with crystal clear turquoise water and leaning palm trees under a bright blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByzv6QNNDjt742btCf2xtyPUtYBiYX6-d1vBaiUE7fDDSd6ZxAphUOYQP8rmbLj9-N7f-05YTkJ2GvvUwIAbvCG50jX8j8JtE6sL7mbfx1cA1w0sX8E5ZBtmf6voBgEJeVyyVRu6mtJOCAfdhLmyH-gE--oXdH5fHAuhpxuRCt15iImvtW8TZ8kN7na2x9ratzxjQZ5Xe8sgw6MzkI7sVBjnu8umhgD1kRnk3O_hPquYDfyxAIOIlLc0iSHJz9IUWf4rF-buHPZsY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest mb-2 inline-block">Trending</span>
+<h4 class="text-2xl font-headline font-bold">Maldives Escape</h4>
+<p class="text-white/80 text-sm">Direct flights starting at ₹45,000</p>
+</div>
+</div>
+<div class="md:col-span-2 rounded-2xl overflow-hidden relative group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Ancient Japanese temple in Kyoto surrounded by vibrant pink cherry blossom trees in full bloom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_8F1fMJ2Vf-XziaO7GHHMxvZ_oGVrD-PcEWcS-RFyie63h0NV70pD_HZ5g7n39dflUdwGLK2aT_jmWuyS2GpJyQavRrZj1088tDkzinZLPDChrvazrIFrmJwRgGm19dlpfLMsUaQx8XADdl8VJualBhcYcdIQ6veG6px0q12RrUQcHV_cZSTu25lc-yo9v6COoYafpqei6hPr4AfjafjX2KzcSQgLimDSDKl26cgNHUdkNs2GtZREh7un8i-v8CBBukh2l4Yz_nc"/>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="absolute inset-0 flex items-center justify-center text-center">
+<div class="p-4">
+<h4 class="text-xl font-headline font-bold text-white">Kyoto Springs</h4>
+<p class="text-white/90 text-sm">Limited Time Offers</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 rounded-2xl overflow-hidden relative group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Iconic white and blue domed architecture of Santorini overlooking the deep blue Aegean Sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGu_cpwgwCTy-kXvFeYR9tV1mopkpwmxnayvgBxNnKil89lWLMtUY22V_oHXPJ2Xc79cUcpI6RVUrZpECRFTxwNFSeNQugbq-HvpeAinFmKiKWLZFLPhhtrEB82qDd8ip3ZuDFrK_oA-k6LiB-KFkqVs3b6CG5_OI5nw3_o34C85cA5N8HaIsPh13sQl9RSrdIoLW8BipFJ--1Vx1t3kan3FZrjmUJucAx9Vy2QkxWwFtDx1_aj0PWaPC5_gxJ0findk7y0OyDVbk"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="md:col-span-1 rounded-2xl bg-secondary p-6 flex flex-col justify-between group cursor-pointer">
+<span class="material-symbols-outlined text-white text-3xl group-hover:rotate-12 transition-transform">local_activity</span>
+<div>
+<h4 class="text-lg font-bold text-white leading-tight">Privilege Member Perks</h4>
+<p class="text-white/70 text-xs mt-2">Earn 2x miles on every booking this month.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="mt-20 border-t border-surface-container-high pt-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">verified_user</span>
+<h5 class="text-sm font-bold text-on-background">Secure Checkout</h5>
+<p class="text-[11px] text-on-surface-variant mt-1">256-bit encrypted payments</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">support_agent</span>
+<h5 class="text-sm font-bold text-on-background">24/7 Concierge</h5>
+<p class="text-[11px] text-on-surface-variant mt-1">Global assistance anytime</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">eco</span>
+<h5 class="text-sm font-bold text-on-background">Carbon Offset</h5>
+<p class="text-[11px] text-on-surface-variant mt-1">Fly greener with us</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">price_check</span>
+<h5 class="text-sm font-bold text-on-background">Best Price Guarantee</h5>
+<p class="text-[11px] text-on-surface-variant mt-1">We match any verified quote</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-[0_-4px_20px_0px_rgba(31,26,32,0.06)] rounded-t-3xl z-50">
+<a class="flex flex-col items-center justify-center bg-[#f6eaf4] dark:bg-zinc-800 text-[#a10017] dark:text-[#c6222a] rounded-2xl px-5 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Flights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:opacity-80 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:opacity-80 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="local_offer">local_offer</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Offers</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-5 py-2 hover:opacity-80 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

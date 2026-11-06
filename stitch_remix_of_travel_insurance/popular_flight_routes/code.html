@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#930014",
+              "secondary-fixed": "#d5e3ff",
+              "on-tertiary-fixed": "#001d34",
+              "primary-fixed-dim": "#ffb3ae",
+              "primary-fixed": "#ffdad7",
+              "surface-container-highest": "#ebdfe9",
+              "surface-tint": "#ba1823",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1f1a20",
+              "surface-dim": "#e2d7e0",
+              "on-tertiary-container": "#d5e7ff",
+              "on-background": "#1f1a20",
+              "on-tertiary-fixed-variant": "#004a79",
+              "tertiary-fixed": "#d0e4ff",
+              "on-primary-container": "#ffddda",
+              "secondary-fixed-dim": "#a7c8ff",
+              "primary-container": "#c6222a",
+              "tertiary": "#055285",
+              "on-secondary-fixed-variant": "#004787",
+              "secondary": "#0f5fae",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f9edf7",
+              "background": "#fff7fb",
+              "surface-container-high": "#f1e5ef",
+              "secondary-container": "#6faafe",
+              "outline": "#8f6f6d",
+              "on-secondary-container": "#003d77",
+              "inverse-primary": "#ffb3ae",
+              "tertiary-container": "#2e6a9e",
+              "surface-container": "#f6eaf4",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#001c3b",
+              "surface": "#fff7fb",
+              "tertiary-fixed-dim": "#9bcbff",
+              "surface-variant": "#ebdfe9",
+              "surface-bright": "#fff7fb",
+              "on-error": "#ffffff",
+              "outline-variant": "#e4beba",
+              "primary": "#a10017",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#352e36",
+              "surface-container-low": "#fcf0fa",
+              "on-primary-fixed": "#410004",
+              "on-surface-variant": "#5b403e",
+              "on-error-container": "#93000a"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined text-stone-500" data-icon="menu">menu</span>
+</button>
+<span class="text-xl font-extrabold tracking-tighter text-red-800 dark:text-red-500 font-['Plus_Jakarta_Sans']">Govind Tours</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-stone-500 dark:text-stone-400 hover:text-red-600 font-medium transition-colors" href="#">Explore</a>
+<a class="text-red-700 dark:text-red-400 font-bold" href="#">Flights</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-red-600 font-medium transition-colors" href="#">Bookings</a>
+</nav>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border-2 border-white">
+<img alt="User profile" data-alt="close-up portrait of a professional man with a friendly expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7xbnneYiE_u3Jn40-IGgNRXsV87sFery1eUEYDGdUeLoSWIxLIdHb4JZa_G42SqeyEFBib-QzmPeCqpqHMdyFIHfgBUFEuIScyrKncgnGnywd2SW_0Jum39zg2TjuVuBDpoXWQHy5FrMqLztDxiJlOLjvbcWayhaUf_uaS7IdGcogcKHasy5Ox6bYcBpWaA4T8il2odjp0fYn3dJ3oM90ii4Ismg06Z1vWLb43ZfkJRxV950PNf9wYGNhVTSou73lfastd9uYaCk"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Title Section -->
+<div class="mb-12">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Popular Routes</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl">Discover extraordinary destinations with exclusive fares from Ahmedabad. Your next adventure begins here.</p>
+</div>
+<!-- Flights Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Dubai -->
+<div class="group relative flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Dubai skyline" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="magnificent aerial view of Dubai skyline at twilight with the Burj Khalifa and glowing city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8wdpCjSE8SgIcfvW2cQsxyx7CAGejQTnboOOn9hFJ8yP0JZs9FdOrANGzWd5JZ5aLHh0G4hhoszkG7ZDRcLdzL6ulUKh_1j_s9BCyNO9BGnssyhPYRMLJwVzOFbkJs_eJIV31d29S20ljvPnRpRw9-5xIPVxd1RWcHRBNoSMA_6GV4mYJugXQWO8Z3v2H1H1xuTJSi7Ga-HiaSJGN0e06Y-fA8ySjiNbfv7zw7yUUMWpO49ul4lm9VDZncECZslKeJsekunaJ8YQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 glass-card px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span> Trending
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-secondary font-semibold text-sm">Ahmedabad</span>
+<span class="material-symbols-outlined text-stone-400 text-sm" data-icon="trending_flat">trending_flat</span>
+<span class="text-secondary font-semibold text-sm">Dubai</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Dubai</h3>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-medium">Starting from</p>
+<p class="text-2xl font-extrabold text-primary">₹18,500</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-3 rounded-xl text-sm font-bold tracking-wider uppercase transition-all active:scale-95 shadow-lg shadow-primary/20">
+                            Explore Flights
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 2: London -->
+<div class="group relative flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="London Big Ben" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="iconic Big Ben and the Houses of Parliament in London during a soft pink sunset reflecting in the Thames river" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjTl1XQgqiLdN7McyLbFHvV1T2fZLD6QO3dIERMZwtOUnoUnhAzBCGZwwI3jZPX6-zFDZhDdOOSrmMYQfOstr17QFhHCcwvssdBErTJXomcYzsKegHS7oG0nvd1sWTw_l3VRbIcSfmPCSU2pRmozGV8w1jOa1M9s45kvcUoF0N_AwcuDjJ_9HLV31NXIQRPks9hZJiVnGtGY-jSM_8hPBpRB2a16dY_1mH-LVjpbWFwiiblz-eVWKHzU5xVKKpH7FFHitApjKcL4o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-secondary font-semibold text-sm">Ahmedabad</span>
+<span class="material-symbols-outlined text-stone-400 text-sm" data-icon="trending_flat">trending_flat</span>
+<span class="text-secondary font-semibold text-sm">London</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">London</h3>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-medium">Starting from</p>
+<p class="text-2xl font-extrabold text-primary">₹62,200</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-3 rounded-xl text-sm font-bold tracking-wider uppercase transition-all active:scale-95 shadow-lg shadow-primary/20">
+                            Explore Flights
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Bali -->
+<div class="group relative flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Bali Temple" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="serene Balinese temple gate overlooking a misty tropical forest at dawn with soft ethereal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZBtMz6vIItHrAUm2QxQ-_6Ldbyv2rgwjxwWn4BtKl-zOvLr3xD8ZR2Gnif8LS3ssmAtZcHAoCI3Khu7dg8hduDZaBbE7CXdoUNIyyclsdzB_cOWg3aW7G5lu9y2O0tMQiWFFgKqsktUv3NF0A5s7Q-Y-q7t32IIYc_LT1uwVgbelbAHOVbiiP0WjvQvp3KJJwySjNTPDDMofbBae47vjCRraC2Lzi-6GT8xXSnqDLcFajzDyy_hVwQgJng0wAcBs_eHsbOQRB1ok"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-4 right-4 glass-card px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span> Best Seller
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-secondary font-semibold text-sm">Ahmedabad</span>
+<span class="material-symbols-outlined text-stone-400 text-sm" data-icon="trending_flat">trending_flat</span>
+<span class="text-secondary font-semibold text-sm">Bali</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Bali</h3>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-medium">Starting from</p>
+<p class="text-2xl font-extrabold text-primary">₹34,800</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-3 rounded-xl text-sm font-bold tracking-wider uppercase transition-all active:scale-95 shadow-lg shadow-primary/20">
+                            Explore Flights
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 4: Singapore -->
+<div class="group relative flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Singapore Marina Bay" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="futuristic Gardens by the Bay in Singapore with glowing supertrees against a deep blue night sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC11pcsCrxqBY18_pqIan9wS-ex6hTmq-wpHzEBbJ6ilHM2LmdgakmOA5vtJOci_C9icQOh1Ohf5vhuvofq2ZwWUq_7AGESpYtL2qPIwIZEJhqK5fXOluFA18eC-pLYpJRLJyOHSbMcQZ3LNXYDVHUZ8xgMEKNlh56Vlcd-58bK_X_JKggnwmS9KCuFY4risFlgxz0M0KBb34GWXshsA7qK6LAo-j7D1Y8O3qKjona5WNO4gsCgdHox__zn_VGpPQEYkTCTHj4hG74"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-secondary font-semibold text-sm">Ahmedabad</span>
+<span class="material-symbols-outlined text-stone-400 text-sm" data-icon="trending_flat">trending_flat</span>
+<span class="text-secondary font-semibold text-sm">Singapore</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Singapore</h3>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-medium">Starting from</p>
+<p class="text-2xl font-extrabold text-primary">₹22,900</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-3 rounded-xl text-sm font-bold tracking-wider uppercase transition-all active:scale-95 shadow-lg shadow-primary/20">
+                            Explore Flights
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 5: Paris -->
+<div class="group relative flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Paris Eiffel Tower" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="romantic view of the Eiffel Tower in Paris through blossoming spring trees under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6jvB0KvXrFrFU9jEQvmnQEgHKbmyQgfQHq9M7niE_ULovSrQpqRw0JiKxM_Li0x9MJajmh0feC627mkKfaOZm_B11TOkX6R7IwQM6hIYg3goldFh8AcN7n4F-pVSW3DSjAGGTuDUV_l64YcK97sm1lTPRp7Hvkb4qZlUTLPrvIa1IRn_bbEx_oQwyoNh-h9Sbp6ocoIWLZiqaJkwFkmuzdPC7TpzygH7MvlDKLDLyIcjxyKl2D3iv6Wq_1vg8j8fLd4FjZW-pI0E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-secondary font-semibold text-sm">Ahmedabad</span>
+<span class="material-symbols-outlined text-stone-400 text-sm" data-icon="trending_flat">trending_flat</span>
+<span class="text-secondary font-semibold text-sm">Paris</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Paris</h3>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-medium">Starting from</p>
+<p class="text-2xl font-extrabold text-primary">₹58,400</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-3 rounded-xl text-sm font-bold tracking-wider uppercase transition-all active:scale-95 shadow-lg shadow-primary/20">
+                            Explore Flights
+                        </button>
+</div>
+</div>
+</div>
+<!-- Card 6: Bangkok -->
+<div class="group relative flex flex-col rounded-3xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Bangkok Cityscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant street market in Bangkok at night with colorful lights, food stalls, and blurred city traffic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfHrUUp6YLO5V3muYuDsA1tCnGyyzeiFsfU2qIiClVcY4lMTJmbWMFAxy9T6WWiLAP9aStGS3UgqWGxEptp9vp4I4DkzkbY0jNDXZqcIWc0m1ZAkKPAzsaW_wC4AF9G3gfG4J75jT9LPN3JM7YbywWxmUipImCzYbK7ZvSdh4L_KUwuk3gjzo1c4fTDlzLSUmtQoQRZ2OMv9vs5vrRp142JtWniNV4A05OFnMZD1-JdPxiAq7mK5qRJ2pB0cBsqMM73PYyL-COlfk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-secondary font-semibold text-sm">Ahmedabad</span>
+<span class="material-symbols-outlined text-stone-400 text-sm" data-icon="trending_flat">trending_flat</span>
+<span class="text-secondary font-semibold text-sm">Bangkok</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Bangkok</h3>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider font-medium">Starting from</p>
+<p class="text-2xl font-extrabold text-primary">₹14,900</p>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-6 py-3 rounded-xl text-sm font-bold tracking-wider uppercase transition-all active:scale-95 shadow-lg shadow-primary/20">
+                            Explore Flights
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-6 bg-white/90 dark:bg-stone-900/90 backdrop-blur-lg shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-3xl z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-red-600 dark:hover:text-red-300 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-400 rounded-2xl px-4 py-2 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="flight_takeoff" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">Flights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-red-600 dark:hover:text-red-300 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 px-4 py-2 hover:text-red-600 dark:hover:text-red-300 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest font-semibold">Profile</span>
+</a>
+</nav>
+<!-- Map/Location Trigger (Floating Action Button style for Context) -->
+<div class="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-40">
+<button class="flex items-center gap-2 bg-on-surface text-surface py-4 px-6 rounded-full shadow-2xl hover:bg-stone-800 transition-all active:scale-95 group">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-bold text-sm tracking-wide">View Map</span>
+</button>
+</div>
+</body></html>

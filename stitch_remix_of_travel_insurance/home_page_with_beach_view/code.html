@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Govind Tours | Make Your Tour Amazing With Us</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#e2d7e0",
+              "on-secondary-container": "#003d77",
+              "outline-variant": "#e4beba",
+              "primary": "#a10017",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#930014",
+              "inverse-on-surface": "#f9edf7",
+              "surface-container-high": "#f1e5ef",
+              "primary-container": "#c6222a",
+              "tertiary-fixed": "#d0e4ff",
+              "background": "#fff7fb",
+              "surface-container": "#f6eaf4",
+              "surface-tint": "#ba1823",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary-container": "#6faafe",
+              "on-background": "#1f1a20",
+              "on-tertiary-fixed": "#001d34",
+              "on-secondary-fixed": "#001c3b",
+              "tertiary": "#055285",
+              "surface-variant": "#ebdfe9",
+              "on-primary-fixed": "#410004",
+              "inverse-primary": "#ffb3ae",
+              "on-surface-variant": "#5b403e",
+              "tertiary-fixed-dim": "#9bcbff",
+              "secondary": "#0f5fae",
+              "surface-bright": "#fff7fb",
+              "on-secondary-fixed-variant": "#004787",
+              "surface-container-low": "#fcf0fa",
+              "on-tertiary-fixed-variant": "#004a79",
+              "surface-container-lowest": "#ffffff",
+              "on-error": "#ffffff",
+              "primary-fixed": "#ffdad7",
+              "secondary-fixed": "#d5e3ff",
+              "secondary-fixed-dim": "#a7c8ff",
+              "surface-container-highest": "#ebdfe9",
+              "outline": "#8f6f6d",
+              "error-container": "#ffdad6",
+              "on-surface": "#1f1a20",
+              "on-tertiary-container": "#d5e7ff",
+              "inverse-surface": "#352e36",
+              "tertiary-container": "#2e6a9e",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-primary-container": "#ffddda",
+              "surface": "#fff7fb"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#c6222a] text-3xl" data-icon="travel_explore">travel_explore</span>
+<span class="text-2xl font-extrabold text-[#0e5ead] dark:text-blue-400 font-headline tracking-tight">Govind Tours</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-headline text-sm">
+<a class="text-[#c6222a] font-bold border-b-2 border-[#c6222a] pb-1" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] transition-colors" href="#">Flights</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] transition-colors" href="#">Visa</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] transition-colors" href="#">Packages</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#0e5ead] transition-colors" href="#">About</a>
+</nav>
+<button class="bg-primary-container text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-primary transition-all active:scale-95 duration-200">
+                Contact Us
+            </button>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Ultra realistic tropical beach with crystal clear turquoise water and palm trees at sunset" class="w-full h-full object-cover" data-alt="Ultra realistic tropical beach, crystal clear turquoise water, white sand, palm trees, golden sunset, cinematic lighting, high resolution, no text, no people, clean composition, minimal aesthetic, 16:9" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEEzl-CVBNLQzLC_wWp3-6Vb2y8CCk3_j0Cn1bizW8B0tDO1do59JszByYek0-SNn3IXecF2-DK34rJHQo6E2cP5hKnnjplxRyVgMvu2oaOdaEdNBX7FTwDB-dwMIunFBHP7tprzrMgmHX6OXebwL8J08-3SgBqxzEe4lhovfsjEWG57_WB0ibk_oYjGZMEZMP750Dy2EtGygsXkkkptxFj1hMUOIAozmvpTpIfqo5grRk0G2bBW9lup5CnsvO2nmp5dUAX4Q7WVI"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+<div class="max-w-2xl space-y-6">
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
+                        Make Your Tour <br/> <span class="text-primary-fixed">Amazing</span> With Us
+                    </h1>
+<p class="text-lg md:text-xl text-white/90 font-medium max-w-lg leading-relaxed">
+                        From getting your visa to your dream vacation — we manage everything with professional care.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary-container hover:bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg active:scale-95">
+                            Explore Services
+                        </button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">
+                            View Packages
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="bg-secondary relative z-20 -mt-8 py-10 shadow-2xl">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+<div class="space-y-1 border-r border-white/10 last:border-none">
+<div class="text-3xl font-headline font-extrabold tracking-tighter">2000+</div>
+<div class="text-xs uppercase tracking-widest font-semibold text-secondary-fixed-dim">Visa Approvals</div>
+</div>
+<div class="space-y-1 border-r border-white/10 last:border-none">
+<div class="text-3xl font-headline font-extrabold tracking-tighter">100+</div>
+<div class="text-xs uppercase tracking-widest font-semibold text-secondary-fixed-dim">Trips Planned</div>
+</div>
+<div class="space-y-1 border-r border-white/10 last:border-none">
+<div class="text-3xl font-headline font-extrabold tracking-tighter">99%</div>
+<div class="text-xs uppercase tracking-widest font-semibold text-secondary-fixed-dim">Visa Success Rate</div>
+</div>
+<div class="space-y-1 border-none">
+<div class="text-3xl font-headline font-extrabold tracking-tighter">10+</div>
+<div class="text-xs uppercase tracking-widest font-semibold text-secondary-fixed-dim">Years Experience</div>
+</div>
+</div>
+</section>
+<!-- Main Services -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+<a class="group bg-surface-container-lowest p-8 rounded-3xl transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center space-y-4" href="#">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<h3 class="font-headline font-bold text-lg">Air Tickets</h3>
+</a>
+<a class="group bg-surface-container-lowest p-8 rounded-3xl transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center space-y-4" href="#">
+<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary transition-colors group-hover:bg-secondary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="description">description</span>
+</div>
+<h3 class="font-headline font-bold text-lg">Visa Services</h3>
+</a>
+<a class="group bg-surface-container-lowest p-8 rounded-3xl transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center space-y-4" href="#">
+<div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary transition-colors group-hover:bg-tertiary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline font-bold text-lg">Travel Insurance</h3>
+</a>
+<a class="group bg-surface-container-lowest p-8 rounded-3xl transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center space-y-4" href="#">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="card_travel">card_travel</span>
+</div>
+<h3 class="font-headline font-bold text-lg">Tour Packages</h3>
+</a>
+<a class="group bg-surface-container-lowest p-8 rounded-3xl transition-all hover:-translate-y-2 hover:shadow-xl flex flex-col items-center text-center space-y-4" href="#">
+<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary transition-colors group-hover:bg-secondary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="import_contacts">import_contacts</span>
+</div>
+<h3 class="font-headline font-bold text-lg">Passport Services</h3>
+</a>
+</div>
+</div>
+</section>
+<!-- Top Destinations Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="space-y-4">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Popular Choice</span>
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface">Top Destinations</h2>
+</div>
+<p class="text-on-surface-variant max-w-md font-medium">Explore our hand-picked curated list of world-class destinations for your next escape.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Large Feature -->
+<div class="col-span-2 row-span-2 relative group overflow-hidden rounded-[2.5rem]">
+<img alt="Dubai" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ultra-modern luxury skyline of Dubai with the Burj Khalifa reflecting golden sunset light over calm waters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeagjtxt-h7W8X9RjLc9QyKVmVULnskm9ndzUPFyBVv6lJH_jPoXlv4--klkw3Hnt0IQ0Vk9U1NXPCuYSQeHikFLGqNN2tTeYEkWPWDZcnQJNpwLy4eof2n60sV2gTxCm_q63LjojFWIOnfoTUIKoeDgRJXDlLsuuGsBTNhbfamV37gGH_6XCVueByWmxTyXy9V6xU0G3G9cZGFiRUZIX96bG2vyiohGY_ZHFea8v8UEZUCgn2Gvvy67BXW7NslqEE2kMOoQBwA8A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<h3 class="text-3xl font-headline font-extrabold">Dubai</h3>
+<p class="text-white/80">Sky-high Luxury &amp; Desert Safaris</p>
+</div>
+</div>
+<!-- Regular items -->
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Bali" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="vibrant green rice terraces in Bali with tropical palm trees and soft morning mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEO0mdRG4NDJYnS5vWsypEWgIF2UT1kgmTnoHVoPaRCR_noKhQoFDg93sDfZKDQwgK_Hzq_TIocJaLsziMAZ9-A48wKBn_r6U0uYf_YSp1DvvyAgLWUOPEW1Zviop0unRK0ny_68muiw7UXPS4o0gGmWP4jttqdgZXOFy5Qmmd9WZDaw2aevfM3h3DwRzWmQ1wB14vfgbWXnPi-kn0C_zJfnEd9mbHEwizbrIbnvqwJBWRMowBM9xfkLCF0Q3nkbwR_0VhR8h3oB4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Bali</h3>
+</div>
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Kashmir" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="serene snow-capped mountains of Kashmir reflecting in the crystalline waters of Dal Lake with traditional wooden boats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDHGw5C1-Ii_dIRybONSquoJdNnm6M3GhHGrhwZQDMZc9_RMC1dg57IDZoCDs4NgHznRhuddQuJNUe_T909o6Vhkh5lRg38u0HqhOmjvZhRcMx5TO3C3-qfz3Pe8Ax10YMzE0W1m2pc8jVXY4pKsiw3TMAFS3vUEvk6NlkkYT56KOzI54V7qSaJHYEMHh6O_5ANY6qsJP97Mv8EPk3OOzMbkEHoameV6hFqTYn91Wpy6ZcjjwR6dCW8ioGvFTqXs1QV66zJMawztg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Kashmir</h3>
+</div>
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Kerala" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="traditional Kerala houseboat floating through calm palm-fringed backwaters under a bright tropical sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWonuk8RP1D957bPLK9nIRh25uTqBJdfy8dYcqrQw9v503h1hsSEoDBGZKjynwoxCW93oQGfYpBQ-FxIWgSkVqQDzY9FJd9iW2PZH0KXBmlFdr7JEUMJZYCkZFXs6kL3d2wBVzyvVtVgZCHXEXP-s9zxLiBH417c6csDgHPAyjI__iatB214ik3s8mrxIUXpR9fAEN5pgDTT308ZHRAhOtAc-yi5cTa7D5nQzm4lWHA_8caUDka_DcHLnK6IGy7cfn9BPLPTf_m3U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Kerala</h3>
+</div>
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Singapore" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="glowing futuristic structures at Gardens by the Bay in Singapore during the blue hour with city lights in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr0gTcuZ6QO90f0mb4wTTOKV4E3Rv1wonFiMOJ7O5pq7ECQKWAhD0O85FjzhXDTVUk8CU6RUiqOpkjDjnOfn30jtgpimANbqZg4cbJoORJxefIMxBgFwe9Bn0GCcQplXUXWllCJ0nCW4tijx6lA-5zQbP0EQVXYGnnc4jgMMC4VDNcsGwT0mABj1u6lRaWqAUCUJ3J6X_hV_nT4PlULsbMftyDEV1XUBY87zbSAnpCeb1kDQWrv4J1IRRm1bYM9v-Y9QeGuwhKltY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Singapore</h3>
+</div>
+<!-- Row 3 -->
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Thailand" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="ornate golden Buddhist temple in Bangkok, Thailand with intricate architectural details against a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwXIz5ADml-a-4YeA00NddbGcZuunCm8bwQs6kNJs4f2BSv10WvEfPw6hsVPbVjVXgUCgi76CePYYNdzC1RZ3U--J8MdhR6S7E1ijlA2ewJLO6Csh0zuXsnl2roZiPCjib1Yu0J6C1vT-1EBTNwtG-0NDMHg1jTTo6FJWddVVTs6GCAkiH3HH5xuor5cGxWI2MWQ6jKtIW5EJ0CyQxP8mkKsSD2H-xumSEUq_BxVBgvXkXwE_qWFNlZP-dIUaf1z9vS_4NJyKjMpo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Thailand</h3>
+</div>
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Vietnam" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="scenic Ha Long Bay in Vietnam with limestone karsts emerging from turquoise waters and traditional junk boats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0nzLiyuc8lQiQ1oxuvw1jbFeeiJE2zW4CFonIaH56a3QGXHYF90JgIg8DQjWTYx_-_lbcRV-Qi6Vty1JoacWQhYnfSrT1CwV3UkicDWnWanuwahYOwmxaeiZ677Xv4hne9bUsaYCZSLW5tlXoFnytosjaLy2SCbUHSiJ_LROKuEV7bmflK0YROwUFlLRlwZKENNngID9ycaUxvk8Q1rnAqQr5IqwM5ElXe2poP9kqoKlLbzAIdPdiSGev2_M3F_a6UmIhiJ_x9cE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Vietnam</h3>
+</div>
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Andaman" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="pristine white sand beach in Andaman Islands with leaning palm trees and crystal clear shallow ocean water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyh7o2IiSzZq5JT8GKKWJDgv9AN69PbLE6MwAJXTmXpSfstkq_66uWh4i-7_97mEyTYc_O0EIqkW9aFJVHPkzTC37MXunZiNn95t3KnhEiSz3jHBS07CGtZmnWkD0ARCG_PCjoybDIkbtos2lusBz42wK3mlcSCsb0yX_MHFYFMkEwRoL8C2rmDOcOC2loKFjZ5KAE9s1BpU6exbKNjC55u2HdL6aQIfNCLJGW34kfpyoDeg8fUKNCRKoDlTRpxLbJwKpGp9QHT-c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Andaman</h3>
+</div>
+<div class="relative group overflow-hidden rounded-3xl h-64">
+<img alt="Japan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="stunning view of Mount Fuji in Japan framed by vibrant pink cherry blossoms in full bloom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2JJYX3faw42TcNZgoJqdEDqv4fZUtYshx4CK5QSzqWRmeIvzO-11m65Z5DOlJNgsRkvWfgxcs0mnGlYvtU-DEZyAJXLs0-5nGKA5DREFJ073u-MCZt0kiyJu3dh6sDU77i0uSF2s84O28r9VDRzY18oz35gmiNxKHWnUN_kGd9jHUQbNdKVH_0Aq-GQuaGLsiGy5YVNqVQt3sr_GZJENB9eCGZU2ykl6QgyjibuDEbKjVsSvWwouMAbkpMbXOnHtlFRZnQQF8umE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h3 class="absolute bottom-6 left-6 text-white text-xl font-bold">Japan</h3>
+</div>
+<!-- Hidden for brevity in grid layout but accessible via logic -->
+</div>
+</div>
+</section>
+<!-- Best Seller Packages -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-7xl mx-auto px-6 overflow-hidden">
+<div class="flex justify-between items-end mb-12">
+<h2 class="text-4xl font-headline font-extrabold">Best Seller Packages</h2>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto hide-scrollbar pb-8 snap-x">
+<!-- Package Card 1 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-surface-container-lowest rounded-[2rem] overflow-hidden snap-start group shadow-sm hover:shadow-xl transition-shadow">
+<div class="h-64 relative overflow-hidden">
+<img alt="Majestic India" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="the Taj Mahal in Agra, India glowing in soft morning sunlight with a reflecting pool in the foreground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADdE0YtZoJss-pRsjoFfPKvttGTBJrrcstqlCCPhtWujTk8MdSopkJt2Ctk0JkBY1Oxh4NT_zcssSDmf4D3t8C2UbOYu6v7D7pHRXiEmh7_Omxw4SMp2BNzJu3rR_7SxJGUcm9pezIJpc1ukgc7v0eZRcbrNCvqaarVz9XaqLgHxqF3q8VU9oWLFvEl4D8FqUnKcyWjTzSNzsVUTVC0QkZfQu4fEd2j14fpjfQkB01mXjxGJQeJ3GRKdfGuMaBhhI3vEODjFEAXTA"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full font-bold text-primary text-sm shadow-lg">6D / 5N</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-2xl font-headline font-extrabold">Golden Triangle Express</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Explore the historical wonders of Delhi, Agra, and Jaipur with luxury accommodations.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant">
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Starting From</p>
+<p class="text-2xl font-headline font-extrabold text-[#c6222a]">₹45,000</p>
+</div>
+<button class="bg-secondary text-white px-6 py-3 rounded-xl font-bold transition-all active:scale-95">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Package Card 2 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-surface-container-lowest rounded-[2rem] overflow-hidden snap-start group shadow-sm hover:shadow-xl transition-shadow">
+<div class="h-64 relative overflow-hidden">
+<img alt="Italy Dream" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="the colorful vertical village of Positano on the Amalfi Coast of Italy overlooking the sparkling blue Mediterranean sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATYpKPNScW5oWdKiGbDQk9DpjeZN-wahpa5SilKEcOECaB8AGIX4jruPuOR0_YESu1gvg-4_S9e2IXUAlze0fzNIrybCrNT4zvPWFpMPcbMPgsn1zqQpqItca4weFAyeyLBzpVwixgRWpNgVsMUr19QxzwdZma7c0RJSzlY7Kk-Mc1yYPNqq0YxwCB-p84ZKEmpc0TX6Ig7dVS0T7ZVLKdoSpCu3AJNAJsba9MvyVeZgUsfbtK7fuHGkz61tGmLyvMpAhRy6QZlyU"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full font-bold text-primary text-sm shadow-lg">10D / 9N</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-2xl font-headline font-extrabold">Italian Masterpiece</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">5.0</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">A journey through Rome, Florence, and Venice. Perfect for art lovers and foodies.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant">
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Starting From</p>
+<p class="text-2xl font-headline font-extrabold text-[#c6222a]">₹1,85,000</p>
+</div>
+<button class="bg-secondary text-white px-6 py-3 rounded-xl font-bold transition-all active:scale-95">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Package Card 3 -->
+<div class="min-w-[320px] md:min-w-[400px] bg-surface-container-lowest rounded-[2rem] overflow-hidden snap-start group shadow-sm hover:shadow-xl transition-shadow">
+<div class="h-64 relative overflow-hidden">
+<img alt="Switzerland Luxury" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="luxurious wooden chalets in a snow-covered Swiss mountain village at dusk with cozy warm lights glowing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSIiKwhFS4pek8TSEvjVTF53rF2B37_SiDtXF6JvQIwWN8AjvKTMwdoBXGCiQM3E5pD0vaJB-Cev6u_eWOf7mEcxjRidZS-JNewSvUxeHl905kIShwYDpjxBMAEeVkWcdyiP9sNhQkrA7V_EuxeU21BD5qGlBBU8QF1Xto6saVL7IRp7PFcF5O59WIaGoWVuIvHQ_Y237T0KuduECARx8nMA6gFsVxhSkB9AckQGYh-0T06TNVv-52wEwZRRoforMitd63YuDOD8Y"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full font-bold text-primary text-sm shadow-lg">8D / 7N</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="text-2xl font-headline font-extrabold">Swiss Alps Adventure</h3>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Experience the peak of Europe. Zurich, Lucerne and Interlaken exploration.</p>
+<div class="flex items-center justify-between pt-4 border-t border-surface-variant">
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Starting From</p>
+<p class="text-2xl font-headline font-extrabold text-[#c6222a]">₹2,10,000</p>
+</div>
+<button class="bg-secondary text-white px-6 py-3 rounded-xl font-bold transition-all active:scale-95">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-background">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold">What Our Travelers Say</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Real stories from real people who entrusted their dream vacations to Govind Tours.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-surface-container-low p-10 rounded-[2.5rem] relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-6 right-8">format_quote</span>
+<div class="flex gap-1 mb-6 text-amber-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg leading-relaxed mb-8 italic">"Our Dubai trip was perfectly managed. The visa process which I was scared of was handled within days by Govind Tours. Highly recommended!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
+<img alt="User" data-alt="professional portrait of a woman with a warm friendly smile in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKjmKtV96hFgfL7dpxbpGMIRjI1iw575vwS-P0XkRS6qsf5WR3yP8MRq305wFaXWVQ-QAzZGY8gaR0vkQIOCsVbgGWeaWqi-e3gNc9V5a3x-dhWF9AYXONPpf9jd8K7FB6P5EFNgl9CxXay90E_FtzAl0PHZg72kUU8nDMFDp-1v431siiwFapRmaETYQHoGaK7AbbfqFQzvUe1jXFJk28LMCbXg4RIByZOdzaVP-SWECvQ4SPHtF81u7Jx66EfoJW_dswU7vND-E"/>
+</div>
+<div>
+<p class="font-bold">Ananya Sharma</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Ahmedabad</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 rounded-[2.5rem] relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-6 right-8">format_quote</span>
+<div class="flex gap-1 mb-6 text-amber-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg leading-relaxed mb-8 italic">"The itinerary for our Bali honeymoon was amazing. We didn't have to worry about a single thing from airport pickups to villa bookings."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
+<img alt="User" data-alt="headshot of a young man with a confident look and neat beard in natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVc-xp-hyKo7FPSniOWAIk6YNl1bd_S-0PVwAxv5EKig7LanvGgAua_0uePchib0XGIJrdp4hV4D9CVq28jA2y8aDWWnBXse4bMBJjrz8_KX1GW_bkyzMCFcSxQj-B7DjM-E0NMU4Kbskfkr8mi-PctaHgs1mhJfer55vNwgWaSqpmQM49Zj_ZOpLkq4mS2O7-HTn0wNqqKmWhGMo7xQ_7vk5Y6BzGLT2h_mLAndBpZugeX7xK9EeHT7EnMynrZfs5USEsYK9O8vo"/>
+</div>
+<div>
+<p class="font-bold">Rahul Mehta</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Surat</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 rounded-[2.5rem] relative">
+<span class="material-symbols-outlined text-6xl text-primary/10 absolute top-6 right-8">format_quote</span>
+<div class="flex gap-1 mb-6 text-amber-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<p class="text-lg leading-relaxed mb-8 italic">"Very professional service for passport renewal. They guided me through the documentation and it was done without any hassle."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-300 overflow-hidden">
+<img alt="User" data-alt="natural portrait of a smiling woman with glasses in a casual outdoor setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1qmG8LYReOrlql1guBGP4VF1bbXLy6CmLvnylhGE60PsaG_RrtgQl4Qs3442D1N9GbIBF04cynyF_sc7WIvRtHFtDJb6gGflYM-o2lhEHvQrkaDPU6FC_gFrsLIMVBdm77G7W1YvC6lfJq4MzQqIq6YLKA_O6bwJJ7s1_Vnl5GiHHNFyheDiWIKt6X260OjPbyrn5Yf3byJTa5xXEAR55nJbDW9UabkH-F-PmYS3jKxsZip5CULQ5_Ef8oPtwb5GGXNGaBoF2cMY"/>
+</div>
+<div>
+<p class="font-bold">Priya Patel</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Rajkot</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full rounded-t-[3rem] mt-12 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 py-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#c6222a] text-3xl" data-icon="travel_explore">travel_explore</span>
+<span class="text-2xl font-extrabold text-[#0e5ead] dark:text-blue-400 font-headline">Govind Tours</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">
+                        A-312, Shilp Aaron, Bodakdev, Ahmedabad.<br/>
+                        Providing premium travel experiences and visa solutions for over a decade.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary-container hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-lg text-on-surface">Quick Links</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">Air Tickets</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">Visa Services</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">Insurance</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">Tour Packages</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">Passport</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-lg text-on-surface">Destinations</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">Dubai &amp; Maldives</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">South East Asia</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">European Tours</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#c6222a] transition-all" href="#">India Special</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-headline font-bold text-lg text-on-surface">Contact &amp; Info</h4>
+<ul class="space-y-4 text-sm">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<span class="text-slate-500 dark:text-slate-400">info@govindtours.com</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<span class="text-slate-500 dark:text-slate-400">Mon–Fri, 10AM–6:30PM</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+<span class="text-slate-500 dark:text-slate-400">+91 98765 43210</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 Govind Tours. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 px-4 pb-4 pt-2 flex justify-around items-center shadow-[0_-4px_20px_0_rgba(0,0,0,0.05)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="text-[10px] font-medium font-headline">Flights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="text-[10px] font-medium font-headline">Visa</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-900/20 text-[#c6222a] rounded-xl px-4 py-1.5" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-bold font-headline">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="card_travel">card_travel</span>
+<span class="text-[10px] font-medium font-headline">Packages</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="import_contacts">import_contacts</span>
+<span class="text-[10px] font-medium font-headline">Passport</span>
+</a>
+</nav>
+</body></html>

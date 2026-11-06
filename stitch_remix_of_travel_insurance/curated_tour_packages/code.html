@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curated Packages | Govind Tours</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#c6222a",
+              "error": "#ba1a1a",
+              "secondary-fixed": "#d5e3ff",
+              "on-tertiary-fixed-variant": "#004a79",
+              "on-primary-container": "#ffddda",
+              "surface-bright": "#fff7fb",
+              "on-error": "#ffffff",
+              "on-surface": "#1f1a20",
+              "on-primary-fixed-variant": "#930014",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#001d34",
+              "tertiary-fixed": "#d0e4ff",
+              "surface-tint": "#ba1823",
+              "inverse-primary": "#ffb3ae",
+              "primary": "#a10017",
+              "on-tertiary-container": "#d5e7ff",
+              "on-surface-variant": "#5b403e",
+              "secondary-fixed-dim": "#a7c8ff",
+              "tertiary": "#055285",
+              "on-primary-fixed": "#410004",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f9edf7",
+              "surface-dim": "#e2d7e0",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#ffdad7",
+              "tertiary-fixed-dim": "#9bcbff",
+              "on-background": "#1f1a20",
+              "surface-container-low": "#fcf0fa",
+              "secondary": "#0f5fae",
+              "surface-container-highest": "#ebdfe9",
+              "surface-container-high": "#f1e5ef",
+              "inverse-surface": "#352e36",
+              "tertiary-container": "#2e6a9e",
+              "outline-variant": "#e4beba",
+              "on-secondary-fixed": "#001c3b",
+              "surface-container": "#f6eaf4",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#6faafe",
+              "surface": "#fff7fb",
+              "on-secondary-container": "#003d77",
+              "surface-variant": "#ebdfe9",
+              "error-container": "#ffdad6",
+              "background": "#fff7fb",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-secondary-fixed-variant": "#004787",
+              "outline": "#8f6f6d"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, .font-headline {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Custom shadow for cards based on Design System */
+      .editorial-shadow {
+        box-shadow: 0 20px 40px -20px rgba(31, 26, 32, 0.08);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform hover:opacity-80 transition-opacity flex items-center justify-center h-10 w-10">
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50" style="font-size: 24px;">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-xl text-zinc-900 dark:text-zinc-50">Curated Packages</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="active:scale-95 transition-transform hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50">search</span>
+</button>
+<button class="active:scale-95 transition-transform hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20 px-4 md:px-8 lg:px-12 max-w-7xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mt-8 mb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<span class="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-3 block">Govind Tours Signature</span>
+<h2 class="text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold tracking-tighter leading-tight text-on-surface">
+                        Bespoke Journeys <br class="hidden md:block"/> For The Modern <span class="text-primary italic">Odyssey</span>
+</h2>
+</div>
+<div class="hidden md:block pb-2">
+<p class="text-on-surface-variant font-medium text-lg max-w-xs text-right">
+                        Hand-selected destinations designed for soul-searching and global discovery.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Category Filter Bar -->
+<section class="mb-12 sticky top-16 z-40 py-4 bg-surface/95 backdrop-blur-md -mx-4 px-4">
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="px-6 py-3 rounded-full bg-primary text-on-primary text-sm font-bold tracking-wide whitespace-nowrap shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all">All Destintations</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">Honeymoon</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">Adventure</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">Family</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">Short Breaks</button>
+<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant text-sm font-semibold whitespace-nowrap hover:bg-surface-container-highest transition-colors active:scale-95">Luxury Stay</button>
+</div>
+</section>
+<!-- Bento Grid of Packages -->
+<section class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-10">
+<!-- Package 1: Enchanted Kyoto -->
+<div class="col-span-2 md:col-span-1 group cursor-pointer relative overflow-hidden rounded-3xl bg-surface-container-lowest editorial-shadow transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="cinematic shot of Kyoto temple at sunset with cherry blossoms in foreground and soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBndE5uFWM4CnYRCS8FkGNs8g3etpj69TY1iRLGtQsN8YsdGJT0TjsEhFhbh1M31zQmSMi5YfZpF7QCkZ1j2akxcyC5UVET7BNoIjImo919IN0gDtiXcLyw3OAexyP83s-lofTq6ErmffUhb52DCBcH-ms7YnS5uVIikmLuv-eR0NkaKrZINbrxWlsk76e8WughAqn8umgdRd1z4bVcpnSVUxSL1FjtmBp5jr0EYAW0NhNom49UUd9aTmdh3lnFRWLAHZf4ZZdSqto"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md rounded-full px-3 py-1">
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Heritage</span>
+</div>
+</div>
+<div class="p-6 md:p-8">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl md:text-3xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Enchanted Kyoto</h3>
+<span class="material-symbols-outlined text-primary-container opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+<p class="text-on-surface-variant text-sm md:text-base leading-relaxed mb-6">Experience timeless traditions in the heart of Japan's cultural capital.</p>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="block text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Starting from</span>
+<span class="text-xl md:text-2xl font-headline font-extrabold text-secondary">$1,299</span>
+</div>
+<button class="h-12 w-12 rounded-2xl bg-primary-container text-white flex items-center justify-center hover:shadow-xl transition-shadow active:scale-90">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Package 2: Santorini Sunset -->
+<div class="col-span-1 group cursor-pointer relative overflow-hidden rounded-3xl bg-surface-container-lowest editorial-shadow transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-square relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="whitewashed buildings of Oia Santorini overlooking the Aegean sea with golden sunset light and deep blue water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFb6uhHexHvqcK02Pjk0Vpog02GsSrxemF1-bbWtqQpG9srNQIYDpogzk9niWZsu86IomSL2Q-CTL-Cv9bWORyFpm2Vw_78Hfdini5Ty3VDhFvGZDF2oeVObVLBf69nxs-WxO8G71JKNWx9TAybJ03isASG0X4kV7A4OfywydItIADB2HQEIGcSvICR85slKXLydhwg6y13gCTR6eYgl43lWwP_7Nmd_iNF67G0kx8tG2YGgJJMwPOIkDFa9rDxiEk_gdWdT_RnQ4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl md:text-2xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors mb-2">Santorini Sunset</h3>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">Romantic views and pristine white architecture for two.</p>
+<div class="flex items-end justify-between">
+<span class="text-lg font-headline font-bold text-secondary">$1,850</span>
+<span class="text-[10px] font-bold uppercase text-primary">Limited Slots</span>
+</div>
+</div>
+</div>
+<!-- Package 3: Swiss Alps -->
+<div class="col-span-1 group cursor-pointer relative overflow-hidden rounded-3xl bg-surface-container-lowest editorial-shadow transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-square relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="stunning view of snow-capped Matterhorn peak in Swiss Alps with a wooden chalet in the foreground and blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYD8bkurFCtK6G3AAEZkdUbr5T0RsVE20U4--LwnE8W7RdkwcchnUMmnb0u8uf3i5VeHiQlhSxx2yRdTwqnvtX4xmOUHSGELEZRQ2ZvrKft3URGrZQ2ZGY2uZKBEJ_i1ytf7k655ijWgRjt9SPkyTlq2tR6T5tQuxp50doKSn6UNSXkVA7BJ44qIerw0MeqolVz_EL-MSeb5uz_yf49DkM5AnP38KHe0iZErda9SrvnWPq6JSBsb6Plz8qir1Nzc1Oh2LxQ2jS0II"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl md:text-2xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors mb-2">Swiss Alps</h3>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">A snowy mountain paradise for the ultimate escape.</p>
+<div class="flex items-end justify-between">
+<span class="text-lg font-headline font-bold text-secondary">$2,100</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-xs text-on-surface-variant" style="font-size: 14px;">star</span>
+<span class="text-[10px] font-bold text-on-surface">5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Package 4: Safari Odyssey (Large Featured) -->
+<div class="col-span-2 group cursor-pointer relative overflow-hidden rounded-3xl bg-surface-container-lowest editorial-shadow transition-all duration-500 hover:-translate-y-2">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="aspect-video md:aspect-auto relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="majestic elephant standing in tall yellow savanna grass at dawn with a silhouette of an acacia tree in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44dlrucyZVnf7AF0zu4y3_Tpqy5VYeYdEpiJLSkJFBYu3o5ry3QUsNvWiaBmUCgk3KFRInrFhZyrsIaoh41WAzeDCY8YHcl_NWDi9msqSjHQvhYRNmqbvwv7_9aqIs5PaGSn3eBd9n2Wa3sji2LBTdc8Oac6YWFEISJuG78lZrfJlTt4EcUnvoniCLaVAinw6NIJ6Q_HEctTD4WA0RRccb_Bt3Bawp05jJnV_BOCCoVyHdhJEIueH6NRGxL1XCEfsJjF3yto4Ulw"/>
+<div class="absolute inset-0 bg-black/10 md:hidden"></div>
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-center">
+<span class="text-primary font-bold uppercase tracking-widest text-[10px] mb-4">Most Immersive</span>
+<h3 class="text-3xl md:text-4xl lg:text-5xl font-headline font-extrabold text-on-surface mb-4">Safari Odyssey</h3>
+<p class="text-on-surface-variant text-base lg:text-lg mb-8 max-w-sm">Discover the wild heart of Africa with our expertly guided private expeditions through the Serengeti.</p>
+<div class="flex items-center gap-6">
+<div class="bg-secondary-fixed rounded-2xl px-6 py-4">
+<span class="block text-[10px] text-on-secondary-fixed-variant uppercase font-bold tracking-wider">Invest</span>
+<span class="text-2xl font-headline font-extrabold text-on-secondary-fixed">$2,400</span>
+</div>
+<div class="h-14 w-14 rounded-full border-2 border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+<span class="material-symbols-outlined group-hover:text-white">trending_flat</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Package 5: Dubai Skyline -->
+<div class="col-span-1 group cursor-pointer relative overflow-hidden rounded-3xl bg-surface-container-lowest editorial-shadow transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-square relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="futuristic Dubai skyline with Burj Khalifa under a hazy desert sunset with twinkling city lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtiQEIPnyzHcegoNcqDDsz4UzHVwO_hA44QtJ4AKfT91Muy-zpBjcQ4QHOD4-5G2w07jdCCH0QSovKfMltB-Vu3Zr2G-oQrUlUpvW8lr1buqIp5m_vxEH4_HX7WIxncJg_tx2k1ZHJCqfJh4cvSu-kbJFPGz4txfViI8CyoxePdcE8jaO0weiQW65Xvorlq7PCc7U-mGfUSjimrzsrRI-yHPoJ67HtxL-HSIdohi5v8A9h1LYannaa6-0uBXmw66GalKofGB8efn8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl md:text-2xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors mb-2">Dubai Skyline</h3>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">Modern luxury and architectural wonders in the desert oasis.</p>
+<div class="flex items-end justify-between">
+<span class="text-lg font-headline font-bold text-secondary">$950</span>
+<span class="text-[10px] font-bold uppercase bg-surface-container-high px-2 py-1 rounded">Flash Deal</span>
+</div>
+</div>
+</div>
+<!-- Package 6: Bali Retreat -->
+<div class="col-span-1 group cursor-pointer relative overflow-hidden rounded-3xl bg-surface-container-lowest editorial-shadow transition-all duration-500 hover:-translate-y-2">
+<div class="aspect-square relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxurious tropical infinity pool in Bali surrounded by lush jungle greenery with soft afternoon mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArlgCihRWzzEqK1LRYEcIuagdPH5sBD9NpWLQK9Qa335-Ev-9E2vVDjqR2p2wtnk85m006kfQwUvuZnn8lvjijnAXdEuP1ilpzDHCvnPg4yLJFFo2q8gbqbxuKOhWVTpjtGSw51nHSSnFidfhF9Iv2R2_frA2gxq8BzH0-2yaLxi3rOPP3vWVZjauOYuJEn1midM_G3s8o5UnNAUWv1jD7DSm5nTW0n9R9QkMPIDMhbP86mtnpyyrnOq3rgmP1k0jjZrAClPalSIA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="p-6">
+<h3 class="text-xl md:text-2xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors mb-2">Bali Retreat</h3>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-2">Tropical serenity, healing spa rituals, and emerald jungles.</p>
+<div class="flex items-end justify-between">
+<span class="text-lg font-headline font-bold text-secondary">$1,100</span>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined" style="font-size: 16px;">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Indicator Section -->
+<section class="mt-20 py-16 border-t border-outline-variant/30 text-center">
+<h4 class="text-on-surface-variant font-bold uppercase tracking-[0.3em] text-[10px] mb-8">Trusted by Global Explorers</h4>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 grayscale">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined">diamond</span> <span class="font-bold">LUXESTAY</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined">flight</span> <span class="font-bold">SKYWARD</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined">anchor</span> <span class="font-bold">MARINER</span></div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined">forest</span> <span class="font-bold">ECOVIBE</span></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 rounded-t-3xl bg-white/90 dark:bg-zinc-950/90 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.05)] dark:shadow-none">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3">
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-red-600 dark:hover:text-red-400 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-red-600 dark:hover:text-red-400 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">confirmation_number</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase">Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-400 rounded-2xl px-4 py-2 active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">travel_explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase">Packages</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 px-4 py-2 hover:text-red-600 dark:hover:text-red-400 transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wider uppercase">Profile</span>
+</div>
+</div>
+</nav>
+</body></html>

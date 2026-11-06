@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loyalty Dashboard | Govind Tours</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#a7c8ff",
+              "outline-variant": "#e4beba",
+              "on-tertiary-fixed-variant": "#004a79",
+              "primary-container": "#c6222a",
+              "on-surface-variant": "#5b403e",
+              "error-container": "#ffdad6",
+              "surface-variant": "#ebdfe9",
+              "surface-container-low": "#fcf0fa",
+              "tertiary": "#055285",
+              "on-tertiary-fixed": "#001d34",
+              "tertiary-fixed-dim": "#9bcbff",
+              "on-secondary-fixed-variant": "#004787",
+              "secondary-container": "#6faafe",
+              "error": "#ba1a1a",
+              "surface-container": "#f6eaf4",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "background": "#fff7fb",
+              "outline": "#8f6f6d",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#ebdfe9",
+              "primary": "#a10017",
+              "primary-fixed-dim": "#ffb3ae",
+              "on-secondary-container": "#003d77",
+              "on-primary-container": "#ffddda",
+              "on-surface": "#1f1a20",
+              "surface-dim": "#e2d7e0",
+              "on-background": "#1f1a20",
+              "surface": "#fff7fb",
+              "secondary": "#0f5fae",
+              "on-primary-fixed": "#410004",
+              "secondary-fixed": "#d5e3ff",
+              "surface-tint": "#ba1823",
+              "surface-bright": "#fff7fb",
+              "surface-container-high": "#f1e5ef",
+              "primary-fixed": "#ffdad7",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#f9edf7",
+              "on-secondary-fixed": "#001c3b",
+              "tertiary-fixed": "#d0e4ff",
+              "inverse-primary": "#ffb3ae",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#930014",
+              "on-error": "#ffffff",
+              "inverse-surface": "#352e36",
+              "tertiary-container": "#2e6a9e",
+              "on-tertiary-container": "#d5e7ff"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface antialiased pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-sm shadow-stone-200/50 dark:shadow-none">
+<div class="flex justify-between items-center px-6 h-20 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed shadow-sm">
+<img alt="User profile portrait" class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling professional man in his 30s with short hair, warm outdoor lighting in a blurred park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn_78I66eLGPxvDGtj0xyXSZhc9l5-D0Td6XPBBSagJeUGrXJawIm0oPGdnEgaYDCi3H-zTBC-Do26ODxVUl7iXgrCMY9C_uKkSiTzd_RNSpaLf19vX7mfKQjqotjAcMX4eKToXO_SMJ8E3oQv_JDtfv2XQZ-ne0gpWDJhwtuZUf0_vhakZxXM7HAog_HDtaeqMJ1KmElasvvHV-lAs3J3yMOlAeYx-SxoNBU0RfuWqEmI0zm0sKxgWEs_9sAV4HyUURJzNjd1wfs"/>
+</div>
+<span class="text-2xl font-extrabold text-red-700 dark:text-red-500 italic font-headline tracking-tight">Govind Tours</span>
+</div>
+<button class="active:scale-95 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-stone-500 text-2xl" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- Hero Section -->
+<section class="py-8">
+<p class="text-on-surface-variant font-medium tracking-wide uppercase text-xs mb-1">Welcome back, Aryan</p>
+<h1 class="font-headline font-extrabold text-5xl text-on-surface tracking-tighter mb-2">
+                25,000 <span class="text-primary text-2xl align-top ml-1">Pts</span>
+</h1>
+<p class="text-on-surface-variant text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+                Your points are ready for redemption
+            </p>
+</section>
+<!-- Tier Status Card -->
+<section class="mb-10">
+<div class="bg-surface-container-lowest p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden border border-outline-variant/10">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-4xl text-secondary/10" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Gold Member</span>
+</div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-on-surface font-bold font-headline">Progress to Platinum</span>
+<span class="text-xs text-on-surface-variant font-semibold">5,000 pts left</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-container w-[80%] rounded-full"></div>
+</div>
+<div class="mt-6 flex gap-4">
+<button class="flex-1 py-3 px-4 bg-primary rounded-xl text-white font-label font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-opacity active:scale-[0.98]">
+                        View Benefits
+                    </button>
+<button class="flex-1 py-3 px-4 bg-secondary-fixed text-on-secondary-fixed rounded-xl font-label font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-opacity active:scale-[0.98]">
+                        Tier Details
+                    </button>
+</div>
+</div>
+</section>
+<!-- Rewards For You (Horizontal Scroll) -->
+<section class="mb-10">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline font-bold text-xl text-on-surface">Rewards for You</h2>
+<button class="text-secondary text-xs font-bold uppercase tracking-wider">See All</button>
+</div>
+<div class="flex overflow-x-auto pb-4 gap-4 no-scrollbar -mx-6 px-6">
+<!-- Reward Card 1 -->
+<div class="min-w-[240px] bg-white rounded-3xl overflow-hidden shadow-sm flex flex-col border border-stone-100">
+<div class="h-32 relative">
+<img alt="Airplane cabin" class="w-full h-full object-cover" data-alt="POV shot from airplane window looking at fluffy white clouds during blue sky day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8Yw4TRENBn92-dE307HJWz4X00uCNlUmkPNqPNnTWRkPLe79wd7zMl2E50g9K-BJ33IPFf8TNRYhju2vcVdXD_M2l6b9FGW7ApqxKlpV235HNT17FL_P5uNEDFUYTdqFijT-uNbX9kZSjASvmAYxuUgjrO8ilcZbUNk2cbwKV1ONpUxCO9M_k99pinG7BVQUONVC2Zz_urgeC1AeTWXxp8djZJSj9mywZSmKxF2dUn5_-ENaIexclhaMIjkQjEtdDPvqQRtblVpU"/>
+<div class="absolute top-3 left-3 bg-white/90 glass-effect px-2 py-1 rounded-lg text-[10px] font-bold text-primary uppercase">
+                            Exclusive
+                        </div>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-on-surface mb-1">15% off Int. Flights</h3>
+<p class="text-xs text-on-surface-variant mb-4">Valid for all Asian routes</p>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">7,500 pts</span>
+</div>
+</div>
+<!-- Reward Card 2 -->
+<div class="min-w-[240px] bg-white rounded-3xl overflow-hidden shadow-sm flex flex-col border border-stone-100">
+<div class="h-32 relative">
+<img alt="Airport Lounge" class="w-full h-full object-cover" data-alt="Luxury airport lounge interior with comfortable leather chairs and modern minimalist lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdM_OtvIaupVcFUdVeAS7ASDGYUG7_YnmoTEN5EWWSaqiLfZMadUC1wBnRrsmiNDp1qe2u0-jRq8F_54P_NKSDP8A91_MXNx9WkvsGS89bkBEx4nOKJYgsfjd9tOl0U7EaQbNkF0WlohyLXxH-lnJCL913PNleeTjdO3amK7s9xrJeJEFCXD2WdlG2CoIq53aajoXKlFaZvXNSrUsinG2yBmDwM9R3D0GYD2E8Ge8QYlYWcHr1vH_TrirdPfUNh9iZhQ09il5CEm8"/>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-on-surface mb-1">Lounge Access</h3>
+<p class="text-xs text-on-surface-variant mb-4">One-time entry voucher</p>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">5,000 pts</span>
+</div>
+</div>
+<!-- Reward Card 3 -->
+<div class="min-w-[240px] bg-white rounded-3xl overflow-hidden shadow-sm flex flex-col border border-stone-100">
+<div class="h-32 relative">
+<img alt="Luggage" class="w-full h-full object-cover" data-alt="Stylish leather suitcases stacked in a hotel lobby with warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRJAVKFwYasEhlAHidx-EOJwKZI4MFVgSPTjI2eEIkVgTexwoQ0rOASxmMSiawkopt5KXj3aIUZ3e9JbeLUX_oBeKekuhzv7DaTKVHnhUmgCDQMTAWBr3S7WnpgXkjOpFXHeyU02eoeRDIDSrwOYqAXhM8HAHuN9XAZSnQDhAsDx5Na2MSmfqKowB6HBZno7wmYtL_OVlU4nuYNCHHC4Lgi2gj02Thpi94JEl8Yt4sF338O5d3NbJXtH8hE_PnQon-1_9C4fhUNTE"/>
+</div>
+<div class="p-5">
+<h3 class="font-bold text-on-surface mb-1">Extra Baggage</h3>
+<p class="text-xs text-on-surface-variant mb-4">+10kg on any flight</p>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">3,200 pts</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Points Breakdown -->
+<section class="mb-10">
+<h2 class="font-headline font-bold text-xl text-on-surface mb-6">Recent Activity</h2>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Flight to Dubai</p>
+<p class="text-[11px] text-on-surface-variant">Oct 12, 2023</p>
+</div>
+</div>
+<span class="text-secondary font-bold text-sm">+2,500 pts</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="group_add">group_add</span>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Visa Referral</p>
+<p class="text-[11px] text-on-surface-variant">Oct 08, 2023</p>
+</div>
+</div>
+<span class="text-secondary font-bold text-sm">+500 pts</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-stone-500">
+<span class="material-symbols-outlined" data-icon="hotel">hotel</span>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Stay in Mumbai</p>
+<p class="text-[11px] text-on-surface-variant">Sep 28, 2023</p>
+</div>
+</div>
+<span class="text-secondary font-bold text-sm">+1,200 pts</span>
+</div>
+</div>
+<button class="w-full mt-6 py-4 text-on-surface-variant font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 border-2 border-dashed border-stone-200 rounded-2xl">
+                Download Statement
+                <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-3 pb-8 bg-white/90 dark:bg-stone-950/90 backdrop-blur-2xl rounded-t-3xl border-t border-stone-100/50 dark:border-stone-800/50 shadow-[0_-8px_30px_rgb(0,0,0,0.04)] z-50">
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-2 transition-all duration-300 ease-out active:scale-90 hover:text-blue-700 dark:hover:text-blue-400">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-2 transition-all duration-300 ease-out active:scale-90 hover:text-blue-700 dark:hover:text-blue-400">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider mt-1">Bookings</span>
+</div>
+<!-- Active Nav: Loyalty -->
+<div class="flex flex-col items-center justify-center bg-red-50 dark:bg-red-950/30 text-red-700 dark:text-red-400 rounded-2xl px-4 py-2 transition-all duration-300 ease-out active:scale-90">
+<span class="material-symbols-outlined" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider mt-1">Loyalty</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-2 transition-all duration-300 ease-out active:scale-90 hover:text-blue-700 dark:hover:text-blue-400">
+<span class="material-symbols-outlined" data-icon="headset_mic">headset_mic</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-semibold uppercase tracking-wider mt-1">Support</span>
+</div>
+</nav>
+</body></html>
