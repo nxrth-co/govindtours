@@ -23,3 +23,4 @@ We needed to push all changes to `https://github.com/nxrth-co/govindtours.git`. 
    - Verified with `git lfs status` that every media asset is staged cleanly with LFS, while code and docs stay lean and pristine.
 
 Time to commit and blast off to GitHub!
+

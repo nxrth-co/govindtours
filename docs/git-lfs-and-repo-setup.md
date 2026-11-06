@@ -27,3 +27,4 @@ Tracked patterns in `.gitattributes`:
 ## Remote Integration
 - Remote URL: `https://github.com/nxrth-co/govindtours.git`
 - Branch: `main`
+
