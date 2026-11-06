@@ -10,12 +10,11 @@ import {
   ShieldCheck, 
   ArrowRight, 
   CheckCircle2, 
-  MapPin, 
-  Sparkles,
-  Clock,
-  Award,
   Star,
-  ExternalLink
+  ExternalLink,
+  Phone,
+  Clock,
+  Building2
 } from 'lucide-react';
 import ApertureCarousel, { Slide } from '@/components/ui/aperture-carousel';
 import { useContactModal } from '@/context/ContactModalContext';
@@ -26,91 +25,91 @@ export default function HomePage() {
   const services = [
     {
       title: 'Air Tickets',
-      desc: 'Instant booking for domestic & international routes with 24/7 rescheduling.',
+      desc: 'Domestic and international route ticketing with real-time seat assignment and reissue support.',
       icon: Plane,
       href: '/air-tickets',
-      tag: 'Best Airfares',
-      accent: 'text-secondary bg-secondary/10',
+      code: 'IATA Desk',
+      turnaround: 'Same-day issuance',
     },
     {
       title: 'Visa Services',
-      desc: 'Comprehensive tourist & business visa guidance for 60+ countries.',
+      desc: 'Pre-check filing, appointment scheduling, and cover letter vetting for 60+ countries.',
       icon: FileText,
       href: '/visa',
-      tag: '99% Approvals',
-      accent: 'text-primary bg-primary/10',
+      code: 'Consular',
+      turnaround: '99% approval track',
     },
     {
       title: 'Tour Packages',
-      desc: 'Curated itineraries spanning tropical beaches, heritage circuits, and Europe.',
+      desc: 'Bespoke domestic and international circuits with verified stays, transfers, and local guides.',
       icon: Palmtree,
       href: '/packages',
-      tag: 'Custom Itineraries',
-      accent: 'text-emerald-700 bg-emerald-50',
+      code: 'Circuits',
+      turnaround: 'Tailored itineraries',
     },
     {
       title: 'Passport Assistance',
-      desc: 'Tatkal expedited slots, new applications, renewals, and police verification prep.',
+      desc: 'Application assistance, document cross-checking, Tatkal appointment slots, and renewal filing.',
       icon: BookOpen,
       href: '/passport',
-      tag: 'Seva Kendra Support',
-      accent: 'text-amber-700 bg-amber-50',
+      code: 'PSK Slot',
+      turnaround: 'Tatkal & Normal',
     },
     {
       title: 'Travel Insurance',
-      desc: 'Embassy-compliant Schengen & international medical and baggage coverage.',
+      desc: 'Embassy-mandated Schengen and overseas medical cover, baggage delay, and cancellation policies.',
       icon: ShieldCheck,
       href: '/travel-insurance',
-      tag: 'Instant Issuance',
-      accent: 'text-purple-700 bg-purple-50',
+      code: 'Medical',
+      turnaround: 'Instant digital policy',
     },
   ];
 
   const destinations = [
     {
-      title: 'Goa Coastal Paradise',
+      title: 'Goa Coastal Circuit',
+      route: 'AMD → GOI',
       duration: '4N / 5D',
       price: '₹18,500',
       image: '/packages/goa.jpg',
-      category: 'Beach & Coastal',
-      badge: 'Popular',
+      circuit: 'North & South Goa beaches, Old Goa churches',
     },
     {
-      title: 'Kerala Backwaters & Hills',
+      title: 'Kerala Backwaters & Munnar',
+      route: 'AMD → COK',
       duration: '5N / 6D',
       price: '₹24,999',
       image: '/packages/kerala.jpg',
-      category: 'Nature & Wellness',
-      badge: "God's Own Country",
+      circuit: 'Munnar tea estates, Alleppey private houseboat',
     },
     {
       title: 'Royal Rajasthan Heritage',
+      route: 'AMD → JAI → JDH',
       duration: '6N / 7D',
       price: '₹34,500',
       image: '/packages/rajasthan.jpg',
-      category: 'India Special',
-      badge: 'Cultural',
+      circuit: 'Mehrangarh Fort, Amber Palace, desert camps',
     },
     {
       title: 'Leh Ladakh High Passes',
+      route: 'AMD → DEL → IXL',
       duration: '6N / 7D',
       price: '₹38,000',
       image: '/packages/ladakh.jpg',
-      category: 'Thrill & Altitude',
-      badge: 'Adventure',
+      circuit: 'Pangong Tso, Khardung La, Nubra Valley sand dunes',
     },
   ];
 
   const proofPoints = [
-    { label: 'Visa Approvals', value: '2,000+', desc: 'High approval rate across US, UK & Schengen' },
-    { label: 'Custom Holidays', value: '500+', desc: 'Bespoke domestic & international packages' },
-    { label: 'Industry Trust', value: '15+ Yrs', desc: 'Operating authorized desk since 2010' },
-    { label: 'Client Satisfaction', value: '99.4%', desc: 'Verified reviews & return travelers' },
+    { label: 'Visa applications processed', value: '2,000+', note: 'US, UK, Schengen & Canada' },
+    { label: 'Tailored holiday circuits', value: '500+', note: 'Verified domestic and international' },
+    { label: 'Years operating desk', value: '15+', note: 'Serving Gujarat travelers since 2010' },
+    { label: 'Google client rating', value: '4.9/5', note: 'Over 60+ verified reviews' },
   ];
 
   const clientReviews = [
     {
-      name: 'APURVA MAHARANA',
+      name: 'Apurva Maharana',
       url: 'https://www.google.com/maps/contrib/117496087145937635483?hl=en-US&sa=X&ved=2ahUKEwia8riTyqeBAxXCSWwGHfI_B5QQvvQBegQIARBc',
       service: 'Holiday & Stays Booking',
       comment:
@@ -119,20 +118,20 @@ export default function HomePage() {
       rating: 5,
     },
     {
-      name: 'VINAY SHAH',
+      name: 'Vinay Shah',
       url: 'https://www.google.com/maps/contrib/112387067822474815718?hl=en-US&sa=X&ved=2ahUKEwia8riTyqeBAxXCSWwGHfI_B5QQvvQBegQIARA_',
       service: 'Ticketing & Consultation',
       comment:
-        'Nikulbhai at Govind Tours was excellent. He was very professional, polite, prompt, patient and tried his hardest to get the right tickets at the right price. He even tried his best for Train tickets when the flights were prohibitively expensive. I would recommend Nikulbhai for your travel needs.',
+        'Nikulbhai at Govind Tours was excellent. He was very professional, polite, prompt, patient and tried his hardest to get the right tickets at the right price. He even tried his best for Train tickets when flights were prohibitively expensive. I would recommend Nikulbhai for your travel needs.',
       initials: 'VS',
       rating: 5,
     },
     {
-      name: 'JIGNA DAVE',
+      name: 'Jigna Dave',
       url: 'https://www.google.com/maps/contrib/113176706805171570188/reviews?authuser=1&hl=en-GB',
       service: 'UK Visa Assistance',
       comment:
-        'I recently applied for my UK visa through Govind Tours, and I am very happy with their service. The process was smooth, well-guided, and completely hassle-free. They provided clear instructions, handled documentation carefully, and kept me updated at every step. Thanks to their professional support, I received my visa without any difficulty.',
+        'I recently applied for my UK visa through Govind Tours, and I am very happy with their service. The process was smooth, well-guided, and completely hassle-free. They provided clear instructions, handled documentation carefully, and kept me updated at every step.',
       initials: 'JD',
       rating: 5,
     },
@@ -141,125 +140,128 @@ export default function HomePage() {
   const heroSlides: Slide[] = [
     {
       image: '/hero/ladakh.jpg',
-      tag: 'Himalayan High Passes',
+      tag: 'Himalayan Pass Circuit',
       title: 'Leh Ladakh',
-      caption: 'Pangong Tso azure waters, Nubra Valley sand dunes & ancient high-altitude monasteries.',
+      caption: 'Pangong Tso azure waters, Nubra Valley sand dunes, and high-altitude Buddhist monasteries.',
       href: '/packages#ladakh',
-      ctaLabel: 'Explore Ladakh Package',
+      ctaLabel: 'View Ladakh itinerary',
     },
     {
       image: '/hero/kerala.jpg',
-      tag: "God's Own Country",
-      title: 'Kerala Backwaters',
-      caption: 'Traditional thatched houseboats, Alleppey lagoons & rejuvenating Ayurvedic wellness retreats.',
+      tag: 'Backwaters & Spice Hills',
+      title: 'Kerala Circuit',
+      caption: 'Private thatched houseboats across Alleppey lagoons and mist-covered Munnar plantations.',
       href: '/packages#kerala',
-      ctaLabel: 'Explore Kerala Package',
+      ctaLabel: 'View Kerala itinerary',
     },
     {
       image: '/hero/kashmir.jpg',
-      tag: 'Paradise on Earth',
+      tag: 'Dal Lake & Alpine Valleys',
       title: 'Jammu & Kashmir',
-      caption: 'Morning shikaras on Dal Lake, snow-clad Gulmarg peaks & peaceful pine valley sanctuaries.',
+      caption: 'Morning shikara rides on Dal Lake, snow-dusted Gulmarg meadows, and quiet pine valleys.',
       href: '/packages#kashmir',
-      ctaLabel: 'Explore Kashmir Package',
+      ctaLabel: 'View Kashmir itinerary',
     },
     {
       image: '/hero/rajasthan.jpg',
-      tag: 'Royal Heritage Circuit',
+      tag: 'Royal Heritage & Fortresses',
       title: 'Grand Rajasthan',
-      caption: 'Intricately carved stone fortresses, desert safari dunes & royal palace living in Jaipur & Jodhpur.',
+      caption: 'Carved sandstone bastions in Jodhpur, Amber Palace in Jaipur, and Thar desert safaris.',
       href: '/packages#rajasthan',
-      ctaLabel: 'Explore Rajasthan Package',
+      ctaLabel: 'View Rajasthan itinerary',
     },
     {
       image: '/hero/goa.jpg',
-      tag: 'Tropical Coastal Escape',
+      tag: 'Coastal & Heritage Escape',
       title: 'Sun-Kissed Goa',
-      caption: 'Palm-fringed beaches, tranquil coastal sunsets, Portuguese architecture & watersports.',
+      caption: 'Quiet southern coves, heritage Portuguese quarters in Fontainhas, and sea-view resorts.',
       href: '/packages#goa',
-      ctaLabel: 'Explore Goa Package',
+      ctaLabel: 'View Goa itinerary',
     },
     {
       image: '/hero/alpine.jpg',
-      tag: 'Alpine Lakes & Wilderness',
+      tag: 'Lakes & Himalayan Foothills',
       title: 'Uttarakhand Peaks',
-      caption: 'Sacred mountain trails, Nainital emerald waters & panoramic Himalayan vistas.',
+      caption: 'Nainital lake views, Corbett wildlife safaris, and high-altitude pilgrimage routes.',
       href: '/packages#uttarakhand',
-      ctaLabel: 'Explore Uttarakhand Package',
+      ctaLabel: 'View Uttarakhand itinerary',
     },
   ];
 
-  const quickNav = [
+  const quickPortals = [
     {
       name: 'Air Tickets',
-      desc: 'Domestic & Global Flights',
+      desc: 'Domestic & global fares',
       href: '/air-tickets',
       img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=300&q=80',
     },
     {
       name: 'Visa Services',
-      desc: 'Fast-Track Approvals',
+      desc: 'Schengen, US, UK, Gulf',
       href: '/visa',
       img: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=300&q=80',
     },
     {
       name: 'Tour Packages',
-      desc: 'Curated Itineraries',
+      desc: 'Custom holiday circuits',
       href: '/packages',
       img: '/hero/ladakh.jpg',
     },
     {
       name: 'Passport Desk',
-      desc: 'Tatkal & Appointments',
+      desc: 'PSK slots & renewals',
       href: '/passport',
       img: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=300&q=80',
     },
     {
       name: 'Trip Insurance',
-      desc: 'Embassy-Compliant',
+      desc: 'Embassy-compliant cover',
       href: '/travel-insurance',
       img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=300&q=80',
     },
   ];
 
   return (
-    <div className="space-y-20 lg:space-y-28 pb-24">
-      {/* Hero Section: Aperture Carousel with Iris Transition */}
-      <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-2 sm:pt-4">
-        {/* Full-width Carousel Frame */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 group">
+    <div className="space-y-16 lg:space-y-24 pb-20">
+      {/* 1. Hero Section: Cinematic Aperture Carousel with Iris Transition */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4">
+        <div className="relative rounded-2xl overflow-hidden shadow-sm border border-slate-200">
           <ApertureCarousel
             slides={heroSlides}
             height="58vh"
-            autoplay={5500}
-            duration={1050}
-            ariaLabel="Govind Tours Signature Packages Carousel"
+            autoplay={6000}
+            duration={1000}
+            ariaLabel="Govind Tours Featured Circuits"
           />
         </div>
 
-        {/* Circular Quick Navigation Rail (Underneath Carousel) */}
-        <div className="mt-8 sm:mt-10 pt-4">
-          <div className="text-center mb-6">
-            <span className="text-[11px] font-headline font-bold uppercase tracking-widest text-primary">
-              Instant Portals &amp; Direct Services
+        {/* 2. Direct Service Portals Rail */}
+        <div className="mt-8 pt-2">
+          <div className="flex items-center justify-between mb-4 px-1">
+            <span className="text-xs font-medium text-slate-500">
+              Direct Travel Portals
+            </span>
+            <span className="text-xs text-slate-400">
+              Ahmedabad Desk
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-            {quickNav.map((item) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+            {quickPortals.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-primary/40 transition-all duration-300 flex flex-col items-center text-center group active:scale-95"
+                className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 hover:border-slate-300 transition-colors duration-150 flex flex-col items-center text-center group"
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden relative mb-3 shadow-inner ring-2 ring-slate-100 group-hover:ring-primary/40 transition-all">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden relative mb-2.5 bg-slate-100 ring-1 ring-slate-200">
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
-                <span className="font-headline font-bold text-xs sm:text-sm text-slate-900 group-hover:text-primary transition-colors">
+                <span className="font-headline font-semibold text-xs sm:text-sm text-slate-900 group-hover:text-[#a10017] transition-colors">
                   {item.name}
                 </span>
                 <span className="text-[11px] text-slate-500 mt-0.5">
@@ -270,41 +272,44 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Micro Agency Trust Metrics */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-slate-500 pt-4 border-t border-slate-200/60">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>Govt. Registered Agency</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>99% Visa Approval Track Record</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>Sindhu Bhavan Marg, Ahmedabad Desk</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>Direct WhatsApp Support</span>
-          </div>
+        {/* Quiet Trust Bar */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs text-slate-600 pt-4 border-t border-slate-200">
+          <span className="inline-flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-slate-500" />
+            Registered Travel Desk since 2010
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-slate-500" />
+            Consular document validation
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-slate-500" />
+            Shilp Aaron, Bodakdev office
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-slate-500" />
+            Dedicated phone &amp; WhatsApp support
+          </span>
         </div>
       </section>
 
-      {/* Metrics Row: Clean & Airy */}
+      {/* 3. Verified Metrics Strip */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-surface-container-low border border-outline-variant/30 p-8 sm:p-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="rounded-2xl bg-[#f7f6f4] border border-slate-200 p-6 sm:p-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {proofPoints.map((item, idx) => (
-              <div key={item.label} className={idx !== proofPoints.length - 1 ? 'lg:border-r border-slate-200/60 lg:pr-8' : ''}>
-                <div className="text-3xl sm:text-4xl font-headline font-extrabold text-on-surface tracking-tight">
+              <div 
+                key={item.label} 
+                className={idx < proofPoints.length - 1 ? 'lg:border-r lg:border-slate-300/70 lg:pr-6' : ''}
+              >
+                <div className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tabular-nums tracking-tight">
                   {item.value}
                 </div>
-                <div className="text-xs font-bold uppercase tracking-wider text-primary mt-1">
+                <div className="text-xs font-medium text-slate-700 mt-1">
                   {item.label}
                 </div>
-                <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                  {item.desc}
+                <p className="text-xs text-slate-500 mt-0.5">
+                  {item.note}
                 </p>
               </div>
             ))}
@@ -312,139 +317,165 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Core Services: Modular Clean Bento Grid */}
+      {/* 4. Core Travel Capabilities: Quiet 3x2 Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 gap-4">
-          <div className="space-y-2">
-            <span className="text-primary font-headline font-bold text-xs uppercase tracking-widest block">
-              Our Capabilities
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-10 gap-3">
+          <div>
+            <span className="text-xs font-medium text-slate-500 block mb-1">
+              Capabilities
             </span>
-            <h2 className="text-3xl sm:text-4xl font-headline font-extrabold text-on-surface tracking-tight">
-              Modular Travel Solutions
+            <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tracking-tight">
+              Desk Services &amp; Ticketing
             </h2>
           </div>
-          <p className="text-slate-500 text-sm max-w-md">
-            Choose standalone services or bundle them together for seamless international travel.
+          <p className="text-slate-500 text-xs sm:text-sm max-w-sm">
+            Standalone services or complete itineraries managed through one desk in Ahmedabad.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.title}
-                className="bg-white rounded-3xl p-8 border border-slate-200/70 hover:border-slate-300 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
+                className="bg-white rounded-xl p-6 border border-slate-200 hover:border-slate-300 transition-colors duration-150 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${service.accent}`}>
-                      <Icon className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center">
+                      <Icon className="w-5 h-5" strokeWidth={1.75} />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
-                      {service.tag}
+                    <span className="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200/80 px-2.5 py-0.5 rounded">
+                      {service.turnaround}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-headline font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-headline font-semibold text-slate-900 mb-1.5 group-hover:text-[#a10017] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-8">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
                     {service.desc}
                   </p>
                 </div>
 
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center gap-2 text-sm font-headline font-bold text-primary group-hover:gap-3 transition-all pt-4 border-t border-slate-100"
-                >
-                  <span>View Details</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <span className="text-[11px] font-mono text-slate-400">
+                    [{service.code}]
+                  </span>
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#a10017] hover:underline"
+                  >
+                    <span>View details</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
             );
           })}
 
-          {/* Quick Callout Card in the grid */}
-          <div className="bg-gradient-to-br from-secondary to-slate-900 text-white rounded-3xl p-8 flex flex-col justify-between shadow-sm">
+          {/* Direct Consultation Card */}
+          <div className="bg-slate-900 text-white rounded-xl p-6 flex flex-col justify-between">
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-secondary-fixed-dim">Custom Request</span>
-              <h3 className="text-2xl font-headline font-bold mt-3 mb-2">Need a custom plan?</h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                Connect directly with our travel desk for complex corporate groups, multi-city itineraries, or urgent visa queries.
+              <div className="flex items-center justify-between mb-5">
+                <div className="w-10 h-10 rounded-lg bg-slate-800 text-slate-200 flex items-center justify-center">
+                  <Phone className="w-5 h-5" strokeWidth={1.75} />
+                </div>
+                <span className="text-[11px] font-medium text-slate-300 bg-slate-800 border border-slate-700 px-2.5 py-0.5 rounded">
+                  Direct Line
+                </span>
+              </div>
+              <h3 className="text-lg font-headline font-semibold text-white mb-1.5">
+                Custom Route Consultation
+              </h3>
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+                Complex multi-city flight connections, corporate delegation bookings, or urgent consular appointment filings.
               </p>
             </div>
-            <button
-              onClick={openModal}
-              className="mt-8 inline-flex items-center justify-center gap-2 bg-white text-secondary px-6 py-3.5 rounded-xl font-headline font-bold text-sm shadow hover:bg-slate-50 transition-all"
-            >
-              <span>Speak to an Advisor</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
+
+            <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span className="text-[11px] font-mono text-slate-400">
+                +91 94264 17399
+              </span>
+              <button
+                onClick={openModal}
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-slate-200 underline"
+              >
+                <span>Request callback</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Holiday Packages: Clean Minimal Gallery */}
-      <section className="bg-surface-container-low py-20 border-y border-outline-variant/30">
+      {/* 5. Selected Holiday Circuits: Clean Minimal Presentation */}
+      <section className="bg-[#f7f6f4] py-14 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
             <div>
-              <span className="text-secondary font-headline font-bold text-xs uppercase tracking-widest block mb-2">
-                Handpicked Vacations
+              <span className="text-xs font-medium text-slate-500 block mb-1">
+                Handpicked Circuits
               </span>
-              <h2 className="text-3xl sm:text-4xl font-headline font-extrabold text-on-surface tracking-tight">
-                Curated Travel Escapes
+              <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tracking-tight">
+                Curated Travel Itineraries
               </h2>
             </div>
             <Link
               href="/packages"
-              className="inline-flex items-center gap-2 text-sm font-headline font-bold text-primary hover:gap-3 transition-all"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#a10017] hover:underline"
             >
-              <span>Explore All Tours</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>View all tour packages</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {destinations.map((dest) => (
               <div
                 key={dest.title}
-                className="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col group"
+                className="bg-white rounded-xl overflow-hidden border border-slate-200 flex flex-col justify-between group"
               >
-                <Link href="/packages" className="relative h-48 overflow-hidden bg-slate-100 block">
-                  <img
-                    src={dest.image}
-                    alt={dest.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-slate-800 text-[10px] font-bold uppercase px-2.5 py-1 rounded-md shadow-sm">
-                    {dest.badge}
-                  </div>
-                </Link>
+                <div>
+                  <Link href="/packages" className="relative h-44 overflow-hidden bg-slate-100 block">
+                    <img
+                      src={dest.image}
+                      alt={dest.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-2.5 left-2.5 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-mono px-2 py-0.5 rounded">
+                      {dest.route}
+                    </div>
+                    <div className="absolute top-2.5 right-2.5 bg-white/90 text-slate-800 text-[10px] font-medium px-2 py-0.5 rounded">
+                      {dest.duration}
+                    </div>
+                  </Link>
 
-                <div className="p-6 flex flex-col flex-grow justify-between space-y-4">
-                  <div>
-                    <span className="text-xs font-semibold text-slate-400 block mb-1">
-                      {dest.category} • {dest.duration}
-                    </span>
+                  <div className="p-5 space-y-2">
                     <Link href="/packages" className="block">
-                      <h4 className="font-headline font-bold text-base text-on-surface leading-snug group-hover:text-primary transition-colors">
+                      <h4 className="font-headline font-semibold text-base text-slate-900 group-hover:text-[#a10017] transition-colors">
                         {dest.title}
                       </h4>
                     </Link>
+                    <p className="text-slate-500 text-xs leading-relaxed">
+                      {dest.circuit}
+                    </p>
                   </div>
+                </div>
 
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                <div className="p-5 pt-0">
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                     <div>
-                      <span className="text-[11px] text-slate-400 block">Starting from</span>
-                      <span className="font-headline font-extrabold text-lg text-primary-container">
+                      <span className="text-[10px] text-slate-400 block">Starting from</span>
+                      <span className="font-headline font-semibold text-base text-slate-900 tabular-nums">
                         {dest.price}
                       </span>
                     </div>
                     <button
                       onClick={openModal}
-                      className="px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-primary-container hover:text-white text-xs font-bold font-headline transition-colors"
+                      className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-800 hover:bg-slate-50 transition-colors"
                     >
                       Inquire
                     </button>
@@ -456,133 +487,120 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us: Spacious Split Layout */}
+      {/* 6. Desk Assurance: Clear Factual Points */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          <div className="lg:col-span-5 space-y-6">
-            <span className="text-primary font-headline font-bold text-xs uppercase tracking-widest block">
-              The Govind Standard
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="lg:col-span-5 space-y-4">
+            <span className="text-xs font-medium text-slate-500 block">
+              Desk Assurance
             </span>
-            <h2 className="text-3xl sm:text-4xl font-headline font-extrabold text-on-surface tracking-tight leading-tight">
-              Why Travelers Choose Our Dedicated Desk
+            <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tracking-tight leading-snug">
+              Why Travelers Book Through Our Bodakdev Office
             </h2>
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              We cut through the noise of conflicting travel advisories with verifiable documentation, prompt answers, and dedicated concierge assistance.
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              We cut through the confusion of conflicting airline rules and consulate requirements with verified documentation, transparent quotes, and immediate answers.
             </p>
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-headline font-bold text-primary hover:gap-3 transition-all"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#a10017] hover:underline"
               >
-                <span>Visit our Ahmedabad Office</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Office directions &amp; hours</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">
-                01
-              </div>
-              <h4 className="font-headline font-bold text-base text-on-surface pt-2">Transparent Quotations</h4>
-              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                Clear itemized pricing with zero surprise charges or hidden booking add-ons.
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <span className="text-xs font-mono text-slate-400 block">01</span>
+              <h4 className="font-headline font-semibold text-sm text-slate-900">Itemized Quotations</h4>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Clear fare breakdown with airport taxes, visa fees, and stay costs stated upfront with zero hidden charges.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center font-bold text-sm">
-                02
-              </div>
-              <h4 className="font-headline font-bold text-base text-on-surface pt-2">Embassy Compliance</h4>
-              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                Meticulous document vetting ensuring complete alignment with consulate guidelines.
+            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <span className="text-xs font-mono text-slate-400 block">02</span>
+              <h4 className="font-headline font-semibold text-sm text-slate-900">Consulate Compliance</h4>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Thorough review of financial proof, cover letters, and insurance before submitting files to visa centers.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-sm">
-                03
-              </div>
-              <h4 className="font-headline font-bold text-base text-on-surface pt-2">24/7 Duty Assistance</h4>
-              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                Direct phone and WhatsApp escalation while you are on an active overseas itinerary.
+            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <span className="text-xs font-mono text-slate-400 block">03</span>
+              <h4 className="font-headline font-semibold text-sm text-slate-900">Direct Desk Contact</h4>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Direct phone and WhatsApp access to the advisor managing your booking while on domestic or overseas travel.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-sm">
-                04
-              </div>
-              <h4 className="font-headline font-bold text-base text-on-surface pt-2">End-to-End Handling</h4>
-              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-                Flight seats, hotel vouchers, local excursions, and visas managed under one roof.
+            <div className="p-5 rounded-xl bg-white border border-slate-200 space-y-1.5">
+              <span className="text-xs font-mono text-slate-400 block">04</span>
+              <h4 className="font-headline font-semibold text-sm text-slate-900">Single Desk Coordination</h4>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Flights, stay vouchers, local excursions, and overseas insurance combined in a unified documentation packet.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Verified Google Reviews Section */}
+      {/* 7. Verified Client Reviews: Direct Google Reviews */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
-          <div className="space-y-2">
-            <span className="text-secondary font-headline font-bold text-xs uppercase tracking-widest block">
-              Google Verified Reviews
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
+          <div>
+            <span className="text-xs font-medium text-slate-500 block mb-1">
+              Client Feedback
             </span>
-            <h2 className="text-3xl sm:text-4xl font-headline font-extrabold text-on-surface tracking-tight">
-              What Our Travelers Say
+            <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tracking-tight">
+              Verified Google Reviews
             </h2>
           </div>
-          <p className="text-slate-500 text-sm max-w-md">
-            Direct feedback from travelers who booked visas, itineraries, and tickets through our desk.
+          <p className="text-slate-500 text-xs sm:text-sm max-w-sm">
+            Read directly from travelers who booked ticketing, visas, and holiday packages with our team.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {clientReviews.map((rev) => (
             <div
               key={rev.name}
-              className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+              className="bg-white rounded-xl p-6 border border-slate-200 flex flex-col justify-between"
             >
-              <div className="space-y-4">
-                {/* Rating & Badge */}
+              <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-amber-400">
+                  <div className="flex items-center gap-0.5 text-amber-500">
                     {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-current" />
                     ))}
                   </div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 border border-slate-100 px-2.5 py-1 rounded-md">
+                  <span className="text-[11px] text-slate-500 bg-slate-50 border border-slate-200/80 px-2 py-0.5 rounded">
                     {rev.service}
                   </span>
                 </div>
 
-                {/* Review Text */}
-                <p className="text-slate-600 text-sm leading-relaxed italic">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                   &ldquo;{rev.comment}&rdquo;
                 </p>
               </div>
 
-              {/* Author & Profile Link */}
-              <div className="pt-6 border-t border-slate-100 mt-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 text-primary font-headline font-bold text-xs flex items-center justify-center shrink-0">
-                    {rev.initials}
-                  </div>
-                  <div>
-                    <a
-                      href={rev.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-headline font-bold text-sm text-on-surface hover:text-primary transition-colors flex items-center gap-1.5 group"
-                    >
-                      <span>{rev.name}</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary transition-colors" />
-                    </a>
-                    <span className="text-[11px] text-slate-400 block">Google Reviewer</span>
-                  </div>
+              <div className="pt-4 border-t border-slate-100 mt-5 flex items-center justify-between">
+                <div>
+                  <a
+                    href={rev.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-headline font-semibold text-xs sm:text-sm text-slate-900 hover:text-[#a10017] transition-colors inline-flex items-center gap-1"
+                  >
+                    <span>{rev.name}</span>
+                    <ExternalLink className="w-3 h-3 text-slate-400" />
+                  </a>
+                  <span className="text-[11px] text-slate-400 block">Verified Google Reviewer</span>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-slate-100 text-slate-700 font-semibold text-xs flex items-center justify-center">
+                  {rev.initials}
                 </div>
               </div>
             </div>
@@ -590,31 +608,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pre-Footer Action Block: Minimal & Airy */}
+      {/* 8. Office Desk Callout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-slate-900 text-white p-8 sm:p-14 text-center max-w-4xl mx-auto space-y-6">
-          <span className="text-secondary-fixed-dim font-headline font-bold text-xs uppercase tracking-widest block">
-            Ready to Begin?
-          </span>
-          <h3 className="text-3xl sm:text-4xl font-headline font-extrabold tracking-tight">
-            Connect with our travel team today
-          </h3>
-          <p className="text-slate-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-            Reach out via phone, WhatsApp, or request an instant callback to receive customized fares and visa advice.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <button
-              onClick={openModal}
-              className="bg-primary-container hover:bg-primary text-white px-8 py-3.5 rounded-xl font-headline font-bold text-sm shadow-md transition-all active:scale-95"
-            >
-              Get In Touch
-            </button>
-            <Link
-              href="/contact"
-              className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-3.5 rounded-xl font-headline font-bold text-sm transition-all"
-            >
-              Visit Our Office
-            </Link>
+        <div className="rounded-2xl bg-slate-900 text-white p-6 sm:p-10 max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div className="space-y-2">
+              <span className="text-xs font-mono text-slate-400 block">
+                AHMEDABAD TRAVEL DESK
+              </span>
+              <h3 className="text-xl sm:text-2xl font-headline font-semibold text-white tracking-tight">
+                Plan your itinerary with an advisor
+              </h3>
+              <p className="text-slate-300 text-xs sm:text-sm max-w-md leading-relaxed">
+                Visit our Bodakdev desk or connect directly on WhatsApp for flight reservations, visa queries, and custom holiday quotes.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400 pt-1">
+                <span className="inline-flex items-center gap-1.5">
+                  <Building2 className="w-3.5 h-3.5" />
+                  A-207, Shilp Aaron, Sindhu Bhavan Marg
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="w-3.5 h-3.5" />
+                  Mon–Sat 10:00 AM – 7:00 PM
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-2.5 shrink-0">
+              <button
+                onClick={openModal}
+                className="bg-[#a10017] hover:bg-[#860013] text-white px-5 py-2.5 rounded-lg font-headline font-semibold text-xs transition-colors text-center"
+              >
+                Inquire online
+              </button>
+              <a
+                href="tel:+919426417399"
+                className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-5 py-2.5 rounded-lg font-headline font-semibold text-xs transition-colors text-center"
+              >
+                Call desk
+              </a>
+            </div>
           </div>
         </div>
       </section>

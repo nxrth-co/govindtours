@@ -80,17 +80,17 @@ export default function Footer() {
             <div className="pt-2">
               <button
                 onClick={openModal}
-                className="inline-flex items-center gap-2 text-xs font-bold font-headline uppercase tracking-wider text-secondary-fixed bg-secondary/30 hover:bg-secondary/50 px-4 py-2.5 rounded-xl transition-all"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-white bg-slate-800 hover:bg-slate-700 px-3.5 py-2 rounded-lg border border-slate-700 transition-colors"
               >
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Talk to a Visa Specialist</span>
+                <ShieldCheck className="w-3.5 h-3.5 text-slate-300" />
+                <span>Talk to a visa specialist</span>
               </button>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="font-headline font-bold text-white text-base tracking-wide uppercase text-xs">
+          <div className="space-y-3">
+            <h4 className="font-headline font-semibold text-white text-xs">
               Services
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -138,8 +138,8 @@ export default function Footer() {
           </div>
 
           {/* Featured Destinations */}
-          <div className="space-y-4">
-            <h4 className="font-headline font-bold text-white text-base tracking-wide uppercase text-xs">
+          <div className="space-y-3">
+            <h4 className="font-headline font-semibold text-white text-xs">
               Top Destinations
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -177,8 +177,8 @@ export default function Footer() {
           </div>
 
           {/* Office Contact Info */}
-          <div className="space-y-4">
-            <h4 className="font-headline font-bold text-white text-base tracking-wide uppercase text-xs">
+          <div className="space-y-3">
+            <h4 className="font-headline font-semibold text-white text-xs">
               Headquarters
             </h4>
             <ul className="space-y-3.5 text-sm">

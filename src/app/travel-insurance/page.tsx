@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { 
   ShieldCheck, 
   Check, 
@@ -9,8 +8,6 @@ import {
   Briefcase, 
   PlaneTakeoff, 
   PhoneCall, 
-  FileCheck2,
-  AlertTriangle,
   ArrowRight
 } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
@@ -22,7 +19,7 @@ export default function TravelInsurancePage() {
     {
       name: 'Asia Essential',
       coverage: '$50,000 USD',
-      price: '₹750 / Week',
+      price: '₹750 / week',
       popular: false,
       tag: 'Thailand, Bali & Dubai',
       features: [
@@ -36,7 +33,7 @@ export default function TravelInsurancePage() {
     {
       name: 'Schengen Compliant',
       coverage: '€30,000 EUR',
-      price: '₹1,250 / Week',
+      price: '₹1,250 / week',
       popular: true,
       tag: 'Mandatory Europe Visa',
       features: [
@@ -51,7 +48,7 @@ export default function TravelInsurancePage() {
     {
       name: 'USA & Global Platinum',
       coverage: '$250,000 USD',
-      price: '₹2,100 / Week',
+      price: '₹2,100 / week',
       popular: false,
       tag: 'Worldwide Coverage',
       features: [
@@ -73,69 +70,72 @@ export default function TravelInsurancePage() {
   ];
 
   return (
-    <div className="space-y-20 lg:space-y-28 pb-24">
-      {/* Header Section: Spacious & Clean */}
-      <section className="bg-surface-container-low py-16 px-4 sm:px-6 lg:px-8 border-b border-outline-variant/30">
+    <div className="space-y-16 lg:space-y-24 pb-20">
+      {/* 1. Header Section */}
+      <section className="bg-[#f7f6f4] py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="space-y-3 max-w-2xl">
-            <span className="text-secondary font-headline font-bold text-xs uppercase tracking-widest block">
-              Embassy-Approved Protection
+          <div className="space-y-2 max-w-2xl">
+            <span className="text-xs font-mono text-slate-500 block">
+              EMBASSY-COMPLIANT PROTECTION • AHMEDABAD
             </span>
-            <h1 className="text-4xl sm:text-5xl font-headline font-extrabold text-on-surface tracking-tight">
-              International <span className="text-primary">Travel Insurance</span>
+            <h1 className="text-3xl sm:text-4xl font-headline font-semibold text-slate-900 tracking-tight">
+              International Travel Insurance
             </h1>
-            <p className="text-slate-600 text-base leading-relaxed">
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               Medical emergency cover, cashless international hospitalization, and Schengen embassy-compliant policies issued in minutes.
             </p>
           </div>
 
           <button
             onClick={openModal}
-            className="self-start md:self-auto bg-primary-container hover:bg-primary text-white px-7 py-3.5 rounded-xl font-headline font-bold text-sm shadow-md transition-all active:scale-95"
+            className="self-start md:self-auto bg-[#a10017] hover:bg-[#860013] text-white px-5 py-2.5 rounded-lg font-headline font-semibold text-xs transition-colors shrink-0"
           >
-            Get Instant Policy Quote
+            Get policy quote
           </button>
         </div>
       </section>
 
-      {/* Plans Comparison: Clean Bento Tiers */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 pb-4 border-b border-slate-100">
-          <h2 className="text-2xl sm:text-3xl font-headline font-bold text-on-surface tracking-tight">
+      {/* 2. Plans Comparison */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div>
+          <span className="text-xs font-medium text-slate-500 block mb-1">
+            Policy Options
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tracking-tight">
             Protection Tiers
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {plans.map((p) => (
             <div
               key={p.name}
-              className={`rounded-3xl p-8 flex flex-col justify-between transition-all duration-200 relative ${
+              className={`rounded-xl p-6 flex flex-col justify-between transition-colors duration-150 ${
                 p.popular
-                  ? 'bg-slate-900 text-white shadow-xl ring-2 ring-primary-container'
-                  : 'bg-white border border-slate-200/80 shadow-sm text-on-surface'
+                  ? 'bg-slate-900 text-white border border-slate-800'
+                  : 'bg-white border border-slate-200 text-slate-900'
               }`}
             >
-              <div className="space-y-6">
+              <div className="space-y-5">
                 <div>
-                  <span className={`text-[10px] font-bold uppercase tracking-wider block mb-1 ${p.popular ? 'text-primary-fixed-dim' : 'text-slate-400'}`}>
-                    {p.tag}
+                  <span className={`text-[11px] font-mono block mb-1 ${p.popular ? 'text-slate-400' : 'text-slate-400'}`}>
+                    [{p.tag}]
                   </span>
-                  <h3 className="font-headline font-extrabold text-xl">{p.name}</h3>
+                  <h3 className="font-headline font-semibold text-lg">{p.name}</h3>
                   <div className="mt-3">
-                    <span className="text-[11px] text-slate-400 block">Sum Insured</span>
-                    <span className="text-2xl font-headline font-extrabold">{p.coverage}</span>
+                    <span className={`text-[11px] block ${p.popular ? 'text-slate-400' : 'text-slate-400'}`}>Sum Insured</span>
+                    <span className="text-xl font-headline font-semibold tabular-nums">{p.coverage}</span>
                   </div>
-                  <div className="mt-1 text-xs font-semibold text-emerald-500">
+                  <div className={`mt-0.5 text-xs font-medium tabular-nums ${p.popular ? 'text-slate-300' : 'text-slate-600'}`}>
                     {p.price}
                   </div>
                 </div>
 
-                <div className={`pt-6 border-t ${p.popular ? 'border-slate-800' : 'border-slate-100'}`}>
-                  <ul className="space-y-2.5">
+                <div className={`pt-4 border-t ${p.popular ? 'border-slate-800' : 'border-slate-100'}`}>
+                  <ul className="space-y-2">
                     {p.features.map((feat) => (
-                      <li key={feat} className="flex items-start gap-2.5 text-xs">
-                        <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                      <li key={feat} className="flex items-start gap-2 text-xs">
+                        <Check className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${p.popular ? 'text-slate-300' : 'text-slate-600'}`} />
                         <span className={p.popular ? 'text-slate-300' : 'text-slate-600'}>{feat}</span>
                       </li>
                     ))}
@@ -143,16 +143,16 @@ export default function TravelInsurancePage() {
                 </div>
               </div>
 
-              <div className="pt-8">
+              <div className="pt-6">
                 <button
                   onClick={openModal}
-                  className={`w-full py-2.5 rounded-xl text-xs font-headline font-bold transition-all ${
+                  className={`w-full py-2 px-3 rounded-lg font-headline font-semibold text-xs transition-colors ${
                     p.popular
-                      ? 'bg-primary-container hover:bg-primary text-white shadow-md'
-                      : 'bg-slate-100 hover:bg-primary-container hover:text-white text-slate-800'
+                      ? 'bg-[#a10017] hover:bg-[#860013] text-white'
+                      : 'border border-slate-200 hover:bg-slate-50 text-slate-900'
                   }`}
                 >
-                  Request Policy
+                  Inquire this plan
                 </button>
               </div>
             </div>
@@ -160,51 +160,20 @@ export default function TravelInsurancePage() {
         </div>
       </section>
 
-      {/* Official Policy Specification Sheet & Graphic Display */}
+      {/* 3. Core Benefits Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-100">
-            <div>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-primary block">
-                Comprehensive Coverage Guide
-              </span>
-              <h2 className="text-xl sm:text-2xl font-headline font-bold text-on-surface">
-                Travel Insurance Policy Scope &amp; Inclusions
-              </h2>
-            </div>
-            <span className="text-xs text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full self-start sm:self-auto font-medium">
-              Consulate Approved
-            </span>
-          </div>
-
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-50">
-            <Image
-              src="/travel_insurance_card.jpg"
-              alt="Official Travel Insurance Policy Inclusions"
-              width={1275}
-              height={2020}
-              className="w-full h-auto object-contain mx-auto"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Key Benefits: Minimal Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-surface-container-low p-8 sm:p-12 border border-outline-variant/30">
-          <div className="mb-8">
-            <h3 className="text-2xl font-headline font-bold text-on-surface">
-              Core Policy Inclusions
+        <div className="rounded-xl bg-[#f7f6f4] p-6 sm:p-8 border border-slate-200">
+          <div className="mb-6">
+            <h3 className="text-lg font-headline font-semibold text-slate-900">
+              Why Overseas Insurance is Essential
             </h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((b, idx) => (
-              <div key={b.title} className="space-y-2">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">
-                  0{idx + 1}
-                </div>
-                <h4 className="font-headline font-bold text-sm text-on-surface pt-1">{b.title}</h4>
+            {benefits.map((b, i) => (
+              <div key={b.title} className="space-y-1.5">
+                <span className="text-xs font-mono text-slate-400 block">0{i + 1}</span>
+                <h4 className="font-headline font-semibold text-sm text-slate-900">{b.title}</h4>
                 <p className="text-xs text-slate-500 leading-relaxed">{b.desc}</p>
               </div>
             ))}

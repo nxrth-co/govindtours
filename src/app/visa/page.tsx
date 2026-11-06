@@ -3,12 +3,10 @@
 import React, { useState } from 'react';
 import { 
   FileText, 
-  CheckCircle, 
   Clock, 
   ShieldCheck, 
   ArrowRight, 
-  FileCheck2, 
-  Sparkles 
+  CheckCircle2
 } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
 
@@ -113,117 +111,116 @@ export default function VisaPage() {
   ];
 
   const processSteps = [
-    { step: '01', title: 'Profile Assessment', desc: 'Review travel history & identify optimal visa category.' },
+    { step: '01', title: 'Profile Assessment', desc: 'Review travel history and identify optimal visa category.' },
     { step: '02', title: 'Dossier Preparation', desc: 'Complete official paperwork, cover letters, and document audit.' },
     { step: '03', title: 'Appointment & Biometrics', desc: 'Secure VFS/Embassy dates with interview briefing.' },
     { step: '04', title: 'Approval & Handover', desc: 'Application tracking until your visa or E-visa is issued.' },
   ];
 
   return (
-    <div className="space-y-20 lg:space-y-28 pb-24">
-      {/* Header Section: Clean & Focused */}
-      <section className="bg-surface-container-low py-16 px-4 sm:px-6 lg:px-8 border-b border-outline-variant/30">
+    <div className="space-y-16 lg:space-y-24 pb-20">
+      {/* 1. Header Section */}
+      <section className="bg-[#f7f6f4] py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="space-y-3 max-w-2xl">
-            <span className="text-secondary font-headline font-bold text-xs uppercase tracking-widest block">
-              99.2% Historical Success
+          <div className="space-y-2 max-w-2xl">
+            <span className="text-xs font-mono text-slate-500 block">
+              CONSULAR &amp; VISA DESK • AHMEDABAD
             </span>
-            <h1 className="text-4xl sm:text-5xl font-headline font-extrabold text-on-surface tracking-tight">
-              Visa Assistance for <span className="text-primary">60+ Countries</span>
+            <h1 className="text-3xl sm:text-4xl font-headline font-semibold text-slate-900 tracking-tight">
+              Tourist &amp; Business Visa Assistance
             </h1>
-            <p className="text-slate-600 text-base leading-relaxed">
-              From instant tourist E-Visas to intricate US, UK, and Schengen embassy dossiers.
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              From instant tourist E-Visas to intricate US, UK, and Schengen embassy dossiers with high approval track record.
             </p>
           </div>
 
           <button
             onClick={openModal}
-            className="self-start md:self-auto bg-primary-container hover:bg-primary text-white px-7 py-3.5 rounded-xl font-headline font-bold text-sm shadow-md transition-all active:scale-95"
+            className="self-start md:self-auto bg-[#a10017] hover:bg-[#860013] text-white px-5 py-2.5 rounded-lg font-headline font-semibold text-xs transition-colors shrink-0"
           >
-            Start Visa Assessment
+            Check visa requirements
           </button>
         </div>
       </section>
 
-      {/* Country Directory */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 pb-4 border-b border-slate-100">
+      {/* 2. Countries & Requirements Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 pb-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-headline font-bold text-on-surface tracking-tight">
-              Select Destination
+            <span className="text-xs font-medium text-slate-500 block mb-1">
+              Destinations
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tracking-tight">
+              Popular Visa Destinations
             </h2>
           </div>
 
-          {/* Filter Pills */}
-          <div className="flex gap-2">
+          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-slate-100 rounded-lg border border-slate-200">
             {[
-              { id: 'all', label: 'All Destinations' },
-              { id: 'evisa', label: 'E-Visas' },
+              { id: 'all', label: 'All' },
+              { id: 'evisa', label: 'E-Visa' },
               { id: 'embassy', label: 'Embassy / Stamp' },
-            ].map((f) => (
+            ].map((tab) => (
               <button
-                key={f.id}
-                onClick={() => setSelectedCategory(f.id as any)}
-                className={`px-4 py-2 rounded-xl text-xs font-headline font-bold transition-all ${
-                  selectedCategory === f.id
-                    ? 'bg-on-surface text-white shadow-sm'
-                    : 'bg-surface-container text-slate-600 hover:text-slate-900'
+                key={tab.id}
+                onClick={() => setSelectedCategory(tab.id as any)}
+                className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                  selectedCategory === tab.id
+                    ? 'bg-white text-slate-900 shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                {f.label}
+                {tab.label}
               </button>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {filteredCountries.map((c) => (
             <div
               key={c.country}
-              className="bg-white rounded-3xl border border-slate-200/80 p-6 hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
+              className="bg-white rounded-xl border border-slate-200 p-5 hover:border-slate-300 transition-colors duration-150 flex flex-col justify-between"
             >
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-3xl">{c.flag}</span>
-                  <span
-                    className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                      c.category === 'evisa'
-                        ? 'bg-emerald-50 text-emerald-700'
-                        : 'bg-blue-50 text-secondary'
-                    }`}
-                  >
+                  <span className="text-2xl">{c.flag}</span>
+                  <span className="text-[11px] font-medium text-slate-600 bg-slate-100 px-2 py-0.5 rounded">
                     {c.type}
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="font-headline font-bold text-base text-on-surface group-hover:text-primary transition-colors">
+                  <h3 className="font-headline font-semibold text-base text-slate-900">
                     {c.country}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                  <p className="text-slate-500 text-xs mt-1 leading-relaxed">
                     {c.description}
                   </p>
                 </div>
 
-                <div className="space-y-1.5 pt-3 border-t border-slate-100 text-xs text-slate-600">
+                <div className="pt-3 border-t border-slate-100 space-y-1.5 text-xs text-slate-600">
                   <div className="flex justify-between">
                     <span className="text-slate-400">Processing:</span>
-                    <span className="font-medium text-slate-700">{c.processingTime}</span>
+                    <span className="font-medium text-slate-800">{c.processingTime}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-400">Validity:</span>
-                    <span className="font-medium text-slate-700">{c.validity}</span>
+                    <span className="font-medium text-slate-800">{c.validity}</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between mt-4">
-                <span className="font-headline font-extrabold text-sm text-primary-container">
-                  {c.fee}
-                </span>
+              <div className="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] text-slate-400 block">Consultation fee</span>
+                  <span className="font-headline font-semibold text-sm text-slate-900 tabular-nums">
+                    {c.fee}
+                  </span>
+                </div>
                 <button
                   onClick={openModal}
-                  className="px-3.5 py-1.5 bg-slate-100 hover:bg-primary-container hover:text-white text-slate-800 rounded-lg text-xs font-headline font-bold transition-colors"
+                  className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-800 hover:bg-slate-50 transition-colors"
                 >
                   Apply
                 </button>
@@ -233,57 +230,59 @@ export default function VisaPage() {
         </div>
       </section>
 
-      {/* Mandatory Document Checklist & Process: Modular 2-Column Section */}
+      {/* 3. Document Checklist & 4-Step Process */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Document Checklist */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-4">
             <div>
-              <span className="text-primary font-headline font-bold text-xs uppercase tracking-widest block mb-1">
-                Document Checklist
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-headline font-extrabold text-on-surface tracking-tight">
+              <span className="text-xs font-medium text-slate-500 block mb-1">
                 Standard Requirements
+              </span>
+              <h3 className="text-xl font-headline font-semibold text-slate-900">
+                Core Document Checklist
               </h3>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {documentChecklist.map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-1.5"
-                >
-                  <div className="flex items-center gap-2 text-primary font-headline font-bold text-sm">
-                    <FileCheck2 className="w-4 h-4 shrink-0" />
-                    <span>{item.title}</span>
-                  </div>
-                  <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {documentChecklist.map((doc) => (
+                <div key={doc.title} className="p-4 rounded-xl bg-white border border-slate-200 space-y-1">
+                  <h4 className="font-headline font-semibold text-xs text-slate-900 flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                    <span>{doc.title}</span>
+                  </h4>
+                  <p className="text-[11px] text-slate-500 leading-relaxed pl-5">
+                    {doc.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* 4-Step Process Timeline */}
-          <div className="lg:col-span-6 space-y-6">
+          {/* Process Steps */}
+          <div className="lg:col-span-6 space-y-4">
             <div>
-              <span className="text-secondary font-headline font-bold text-xs uppercase tracking-widest block mb-1">
-                How It Works
+              <span className="text-xs font-medium text-slate-500 block mb-1">
+                Workflow
               </span>
-              <h3 className="text-2xl sm:text-3xl font-headline font-extrabold text-on-surface tracking-tight">
-                Our 4-Step Workflow
+              <h3 className="text-xl font-headline font-semibold text-slate-900">
+                How We Process Your Visa
               </h3>
             </div>
-            <div className="space-y-4">
+
+            <div className="space-y-3">
               {processSteps.map((step) => (
-                <div
-                  key={step.step}
-                  className="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/30 flex items-start gap-4"
-                >
-                  <span className="text-xl font-headline font-black text-primary/40 shrink-0">
+                <div key={step.step} className="p-4 rounded-xl bg-white border border-slate-200 flex items-start gap-3.5">
+                  <span className="text-xs font-mono text-slate-400 shrink-0 pt-0.5">
                     {step.step}
                   </span>
                   <div>
-                    <h4 className="font-headline font-bold text-sm text-on-surface">{step.title}</h4>
-                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{step.desc}</p>
+                    <h4 className="font-headline font-semibold text-xs sm:text-sm text-slate-900">
+                      {step.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                      {step.desc}
+                    </p>
                   </div>
                 </div>
               ))}

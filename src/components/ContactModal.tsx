@@ -39,153 +39,154 @@ export default function ContactModal() {
       setIsSubmitted(false);
       closeModal();
       setFormData({ name: '', email: '', phone: '', message: '' });
-    }, 2500);
+    }, 2200);
   };
 
   return (
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-slate-900/60 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-slate-900/60 backdrop-blur-sm"
       onClick={(e) => {
         if (e.target === e.currentTarget) closeModal();
       }}
     >
-      <div className="relative w-full max-w-4xl bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh]">
+      <div className="relative w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] border border-slate-200">
         {/* Close Button */}
         <button
           onClick={closeModal}
           aria-label="Close modal"
-          className="absolute top-4 right-4 z-50 p-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-primary rounded-full transition-all active:scale-95 shadow-sm"
+          className="absolute top-4 right-4 z-50 p-2 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full transition-colors"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4" />
         </button>
 
         {/* Visual Sidebar (Desktop only) */}
-        <div className="hidden md:flex md:w-5/12 relative overflow-hidden bg-primary">
-          <div className="absolute inset-0 opacity-40 mix-blend-overlay bg-gradient-to-br from-primary to-secondary" />
+        <div className="hidden md:flex md:w-5/12 relative overflow-hidden bg-slate-900 text-white">
           <img
-            alt="Luxury travel scenery"
-            className="absolute inset-0 object-cover w-full h-full grayscale-[15%] contrast-[1.1]"
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+            alt="Scenic travel landscape"
+            className="absolute inset-0 object-cover w-full h-full brightness-[0.6]"
+            src="/hero/ladakh.jpg"
           />
-          <div className="relative z-10 mt-auto p-8 lg:p-10 bg-gradient-to-t from-black/85 via-black/40 to-transparent">
-            <h3 className="text-white text-2xl lg:text-3xl font-extrabold font-headline mb-3 tracking-tight leading-tight">
-              Your Curated Journey Awaits.
+          <div className="relative z-10 mt-auto p-6 lg:p-8 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent space-y-2">
+            <span className="text-[11px] font-mono text-slate-300 block">
+              AHMEDABAD DESK
+            </span>
+            <h3 className="text-white text-xl font-semibold font-headline tracking-tight leading-snug">
+              Plan your travel with an advisor
             </h3>
-            <p className="text-white/80 text-sm leading-relaxed mb-6 font-body">
-              Connect with our travel concierge to begin designing an itinerary tailored exclusively to your desires.
+            <p className="text-slate-300 text-xs leading-relaxed">
+              Air tickets, foreign visas, overseas insurance, and holiday circuits managed directly from Bodakdev.
             </p>
-            <div className="flex items-center gap-2.5 text-white/90">
-              <ShieldCheck className="w-5 h-5 text-secondary-container" />
-              <span className="text-xs uppercase tracking-widest font-semibold">
-                Direct Agent Consultation
-              </span>
+            <div className="flex items-center gap-2 text-slate-300 text-xs pt-1">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>Direct consultation</span>
             </div>
           </div>
         </div>
 
         {/* Form Content */}
-        <div className="w-full md:w-7/12 p-6 sm:p-8 md:p-10 overflow-y-auto">
-          <header className="mb-8">
-            <span className="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-1.5 block">
-              Govind Tours Concierge
+        <div className="w-full md:w-7/12 p-6 sm:p-8 overflow-y-auto">
+          <header className="mb-6">
+            <span className="text-xs font-mono text-slate-500 block mb-1">
+              INQUIRY DESK
             </span>
-            <h2 className="text-3xl font-extrabold text-on-surface font-headline tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-semibold text-slate-900 font-headline tracking-tight">
               Get in Touch
             </h2>
-            <div className="w-12 h-1 bg-primary-container rounded-full mt-3" />
           </header>
 
           {isSubmitted ? (
-            <div className="py-12 flex flex-col items-center text-center space-y-4">
-              <CheckCircle2 className="w-16 h-16 text-emerald-600 animate-bounce" />
-              <h3 className="text-2xl font-bold font-headline text-on-surface">Thank You!</h3>
-              <p className="text-slate-600 text-sm max-w-sm">
-                Your request has been received. One of our destination specialists will call or WhatsApp you within 2 hours.
+            <div className="py-12 flex flex-col items-center text-center space-y-3">
+              <CheckCircle2 className="w-10 h-10 text-slate-800" />
+              <h3 className="text-lg font-semibold font-headline text-slate-900">Inquiry Received</h3>
+              <p className="text-slate-600 text-xs max-w-sm leading-relaxed">
+                Thank you for contacting Govind Tours. A destination consultant will call or WhatsApp you shortly.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name */}
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider ml-1">
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-slate-600">
                   Full Name
                 </label>
                 <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
                   <input
                     required
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Rahul Sharma"
-                    className="w-full pl-12 pr-4 py-3.5 bg-slate-100 hover:bg-slate-50 focus:bg-white border border-transparent focus:border-primary/30 rounded-xl focus:ring-4 focus:ring-primary/10 transition-all text-on-surface text-sm"
+                    className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
                   />
                 </div>
               </div>
 
               {/* Email & Phone */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-wider ml-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="space-y-1">
+                  <label className="text-xs font-medium text-slate-600">
                     Email Address
                   </label>
                   <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
                     <input
                       required
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="name@email.com"
-                      className="w-full pl-12 pr-4 py-3.5 bg-slate-100 hover:bg-slate-50 focus:bg-white border border-transparent focus:border-primary/30 rounded-xl focus:ring-4 focus:ring-primary/10 transition-all text-on-surface text-sm"
+                      className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-wider ml-1">
-                    Phone Number
+                <div className="space-y-1">
+                  <label className="text-xs font-medium text-slate-600">
+                    Phone / WhatsApp
                   </label>
                   <div className="relative">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
                     <input
                       required
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+91 94264 17399"
-                      className="w-full pl-12 pr-4 py-3.5 bg-slate-100 hover:bg-slate-50 focus:bg-white border border-transparent focus:border-primary/30 rounded-xl focus:ring-4 focus:ring-primary/10 transition-all text-on-surface text-sm"
+                      className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Message */}
-              <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider ml-1">
+              <div className="space-y-1">
+                <label className="text-xs font-medium text-slate-600">
                   How can we help?
                 </label>
                 <div className="relative">
-                  <MessageSquare className="absolute left-4 top-4 text-slate-400 w-5 h-5" />
+                  <MessageSquare className="absolute left-3 top-3 text-slate-400 w-4 h-4" />
                   <textarea
                     rows={3}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about destinations, travel dates, or visa questions..."
-                    className="w-full pl-12 pr-4 py-3.5 bg-slate-100 hover:bg-slate-50 focus:bg-white border border-transparent focus:border-primary/30 rounded-xl focus:ring-4 focus:ring-primary/10 transition-all text-on-surface text-sm resize-none"
+                    placeholder="Tell us about destinations, dates, or visa questions..."
+                    className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors resize-none"
                   />
                 </div>
               </div>
 
               {/* Submit CTA */}
-              <button
-                type="submit"
-                className="w-full py-4 bg-primary-container hover:bg-primary text-white font-headline font-bold rounded-xl shadow-lg shadow-primary-container/20 hover:shadow-primary-container/40 transition-all active:scale-[0.98] text-sm uppercase tracking-wider mt-2"
-              >
-                Send Travel Request
-              </button>
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="w-full py-2.5 bg-[#a10017] hover:bg-[#860013] text-white font-headline font-semibold rounded-lg transition-colors text-xs"
+                >
+                  Send travel request
+                </button>
+              </div>
             </form>
           )}
         </div>

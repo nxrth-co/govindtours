@@ -25,3 +25,5 @@
 
 - [Aperture Carousel Hero Integration](../docs/aperture-carousel-hero-integration.md) - Integrated interactive <ApertureCarousel /> in homepage hero featuring iris click-transitions, panoramic package slides, and quick circular navigation.
 - [Git LFS & Repository Hygiene Setup](../docs/git-lfs-and-repo-setup.md) - Configured Git LFS for binary media assets, updated .gitignore against build caches and temp code, and synchronized with remote repository.
+- [Homepage 9-Pass Unslop Redesign](../docs/homepage-unslop-redesign.md) - Comprehensive de-slopping of the homepage and aperture carousel across Spacing, Color, Icons, Copy, Type, Layout, Details, Visuals, and Motion.
+- [Site-Wide Unslop Refactoring](../docs/site-wide-unslop-refactoring.md) - Complete aesthetic harmonization and de-slopping across all subpages (/air-tickets, /packages, /visa, /passport, /travel-insurance, /payment-details, /contact, /blog, /privacy-policy, and modals).

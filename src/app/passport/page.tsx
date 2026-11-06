@@ -6,7 +6,6 @@ import {
   CheckCircle2, 
   Clock, 
   ShieldCheck, 
-  FileCheck2,
   ArrowRight 
 } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
@@ -23,13 +22,13 @@ export default function PassportPage() {
     },
     {
       title: 'Passport Renewal / Re-issue',
-      desc: 'For expiring booklets, exhausted visa pages, or marital/address updates.',
+      desc: 'For expiring booklets, exhausted visa pages, or marital and address updates.',
       timeframe: 'Normal / Tatkal',
       tag: 'Renewal',
     },
     {
       title: 'Tatkal Scheme (Fast-Track)',
-      desc: 'Accelerated passport dispatch within 1 to 3 days for urgent departure dates.',
+      desc: 'Accelerated passport dispatch within 1 to 3 days for urgent overseas travel.',
       timeframe: '1–3 Working Days',
       tag: 'Express Priority',
     },
@@ -73,62 +72,65 @@ export default function PassportPage() {
   ];
 
   const roadmap = [
-    { num: '01', title: 'File Review', desc: 'Pre-check certificates to prevent document hold.' },
-    { num: '02', title: 'Fee Payment', desc: 'Treasury payment and official profile submission.' },
-    { num: '03', title: 'Slot Booking', desc: 'Earliest available date at PSK or Post Office PSK.' },
-    { num: '04', title: 'PSK Visit', desc: 'Biometric capture and counter verification.' },
-    { num: '05', title: 'Dispatch', desc: 'Delivered by Speed Post directly to your home address.' },
+    { num: '01', title: 'Document Audit', desc: 'Pre-check certificates against Seva Kendra standards.' },
+    { num: '02', title: 'Portal Filing', desc: 'Official portal submission and treasury fee deposit.' },
+    { num: '03', title: 'Slot Scheduling', desc: 'Earliest available date at PSK or Post Office PSK.' },
+    { num: '04', title: 'PSK Visit Briefing', desc: 'Biometric capture and counter verification instructions.' },
+    { num: '05', title: 'Police Verification & Delivery', desc: 'Speed Post delivery directly to your home address.' },
   ];
 
   return (
-    <div className="space-y-20 lg:space-y-28 pb-24">
-      {/* Header Section: Spacious & Clean */}
-      <section className="bg-surface-container-low py-16 px-4 sm:px-6 lg:px-8 border-b border-outline-variant/30">
+    <div className="space-y-16 lg:space-y-24 pb-20">
+      {/* 1. Header Section */}
+      <section className="bg-[#f7f6f4] py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div className="space-y-3 max-w-2xl">
-            <span className="text-secondary font-headline font-bold text-xs uppercase tracking-widest block">
-              Passport Seva Kendra Desk
+          <div className="space-y-2 max-w-2xl">
+            <span className="text-xs font-mono text-slate-500 block">
+              PASSPORT SEVA KENDRA DESK • AHMEDABAD
             </span>
-            <h1 className="text-4xl sm:text-5xl font-headline font-extrabold text-on-surface tracking-tight">
-              Indian Passport &amp; <span className="text-primary">Tatkal Services</span>
+            <h1 className="text-3xl sm:text-4xl font-headline font-semibold text-slate-900 tracking-tight">
+              Indian Passport &amp; Tatkal Assistance
             </h1>
-            <p className="text-slate-600 text-base leading-relaxed">
-              Eliminate appointment delays and documentation rejections with full-service Seva portal assistance.
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Eliminate appointment delays and documentation rejections with full-service Seva portal assistance and Tatkal fast-tracking.
             </p>
           </div>
 
           <button
             onClick={openModal}
-            className="self-start md:self-auto bg-primary-container hover:bg-primary text-white px-7 py-3.5 rounded-xl font-headline font-bold text-sm shadow-md transition-all active:scale-95"
+            className="self-start md:self-auto bg-[#a10017] hover:bg-[#860013] text-white px-5 py-2.5 rounded-lg font-headline font-semibold text-xs transition-colors shrink-0"
           >
-            Book Appointment Consultation
+            Book passport consultation
           </button>
         </div>
       </section>
 
-      {/* Services Grid: Clean & Modular */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 pb-4 border-b border-slate-100">
-          <h2 className="text-2xl sm:text-3xl font-headline font-bold text-on-surface tracking-tight">
-            Available Passport Categories
+      {/* 2. Services Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div>
+          <span className="text-xs font-medium text-slate-500 block mb-1">
+            Service Scope
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-headline font-semibold text-slate-900 tracking-tight">
+            Passport Application Categories
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((svc) => (
             <div
               key={svc.title}
-              className="bg-white rounded-3xl border border-slate-200/80 p-6 hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
+              className="bg-white rounded-xl border border-slate-200 p-5 hover:border-slate-300 transition-colors duration-150 flex flex-col justify-between"
             >
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 px-3 py-1 rounded-full">
+                  <span className="text-[11px] font-medium text-slate-600 bg-slate-100 px-2 py-0.5 rounded">
                     {svc.tag}
                   </span>
-                  <span className="text-xs font-semibold text-emerald-600">{svc.timeframe}</span>
+                  <span className="text-xs text-slate-500 font-medium">{svc.timeframe}</span>
                 </div>
 
-                <h3 className="font-headline font-bold text-base text-on-surface group-hover:text-primary transition-colors">
+                <h3 className="font-headline font-semibold text-base text-slate-900">
                   {svc.title}
                 </h3>
 
@@ -137,12 +139,13 @@ export default function PassportPage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 mt-6">
+              <div className="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
+                <span className="text-[11px] text-slate-400">PSK Slot Support</span>
                 <button
                   onClick={openModal}
-                  className="w-full py-2 bg-slate-100 hover:bg-primary-container hover:text-white text-slate-800 rounded-xl text-xs font-headline font-bold transition-colors text-center"
+                  className="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-800 hover:bg-slate-50 transition-colors"
                 >
-                  Apply With Our Desk
+                  Inquire
                 </button>
               </div>
             </div>
@@ -150,31 +153,30 @@ export default function PassportPage() {
         </div>
       </section>
 
-      {/* Documents & Roadmap Split Section */}
+      {/* 3. Document Requirements & Workflow */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Document Checklist */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-6 space-y-4">
             <div>
-              <span className="text-primary font-headline font-bold text-xs uppercase tracking-widest block mb-1">
-                Documentation
+              <span className="text-xs font-medium text-slate-500 block mb-1">
+                Verification
               </span>
-              <h3 className="text-2xl sm:text-3xl font-headline font-extrabold text-on-surface tracking-tight">
-                Mandatory PSK Checklist
+              <h3 className="text-xl font-headline font-semibold text-slate-900">
+                Required Documents Checklist
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="space-y-3">
               {requiredDocuments.map((doc) => (
-                <div
-                  key={doc.title}
-                  className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2.5"
-                >
-                  <h4 className="font-headline font-bold text-sm text-on-surface">{doc.title}</h4>
-                  <ul className="space-y-1.5">
-                    {doc.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-slate-600">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                <div key={doc.title} className="p-4 rounded-xl bg-white border border-slate-200 space-y-2">
+                  <h4 className="font-headline font-semibold text-xs text-slate-900">
+                    {doc.title}
+                  </h4>
+                  <ul className="space-y-1">
+                    {doc.items.map((item, i) => (
+                      <li key={i} className="text-xs text-slate-500 flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -184,29 +186,30 @@ export default function PassportPage() {
             </div>
           </div>
 
-          {/* 5-Step Process */}
-          <div className="lg:col-span-5 space-y-6">
+          {/* Workflow */}
+          <div className="lg:col-span-6 space-y-4">
             <div>
-              <span className="text-secondary font-headline font-bold text-xs uppercase tracking-widest block mb-1">
-                Procedure
+              <span className="text-xs font-medium text-slate-500 block mb-1">
+                Step-by-Step
               </span>
-              <h3 className="text-2xl sm:text-3xl font-headline font-extrabold text-on-surface tracking-tight">
-                Application Journey
+              <h3 className="text-xl font-headline font-semibold text-slate-900">
+                Seva Kendra Workflow
               </h3>
             </div>
 
             <div className="space-y-3">
-              {roadmap.map((s) => (
-                <div
-                  key={s.num}
-                  className="bg-surface-container-low p-4 rounded-2xl border border-outline-variant/30 flex items-start gap-4"
-                >
-                  <span className="text-base font-headline font-black text-primary/40 shrink-0">
-                    {s.num}
+              {roadmap.map((step) => (
+                <div key={step.num} className="p-4 rounded-xl bg-white border border-slate-200 flex items-start gap-3.5">
+                  <span className="text-xs font-mono text-slate-400 shrink-0 pt-0.5">
+                    {step.num}
                   </span>
                   <div>
-                    <h4 className="font-headline font-bold text-xs text-on-surface uppercase tracking-wider">{s.title}</h4>
-                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{s.desc}</p>
+                    <h4 className="font-headline font-semibold text-xs sm:text-sm text-slate-900">
+                      {step.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                      {step.desc}
+                    </p>
                   </div>
                 </div>
               ))}

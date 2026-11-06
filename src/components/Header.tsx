@@ -102,15 +102,15 @@ export default function Header() {
                 className="flex flex-col items-center justify-center -mt-5"
               >
                 <div
-                  className={`w-11 h-11 rounded-full flex items-center justify-center shadow-md transition-transform active:scale-95 ${
+                  className={`w-10 h-10 rounded-full flex items-center justify-center shadow-sm transition-colors ${
                     isActive
-                      ? 'bg-primary text-white ring-4 ring-white'
-                      : 'bg-secondary text-white ring-4 ring-white'
+                      ? 'bg-[#a10017] text-white ring-4 ring-white'
+                      : 'bg-slate-900 text-white ring-4 ring-white'
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-4 h-4" />
                 </div>
-                <span className="text-[10px] font-bold font-headline mt-1 text-slate-700">
+                <span className="text-[10px] font-medium mt-1 text-slate-700">
                   {item.name}
                 </span>
               </Link>

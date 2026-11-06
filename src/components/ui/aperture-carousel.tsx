@@ -281,33 +281,32 @@ const AP_CSS = `
   gap: 6px;
   padding: 4px 12px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(15, 23, 42, 0.55);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #f8fafc;
   margin-bottom: 12px;
 }
 .ap-title {
   font-family: var(--font-headline), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-weight: 800;
-  font-size: clamp(32px, 5.5vw, 64px);
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  font-size: clamp(28px, 4.8vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
   color: #ffffff;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 .ap-cap {
   margin-top: 10px;
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(14px, 1.6vw, 17px);
+  font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  max-width: 58ch;
+  max-width: 56ch;
 }
 .ap-cap > span {
   animation-delay: 0.08s;
@@ -634,10 +633,10 @@ export default function ApertureCarousel({
           <div className="ap-cta-wrap">
             <Link
               href={s.href}
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-container text-white px-5 py-2.5 rounded-xl font-headline font-bold text-xs shadow-md transition-all active:scale-95 duration-200"
+              className="inline-flex items-center gap-2 bg-[#a10017] hover:bg-[#860013] text-white px-4 py-2 rounded-lg font-headline font-semibold text-xs tracking-normal shadow-sm transition-colors duration-150"
               onClick={(e) => e.stopPropagation()}
             >
-              <span>{s.ctaLabel || 'Explore Package'}</span>
+              <span>{s.ctaLabel || 'Explore circuit'}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
