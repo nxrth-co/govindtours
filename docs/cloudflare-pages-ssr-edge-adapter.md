@@ -15,11 +15,13 @@ This document specifies the architecture, dependencies, and configuration update
 Created `wrangler.jsonc` in the project root:
 ```jsonc
 {
+  "name": "govindtours",
   "pages_build_output_dir": ".vercel/output/static",
   "compatibility_date": "2026-09-23",
   "compatibility_flags": ["nodejs_compat"]
 }
 ```
+- Sets the mandatory top-level project name `govindtours`.
 - Sets the Cloudflare Pages asset output directory to `.vercel/output/static` where `@cloudflare/next-on-pages` writes compiled edge chunks and static assets.
 - Enables `nodejs_compat` to provide compatibility layers for Node-style globals on Cloudflare Workers.
 
