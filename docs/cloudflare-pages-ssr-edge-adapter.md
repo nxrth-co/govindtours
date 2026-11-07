@@ -29,8 +29,8 @@ Created `wrangler.jsonc` in the project root:
 
 ## 3. Build Scripts (`package.json`)
 Updated npm scripts in `package.json`:
-- `"build": "npx @cloudflare/next-on-pages"`: Default build script used by Cloudflare Pages during CI/CD to compile the Next.js App Router into Cloudflare Edge Worker bundles.
-- `"build:node": "next build"`: Preserved for standalone Node.js container builds (e.g., Dockerfile).
+- `"build": "next build"`: Standard Next.js production build command used by Vercel CLI / next-on-pages internally to compile pages without recursive loops.
+- `"pages:build": "next-on-pages"`: The Cloudflare Pages entry script that invokes next-on-pages to bundle the application into `.vercel/output/static` and edge workers.
 
 ---
 
