@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Groq from 'groq-sdk';
 import { buildSiteContext } from '@/lib/siteKnowledge';
 
-export const runtime = 'nodejs';
+export const runtime = 'edge';
 
 interface ChatMessage {
   role: 'user' | 'assistant' | 'system';

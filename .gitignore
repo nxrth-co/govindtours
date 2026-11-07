@@ -39,6 +39,7 @@ lerna-debug.log*
 
 # Deployment
 .vercel
+.wrangler
 
 # TypeScript cache
 *.tsbuildinfo
